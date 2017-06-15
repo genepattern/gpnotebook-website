@@ -172,11 +172,10 @@
 
             <p>Both the <a href="http://software.broadinstitute.org/cancer/software/genepattern/file-formats-guide" target="_blank">GCT and ODF file formats</a> are easily loaded as Pandas Dataframes. Code examples of how to load these files are available in GenePattern Job Cells by clicking a GCT or ODF job result and selecting “Send to Dataframe” in the menu.</p>
 
-            <h3>Job Access in Python</h3>
-            <p>xxx</p>
-
             <h3>Python Variable Input</h3>
-            <p>xxx</p>
+            <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable <code>foo</code> would appear as <code>{{ foo }}</code></p>
+
+            <p>When the <em>Run</em> button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
         </section>
 
         <aside>
