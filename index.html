@@ -1,102 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<base href="http://localhost:8000" />
-
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Gene Pattern Notebook &#8211; GenePattern Notebook</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Gene Pattern Notebook &#8211; GenePattern Notebook</title>
 <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/mesirovlab.org\/gpnb\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.4"}};
-			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
+<link rel='dns-prefetch' href='//s.w.org' />                
+<script type="text/javascript">
+    window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/mesirovlab.org\/gpnb\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.4"}};
+    !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+                <style type="text/css">
 img.wp-smiley,
 img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
 }
 </style>
 <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
-<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<script type='text/javascript' src='/wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
-<script type='text/javascript' src='/wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
-<script type='text/javascript' src='/wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
-<link rel='https://api.w.org/' href='/wp-json/' />
-<link rel="canonical" href="http://mesirovlab.org/gpnb/"/>
-<link rel='shortlink' href='http://mesirovlab.org/gpnb/'/>
-<link rel="stylesheet" href="/wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
+<script type='text/javascript' src='wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
+<script type='text/javascript' src='wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
+<link rel='https://api.w.org/' href='wp-json/' />
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --><link rel="stylesheet" href="wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
 <body class="home page-template-default page page-id-2">
-
 <div id="wrapper">
-	<header id="header">
-		<div class="container cf">
-			<a href="#" id="logo"><img src="/wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
-			<nav>
-				<a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
-				<ul id="menu-main-menu" class="menu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="/user-guide/">User Guide</a></li>
-<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="/notebook-collection/">Notebook Collection</a></li>
-<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="/knowledgebase/">Knowledgebase</a></li>
-<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="/contact/">Contact</a></li>
-<li id="menu-item-51" class="button menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="https://notebook.genepattern.org/hub/login">Use GenePattern Notebook</a></li>
-</ul>			</nav>
-		</div>
-	</header>
-
+        <header id="header">
+                <div class="container cf">
+                        <a href="#" id="logo"><img src="wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
+            <nav>
+                                <a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
+                                <ul id="menu-main-menu" class="menu">
+                                        <li id="menu-item-19" class="menu-item"><a href="user-guide/">User Guide</a></li>
+                                        <li id="menu-item-18" class="menu-item"><a href="notebook-collection/">Notebook Collection</a></li>
+                                        <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="faq/">FAQ</a></li>
+                                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="resources/">Resources</a></li>
+                                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="releases/">Releases</a></li>
+                                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="about/">About</a></li>
+                                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="contact/">Contact</a></li>
+                                        <li id="menu-item-51" class="button"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
+                                </ul>
+                        </nav>
+                </div>
+        </header>
 
 <div id="banner">
-	<div id="banner-content">
-		<h1>Integrating Genomic Analysis with Interactive Notebooks</h1>
-		<p><a href="#intros" class="button">Learn More</a></p>
-	</div>
+        <div id="banner-content">
+                <h1>Integrating Genomic Analysis with Interactive Notebooks</h1>
+                <p><a href="#intros" class="button">Learn More</a></p>
+        </div>
 </div>
 
 <div id="intros" class="container">
-	<ul>
-				<li style="background-image: url(/wp-content/uploads/2017/02/icon-writer.png);">
-			<h2><strong>Use</strong> the GenePattern Notebook environment</h2>
-			<p class="more"><a href="https://notebook.genepattern.org/hub/login" class="button">Use GenePattern Notebooks</a></p>
-		</li>
-				<li style="background-image: url(/wp-content/uploads/2017/02/icon-book.png);">
-			<h2><strong>Learn</strong> how to use the GenePattern Notebook functions</h2>
-			<p class="more"><a href="/user-guide/" class="button">User Guide</a></p>
-		</li>
-				<li style="background-image: url(/wp-content/uploads/2017/02/icon-browser.png);">
-			<h2><strong>Explore</strong> working GenePattern Notebooks</h2>
-			<p class="more"><a href="/notebook-collection/" class="button">Notebook Collection</a></p>
-		</li>
-			</ul>
+        <ul>
+                                <li style="background-image: url(wp-content/uploads/2017/02/icon-writer.png);">
+                        <h2><strong>Use</strong> the GenePattern Notebook environment</h2>
+                        <p class="more"><a href="https://notebook.genepattern.org/hub/login" class="button">Use GenePattern Notebooks</a></p>
+                </li>
+                                <li style="background-image: url(wp-content/uploads/2017/02/icon-book.png);">
+                        <h2><strong>Learn</strong> how to use the GenePattern Notebook functions</h2>
+                        <p class="more"><a href="user-guide/" class="button">User Guide</a></p>
+                </li>
+                                <li style="background-image: url(wp-content/uploads/2017/02/icon-browser.png);">
+                        <h2><strong>Explore</strong> working GenePattern Notebooks</h2>
+                        <p class="more"><a href="notebook-collection/" class="button">Notebook Collection</a></p>
+                </li>
+                        </ul>
 </div>
 
 <div id="welcome">
-	<div class="container cf">
-		<h2 align="center">Reproducible Research</h2>
+    <div class="container cf">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/r5Km4UPhb1Q" frameborder="5" allowfullscreen align="center"></iframe>
+    </div>
+</div>
+
+<!-- 
+<div id="welcome">
+        <div class="container cf">
+              
+            
+        <h2 align="center">Reproducible Research</h2>
         <p>The GenePattern Notebook environment gives GenePattern users the ability to interleave text, graphics, and code with their GenePattern analyses to create &#8220;notebooks&#8221; that can be edited, shared, and published. GenePattern Notebooks are built on the Jupyter Notebook system  and extend it, allowing researchers to embed the hundreds of genomic analysis and machine learning methods in GenePattern within a notebook, without the need to write code.</p>
         <p>To create and use GenePattern notebooks, follow the instructions below. A GenePattern Notebook Repository, in development, will allow you to create, share, and host your notebooks online without the need for a local installation.</p>
-	</div>
+        </div>
+</div>
+-->
+
+
+        <footer id="footer">
+                <div class="container">
+                        <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source under a BSD-style license.</p>
+                        <p>© 2016 GenePattern. All rights reserved. </p>
+                </div>
+        </footer>
 </div>
 
-	<footer id="footer">
-		<div class="container">
-			<p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source under a BSD-style license.</p>
-			<p>© 2016 GenePattern. All rights reserved. </p>
-		</div>
-	</footer>
-</div>
-
-<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
 
 </body>
 </html>
+
