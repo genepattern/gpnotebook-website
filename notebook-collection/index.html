@@ -32,33 +32,54 @@ img.emoji {
 <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
 <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
 <link rel='https://api.w.org/' href='../wp-json/' />
+    <script type='text/javascript'>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
- 
-
-<link rel="canonical" href="../notebook-collection/" />
-<link rel='shortlink' href='?p=7' />
-
-
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+      }
+    }
+    </script>
+<link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
 <body class="page-template-default page page-id-7">
 
 <div id="wrapper">
-
-	<header id="header">
+    <header id="header" class="site-header">
 		<div class="container cf">
 			<a href=".." id="logo"><img src="../wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
-			<nav>
+			<nav class="main-navigation" role="navigation">
 				<a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
-				<ul id="menu-main-menu" class="menu">
-					<li id="menu-item-19" class="menu-item"><a href="../user-guide/">User Guide</a></li>
+				<ul id="menu-main-menu" class="primary-menu">
+                    <li id="dropdown">
+                        <ul class="dropdown">
+                            <li class="dropbtn" onclick="myFunction()">Guides</li>
+                            <div class="dropdown-content" id="myDropdown">
+                                <a href="../user-guide/">Getting Started</a>
+                                <a href="../install/">Local Installation</a>
+                                <a href="../tutorials/">Videos/Tutorials</a>
+                                <a href="../features/">Features</a>
+                                <a href="../for-jupyter-users/">Jupyter Users</a>
+                            </div>         
+                        </ul>
+                    </li>
 					<li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
 					<li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
 					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../resources/">Resources</a></li>
 					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../releases/">Releases</a></li>
 					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
 					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
-					<li id="menu-item-51" class="button"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
+					<li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
 				</ul>			
 			</nav>
 		</div>
