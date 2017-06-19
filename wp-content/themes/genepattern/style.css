@@ -64,8 +64,8 @@ input { vertical-align: middle; }
 #logo { float: left; position: absolute;}
 
 #header nav { float: right; margin: 5px 0px 0px 0px; }
-#header nav ul li { display: inline-block; list-style: none; margin: 0 0 0 20px; position: relative;}
-#header nav ul li a { text-decoration: none; color: #FFF; font-size: 15px; }
+#header nav li { display: inline-block; list-style: none; margin: 0 0 0 20px; position: relative;}
+#header nav li a { text-decoration: none; color: #FFF; font-size: 15px; }
 #header nav li a:hover { color: #d2cfe7; }
 #header nav li.button { background: #9e9e9e; padding: 6px 20px; letter-spacing: 1px}
 #header nav li.button a:after { content: "\f105"; font-family: "FontAwesome"; margin-left: 20px;}
