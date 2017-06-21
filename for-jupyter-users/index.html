@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>For Jupyter Users &#8211; Gene Pattern Notebook</title>
-    <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css'
-          media='all'/>
+    <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
@@ -32,180 +30,113 @@
     </script>
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
+</head>
 
-    </head>
 <body class="page-template-default page page-id-9">
-
-<div id="wrapper">
-    <header id="header" class="site-header">
-		<div class="container cf">
-			<a href=".." id="logo"><img src="../wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
-			<nav class="main-navigation" role="navigation">
-				<a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
-				<ul id="menu-main-menu" class="primary-menu">
-                    <li id="dropdown">
-                        <ul class="dropdown">
-                            <li class="dropbtn" onclick="myFunction()">Guides</li>
-                            <div class="dropdown-content" id="myDropdown">
-                                <a href="../user-guide/">Getting Started</a>
-                                <a href="../install/">Local Installation</a>
-                                <a href="../tutorials/">Videos/Tutorials</a>
-                                <a href="../features/">Features</a>
-                                <a href="../for-jupyter-users/">Jupyter Users</a>
-                            </div>         
+    <div id="wrapper">
+        <header id="header" class="site-header">
+            <div class="container cf">
+                <a href=".." id="logo"><img src="../wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
+                <nav class="main-navigation" role="navigation">
+                    <a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
+                    <ul id="menu-main-menu" class="primary-menu">
+                        <li id="dropdown">
+                            <ul class="dropdown">
+                                <li class="dropbtn" onclick="myFunction()">Guides</li>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <a href="../user-guide/">Getting Started</a>
+                                    <a href="../install/">Local Installation</a>
+                                    <a href="../tutorials/">Videos/Tutorials</a>
+                                    <a href="../features/">Features</a>
+                                    <a href="../for-jupyter-users/">Jupyter Users</a>
+                                </div>         
+                            </ul>
+                        </li>
+                        <li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
+                        <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../resources/">Resources</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../releases/">Releases</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
+                        <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
+                    </ul>			
+                </nav>
+            </div>
+        </header>
+        <div id="main" class="container cf">
+            <section>
+                <h1>GenePattern Notebook for Jupyter Users </h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>GenePattern Notebook Extension</h3>
+                        <p>GenePattern Notebook is an extension for Jupyter. It provides a variety of tools for interacting with the powerful GenePattern platform from within a Jupyter Notebook environment. These tools include:</p>
+                        <ul>
+                            <li>Visual widgets for running bioinformatic analyses and submitting these analyses to a GenePattern server.</li>
+                            <li>Tools for visually sending results to downstream steps in a bioinformatic workflow.</li>
+                            <li>A WYSIWYG rich text editor for Markdown cells.</li>
+                            <li>Jupyter magics for creating GenePattern widgets.</li>
+                            <li>A Python library for programmatically working with the results of the analyses.</li>
                         </ul>
-                    </li>
-					<li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
-					<li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
-					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../resources/">Resources</a></li>
-					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../releases/">Releases</a></li>
-					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
-					<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
-					<li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
-				</ul>			
-			</nav>
-		</div>
-	</header>
-
-    <div id="main" class="container cf">
-        <section>
-
-
-            <h1>GenePattern Notebook for Jupyter Users </h1>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>GenePattern Notebook Extension</h3>
-
-                    <p>GenePattern Notebook is an extension for Jupyter. It provides a variety of tools for interacting with the powerful GenePattern platform
-                        from within a Jupyter Notebook environment. These tools include:</p>
-
-                    <ul>
-                        <li>Visual widgets for running bioinformatic analyses and submitting these analyses to a GenePattern server.</li>
-                        <li>Tools for visually sending results to downstream steps in a bioinformatic workflow.</li>
-                        <li>A WYSIWYG rich text editor for Markdown cells.</li>
-                        <li>Jupyter magics for creating GenePattern widgets.</li>
-                        <li>A Python library for programmatically working with the results of the analyses.</li>
-                    </ul>
-
-                    <p>To use the GenePattern Notebook extension, you will need to <a href="http://genepattern.broadinstitute.org/gp/pages/registerUser.jsf">register
-                        for an account</a>. GenePattern usage is free and the software is open source under a BSD-style license.</p>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="alert alert-info">
-                        <h4>What is GenePattern?</h4>
-
-                        <p>GenePattern is a powerful platform for reproducible bioinformatic research. It provides hundreds of analytical tools for the analysis
-                            of gene expression (<a href="http://genepattern.org/rna-seq-analysis">RNA-seq</a> and <a
-                                    href="http://genepattern.org/gene-expression-analysis">microarray</a>), <a
-                                    href="http://genepattern.org/variant-and-copy-number-analysis">sequence variation and
-                                copy number</a>, <a href="http://genepattern.org/proteomics">proteomic</a>, <a
-                                    href="http://genepattern.org/flow-cytometry">flow cytometry</a>, and network analysis.
-                        </p>
-
-                        <p>For more information <a href="http://genepattern.org">visit our main GenePattern page</a>. For
-                            introductory information about GenePattern, please see our <a href="http://genepattern.org/cancer/software/genepattern/quick-start">10-minute tutorial</a>
-                            and/or check out one of our <a href="http://genepattern.org/cancer/software/genepattern/video-tutorials">video tutorials</a>.</p>
+                        <p>To use the GenePattern Notebook extension, you will need to <a href="http://genepattern.broadinstitute.org/gp/pages/registerUser.jsf">register
+                            for an account</a>. GenePattern usage is free and the software is open source under a BSD-style license.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="alert alert-info">
+                            <h4>What is GenePattern?</h4>
+                            <p>GenePattern is a powerful platform for reproducible bioinformatic research. It provides hundreds of analytical tools for the analysis of gene expression (<a href="http://genepattern.org/rna-seq-analysis">RNA-seq</a> and <a
+                            href="http://genepattern.org/gene-expression-analysis">microarray</a>), <a href="http://genepattern.org/variant-and-copy-number-analysis">sequence variation and copy number</a>, <a href="http://genepattern.org/proteomics">proteomic</a>, <a
+                            href="http://genepattern.org/flow-cytometry">flow cytometry</a>, and network analysis.</p>
+                            <p>For more information <a href="http://genepattern.org">visit our main GenePattern page</a>. For introductory information about GenePattern, please see our <a href="http://genepattern.org/cancer/software/genepattern/quick-start">10-minute tutorial</a> and/or check out one of our <a href="http://genepattern.org/cancer/software/genepattern/video-tutorials">video tutorials</a>.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <h3>GenePattern Cells</h3>
-
-            <p>GenePattern cells are Python code cells which are automatically executed, and which display a visual widget for submitting GenePattern analyses
+                <h3>GenePattern Cells</h3>
+                <p>GenePattern cells are Python code cells which are automatically executed, and which display a visual widget for submitting GenePattern analyses
                 or working with the results of these analyses. These cells are displayed as a new cell type, and can be added either through the Jupyter menu or
                 through the GenePattern Notebook search functionality.</p>
-
-            <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-10-22_at_11_50_01.png"
-                    style="width: 600px; height: 251px; border-width: 1px; border-style: solid;"/></p>
-
-            <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_30_39.png"
-                    style="width: 600px; height: 296px; border-width: 1px; border-style: solid;"/></p>
-
-            <p>GenePattern cells come in three types: authentication, task cells and job cells.</p>
-
-            <p><strong>Authentication cells</strong> are used to authenticate the notebook user with a GenePattern server. One of these cells must be added to a
-                notebook and the user authenticated before the functionality of other GenePattern cells becomes available. If a GenePattern cell is added to a
-                notebook before authentication has happened, it will automatically become one of these cells.</p>
-
-            <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_27_12.png"
-                    style="width: 600px; height: 221px; border-width: 1px; border-style: solid;"/></p>
-
-            <p><strong>Task cells</strong> each represent a particular type of analysis on the GenePattern platform. Hundreds of diferent analyses are
-                available. These cells will present a form to the user, accepting data or other parameters. Once one of these forms has been filled out, the
-                user can then run the analysis by clicking the Run button. This will submit the analysis to the GenePattern server, and create a Job cell which
-                represents that particular submission.</p>
-
-            <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_32_11.png"
-                    style="width: 600px; height: 324px; border-width: 1px; border-style: solid;"/></p>
-
-            <p><strong>Job cells</strong> are created when a GenePattern task cells are submitted to the GenePattern server. These cells will appear below the
-                submitting task cell. The left of the cell will contain the timestamp for when the job was submitted, and the right will contain the job&#39;s
-                status in GenePattern&#39;s queuing system. All jobs pass from a PENDING state into RUNNING, and from there either into the COMPLETE or ERROR
-                states.</p>
-
-            <p>Once a job has finished running, any results output by the job will appear on the left below the submission timestamp. Clicking any of these
-                results will open a menu containing different options for working with these files.</p>
-
-            <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_33_20.png"
-                    style="width: 600px; height: 97px; border-width: 1px; border-style: solid;"/></p>
-
-            <p>Since GenePattern cells are also Python code cells, all changes to the information in these widgets is reflected in the code and will be saved in
-                the notebook&#39;s ipynb file. Similarly, sending one of these notebook files to a user without the GenePattern Notebook extension installed,
-                will result in a complete notebook, albeit one where the cells with visual widgets are instead displayed as code.</p>
-
-            <p>To view the code backing a GenePattern cell, simply click the &quot;Gear&quot;&nbsp;button found on a GenePattern widget in the upper right
+                <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-10-22_at_11_50_01.png" style="width: 600px; height: 251px; border-width: 1px; border-style: solid;"/></p>
+                <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_30_39.png" style="width: 600px; height: 296px; border-width: 1px; border-style: solid;"/></p>
+                <p>GenePattern cells come in three types: authentication, task cells and job cells.</p>
+                <p><strong>Authentication cells</strong> are used to authenticate the notebook user with a GenePattern server. One of these cells must be added to a notebook and the user authenticated before the functionality of other GenePattern cells becomes available. If a GenePattern cell is added to a notebook before authentication has happened, it will automatically become one of these cells.</p>
+                <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_27_12.png" style="width: 600px; height: 221px; border-width: 1px; border-style: solid;"/></p>
+                <p><strong>Task cells</strong> each represent a particular type of analysis on the GenePattern platform. Hundreds of diferent analyses are available. These cells will present a form to the user, accepting data or other parameters. Once one of these forms has been filled out, the user can then run the analysis by clicking the Run button. This will submit the analysis to the GenePattern server, and create a Job cell which represents that particular submission.</p>
+                <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_32_11.png" style="width: 600px; height: 324px; border-width: 1px; border-style: solid;"/></p>
+                <p><strong>Job cells</strong> are created when a GenePattern task cells are submitted to the GenePattern server. These cells will appear below the
+                submitting task cell. The left of the cell will contain the timestamp for when the job was submitted, and the right will contain the job&#39;s status in GenePattern&#39;s queuing system. All jobs pass from a PENDING state into RUNNING, and from there either into the COMPLETE or ERROR states.</p>
+                <p>Once a job has finished running, any results output by the job will appear on the left below the submission timestamp. Clicking any of these results will open a menu containing different options for working with these files.</p>
+                <p><img alt="" src="http://genepattern.org/uploaded/content_screen_shot_2015-08-24_at_10_33_20.png" style="width: 600px; height: 97px; border-width: 1px; border-style: solid;"/></p>
+                <p>Since GenePattern cells are also Python code cells, all changes to the information in these widgets is reflected in the code and will be saved in
+                the notebook&#39;s ipynb file. Similarly, sending one of these notebook files to a user without the GenePattern Notebook extension installed, will result in a complete notebook, albeit one where the cells with visual widgets are instead displayed as code.</p>
+                <p>To view the code backing a GenePattern cell, simply click the &quot;Gear&quot;&nbsp;button found on a GenePattern widget in the upper right
                 corner and select &quot;Toggle Code.&quot;</p>
-
-            <h3>GenePattern Python Library</h3>
-
-            <p>Programmatic access to all GenePattern jobs and results is also automatically available using GenePattern&#39;s Python library. Any job executed
-                in a notebook can afterward be referenced using <code><em>job</em></code> followed by the job number. For example, if a job is number 1170434,
+                <h3>GenePattern Python Library</h3>
+                <p>Programmatic access to all GenePattern jobs and results is also automatically available using GenePattern&#39;s Python library. Any job executed in a notebook can afterward be referenced using <code><em>job</em></code> followed by the job number. For example, if a job is number 1170434,
                 the variable name would be <code><em>job1170434</em></code>. Entering this into a code cell will return a reference to a GPJob object.</p>
-
-            <ul>
-                <li>For more information on using the GenePattern Python library, see the <a
-                        href="http://genepattern.org/programmers-guide#_Using_GenePattern_from_Python">GenePattern Programmer&#39;s
+                <ul>
+                    <li>For more information on using the GenePattern Python library, see the <a href="http://genepattern.org/programmers-guide#_Using_GenePattern_from_Python">GenePattern Programmer&#39;s
                     Guide</a>.
-                </li>
-                <li>A notebook providing a <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb">tutorial
+                    </li>
+                    <li>A notebook providing a <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb">tutorial
                     for using the GenePattern Python Library</a> is also available.
-                </li>
-            </ul>
-
-            <p>Code examples of how to reference GenePattern jobs or GenePattern result files are available in the notebook by clicking a job result and
-                selecting &quot;Send to Code&quot; in the menu.</p>
-
-            <p><img alt="" src="https://genepattern.org/uploaded/content_screen-shot-2015-10-15-at-13_50.jpg"
-                    style="width: 600px; height: 159px; border-width: 1px; border-style: solid;"/></p>
-
-            <p>GPJob objects can also be programmatically created and executed without the need for a GenePattern cell or widget. For information on how to do
-                this see the <a href="http://genepattern.org/programmers-guide#_Using_GenePattern_from_Python">GenePattern
-                    Programmer&#39;s Guide</a>&nbsp;or the <a
-                        href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb">GenePattern Python
-                    Tutorial</a> notebook.</p>
-
-
-        </section>
-
-        <aside>
-
-
-        </aside>
-    </div>
-
-    <footer id="footer">
-        <div class="container">
-            <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source
-                under a BSD-style license.</p>
-            <p>© 2016 GenePattern. All rights reserved. </p>
+                    </li>
+                </ul>
+                <p>Code examples of how to reference GenePattern jobs or GenePattern result files are available in the notebook by clicking a job result and selecting &quot;Send to Code&quot; in the menu.</p>
+                <p><img alt="" src="https://genepattern.org/uploaded/content_screen-shot-2015-10-15-at-13_50.jpg" style="width: 600px; height: 159px; border-width: 1px; border-style: solid;"/></p>
+                <p>GPJob objects can also be programmatically created and executed without the need for a GenePattern cell or widget. For information on how to do
+                this see the <a href="http://genepattern.org/programmers-guide#_Using_GenePattern_from_Python">GenePattern Programmer&#39;s Guide</a>&nbsp;or the <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb">GenePattern Python Tutorial</a> notebook.</p>
+            </section>
+            <aside>
+            </aside>
         </div>
-    </footer>
-
-</div>
-
-<script type='text/javascript' src='../wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
+        <footer id="footer">
+            <div class="container">
+                <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source
+                    under a BSD-style license.</p>
+                <p>© 2016 GenePattern. All rights reserved. </p>
+            </div>
+        </footer>
+    </div>
+    <script type='text/javascript' src='../wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
 
 </body>
 </html>

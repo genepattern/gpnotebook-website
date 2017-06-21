@@ -112,7 +112,7 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 #main section h1 { font-size: 50px; color: #3b2942; }
 #main section h2 { font-size: 35px; color: #3b2942; }
 #main section h3 { font-size: 30px; color: #3b2942; margin: 0 0 10px 0; }
-#main section img { max-width: 100%; height: auto; }
+#main section img { max-width: 100%; height: auto;}
 #main section code { background: #EFEFEF; padding: 20px 30px; margin: 0 0 15px 0; display: block; }
 
 .page-template-full-width #main section { width: 100%; float: none; }
