@@ -55,7 +55,7 @@ input { vertical-align: middle; }
 .container { width: 100%; max-width: 1260px; margin: 0 auto; text-align: left; }
 
 .button { display: inline-block; border: none; border-radius: 30px; background: #365e9f; color: #FFF; font-weight: bold; padding: 7px 16px; text-decoration: none; cursor: pointer; }
-.button:hover { background: #365e9f; color: #FFF; }
+.button:hover { background: #ed1c24; color: #FFF; }
 
 /* ----------------------------------- */
 /* HEADER
@@ -73,6 +73,7 @@ input { vertical-align: middle; }
 #header nav li.button:hover a { color: #FFF; }
 
 #mobile-menu { display: none; }
+#mobile { display:none; }
 
 
 
@@ -139,17 +140,21 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 @media screen and (max-width: 1260px) {
 
 	.container { padding-left: 5%; padding-right: 5%; width: 90%; }
-
+    
 	#mobile-menu { float: right; display: block; font-size: 30px; color: #FFF; z-index: 1001; }
+    #mobile { display:block ; height: 18px; visibility: hidden; }
 	#header nav ul { opacity: 0; background: #0f487e; position: fixed; z-index: 1000; left: 0; top: 0; height: 100%; width: 300px; transform: translateX( -100% ); }
 	.nav-open #header nav ul { opacity: 1; transform: translateX( 0 ); }
-	#header nav li { display: block; float: none; margin: 0; margin: 20px 30px; }
-	#header nav li a { display: block; font-size: 18px; }
+	#header nav li { display: block; float: none; margin: 0; margin: 10px 20px 30px 10px; }
+	#header nav li a { display: block; font-size: 15px; }
+    #header nav li {font-size:18px; }
 	#header nav li.button { padding: 0; background: none; }
 	#header nav li.button a { color: #9e9e9e; font-weight: bold; }
 	#header nav li.button:hover { background: none; }
 	#header nav li.button a:after { display: none; }
 	#header nav li.button:hover a { color: #d2cfe7; }
+    #header nav ul li ol li { font: 30px; float: none; position: fixed; margin: 0px 0px 10px 0px;
+    }
 
 
 }

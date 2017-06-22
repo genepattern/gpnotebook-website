@@ -37,15 +37,16 @@
     
 <body class="page-template-default page page-id-9">
     <div id="wrapper">
-        <header id="header" class="site-header">
+        <header id="header">
             <div class="container cf">
                 <a href=".." id="logo"><img src="../wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
-                <nav class="main-navigation" role="navigation">
+                <nav>
                     <a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
-                    <ul id="menu-main-menu" class="primary-menu">
-                        <li id="dropdown">
-                            <ul class="dropdown">
+                    <ul id="menu-main-menu" class="menu">
+                        <li id="dropdown" class="menu-item">
+                            <ol class="dropdown">
                                 <li class="dropbtn" onclick="myFunction()">Guides</li>
+                                <hr style="height: 18px; visibility: hidden;" id="mobile">
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="../user-guide/">Getting Started</a>
                                     <a href="../install/">Local Installation</a>
@@ -53,7 +54,7 @@
                                     <a href="../features/">Features</a>
                                     <a href="../for-jupyter-users/">Jupyter Users</a>
                                 </div>         
-                            </ul>
+                            </ol>
                         </li>
                         <li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
                         <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
