@@ -55,7 +55,7 @@ input { vertical-align: middle; }
 .container { width: 100%; max-width: 1260px; margin: 0 auto; text-align: left; }
 
 .button { display: inline-block; border: none; border-radius: 30px; background: #365e9f; color: #FFF; font-weight: bold; padding: 7px 16px; text-decoration: none; cursor: pointer; }
-.button:hover { background: #ed1c24; color: #FFF; }
+.button:hover { background: #365e9f; color: #FFF; }
 
 /* ----------------------------------- */
 /* HEADER
@@ -84,7 +84,7 @@ input { vertical-align: middle; }
 #banner-content { position: relative; top: 50%; transform: translateY(-50%); padding-top: 100px; }
 #banner h1 { color: #FFF; font-size: 55px; max-width: 780px; margin: 0 auto; }
 #banner a.button { font-size: 20px; padding: 13px 45px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px; }
-#banner a.button:hover { background: #FFF; color: #ed1c24; }
+#banner a.button:hover { background: #FFF; color: #365e9f; }
 
 #intros { padding: 115px 0; }
 #intros ul { display: flex; align-items: stretch; justify-content: space-around; }
