@@ -72,7 +72,7 @@
         <div id="main" class="container cf">
             <section>
                 <h1>Using the GenePattern Notebook Environment</h1>
-                <p>If you do not already have a Jupyter Notebook environment running, follow <a href="../install/">these instructions to install Jupyter</a> and its required packages.</p>
+                <p>If you do not already have a Jupyter Notebook environment running, you can manually set up an environment by following <a href="../install/">these instructions to install Jupyter</a> and its required packages, or you can simply log into the <a href="https://notebook.genepattern.org">GenePattern Notebook Repository</a>.</p>
                 <div class="section" id="login">
                     <h2>1. Login to the GenePattern Notebook Repository</h2>
                     <p>Open up the GenePattern Notebook Repository by visiting <a href="https://notebook.genepattern.org" target="_blank">https://notebook.genepattern.org</a> and then log in with your GenePattern account. If you do not have a GenePattern account you can sign up for one by visiting the <a href="https://genepattern.broadinstitute.org" target="_blank">public GenePattern server</a>.</p>
@@ -81,10 +81,10 @@
                 </div>
                 <div class="section" id="create-a-new-genepattern-notebook">
                     <h2>2. Create a New GenePattern Notebook</h2>
-                    <p>On the page listing notebook files, look in the upper right and you should see three buttons: Upload, New and a Refresh icon. Pull down the New menu and select <em>Notebooks &gt; Python 2</em>. This will create a new GenePattern notebook, which will open in a new browser tab. It should look something like the screenshot below.</p>
+                    <p>On the page listing notebook files, look in the upper right and you should see three buttons: Upload, New and a Refresh icon. Pull down the New menu and select <em>Notebooks &gt; Python 3</em>. This will create a new GenePattern notebook, which will open in a new browser tab. It should look something like the screenshot below.</p>
                     <p><img class="alignnone size-full wp-image-29"
                     src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_16_34.png" alt="" width="800" height="190" srcset="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_16_34.png 800w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_16_34-300x71.png 300w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_16_34-768x182.png 768w" sizes="(max-width: 800px) 100vw, 800px"/></p>
-                    <p>At the top of this page is a menu bar and toolbar for working with the notebook. Below this is the notebook&#8217;s first cell. Python code can executed from cells, documentation can be added and GenePattern widgets can be entered to launch analyses. For general information on how to use Jupyter notebooks, see the Jupyter documentation.</p>
+                    <p>At the top of this page is a menu bar and toolbar for working with the notebook. Below this is the notebook&#8217;s first cell. Python code can executed from cells, documentation can be added and GenePattern widgets can be entered to launch analyses. For general information on how to use Jupyter notebooks, see the <a href="http://jupyter.org/">Jupyter documentation</a>.</p>
                 </div>
                 <div class="section" id="log-into-genepattern">
                     <h2>3. Log into GenePattern</h2>
@@ -124,15 +124,8 @@
                     src="../wp-content/uploads/2017/02/SendToCode.PNG" alt="" width="800" height="208" srcset="../wp-content/uploads/2017/02/SendToCode.PNG 800w, ../wp-content/uploads/2017/02/SendToCode.PNG 300w, ../wp-content/uploads/2017/02/SendToCode.PNG 768w" sizes="(max-width: 800px) 100vw, 800px"/></p>
                     <p>The result file of one analysis can be easily be used as input for a later analysis. Simply click the result file to open the menu, and select either an existing downstream task or a new task. Clicking one of these options will place the correct value for the result file into the downstream form. In the case of sending to a new task, a new cell will be created for the downstream analysis. Alternatively, result files can also be dragged-and-dropped into the correct form.</p>
                 </div>
-                <div class="section" id="jobs-list">
-                    <h2>6. Jobs List</h2>
-                    <p>A list of all GenePattern jobs can be found by opening the sliding menu and clicking the Jobs tab at the top. This will show an overview of all jobs submitted in this notebook, and will provide the status of those jobs. Clicking any of the jobs in the list will scroll the
-                    notebook to the selected job. These can also be searched through by entering text into the &#8220;Type to Filter&#8221; box in the upper right.</p>
-                    <p><img class="alignnone size-full wp-image-39"
-                    src="../wp-content/uploads/2017/02/content_screen_shot_2015-09-17_at_14_49_12.png" alt="" width="666" height="235" srcset="../wp-content/uploads/2017/02/content_screen_shot_2015-09-17_at_14_49_12.png 666w, ../wp-content/uploads/2017/02/content_screen_shot_2015-09-17_at_14_49_12-300x106.png 300w" sizes="(max-width: 666px) 100vw, 666px"/></p>
-                </div>
                 <div class="section" id="access-in-python">
-                    <h3>7. Access in Python</h3>
+                    <h3>6. Access in Python</h3>
                     <p>Programmatic access to all GenePattern jobs and results is also automatically available using GenePattern&#8217;s Python library. Any job executed in a notebook can afterward be referenced using <code><em>job</em></code> followed by the job number. For example, if a job is number 1170434 (such as in the screenshot above), the variable name would be <code><em>job1170434</em></code>. Entering this into a code cell will return a reference to a GPJob object.</p>
                     <ul>
                         <li>For more information on using the GenePattern Python library, see the <a href="http://www.broadinstitute.org/cancer/software/genepattern/programmers-guide#_Using_GenePattern_from_Python">GenePattern Programmer&#8217;s Guide</a>.
@@ -150,7 +143,6 @@
                     <li><a href="#log-into-genepattern">Log into GenePattern</a></li>
                     <li><a href="#begin-an-analysis">Begin an Analysis</a></li>
                     <li><a href="#working-with-results">Working with Results</a></li>
-                    <li><a href="#jobs-list">Jobs List</a></li>
                     <li><a href="#access-in-python">Access in Python</a></li>
                 </ul>
             </aside>
