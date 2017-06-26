@@ -115,6 +115,7 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 #main section h3 { font-size: 30px; color: #3b2942; margin: 0 0 10px 0; }
 #main section img { max-width: 100%; height: auto;}
 #main section code { background: #EFEFEF; padding: 20px 30px; margin: 0 0 15px 0; display: block; }
+#contentbutton a { float: right; } 
 
 .page-template-full-width #main section { width: 100%; float: none; }
 
@@ -155,6 +156,7 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 	#header nav li.button:hover a { color: #d2cfe7; }
     #header nav ul li ol li { font: 30px; float: none; position: fixed; margin: 0px 0px 10px 0px;
     }
+    #icons img { display: none; }
 
 
 }
