@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Resources &#8211; Gene Pattern Notebook</title>  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
     <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
     <script type='text/javascript'>
@@ -29,6 +28,8 @@
     <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
@@ -77,45 +78,38 @@
                 <br>
                 <br>
                 <div class="row">
-                    <div class="col-sm-2">
-                    <img src="../wp-content/uploads/2017/02/github.png" alt="GitHub" style="width:100%;height:65px;">
-                    <br><br><br>
-                    <img src="../wp-content/uploads/2017/02/jupyter.png" alt="GitHub" style="width:100%;height:70px;">
-                    <br><br><br>
-                    <img src="../wp-content/uploads/2017/02/python.png" alt="GitHub" style="width:100%;height:70px;">
-                    <br><br><br><br>
-                    <img src="../wp-content/uploads/2017/02/genepattern.png" alt="GitHub" style="width:100%;height:70px;">
-                    <br><br><br>
-                    <img src="../wp-content/uploads/2017/02/gparc.png" alt="GitHub" style="width:100%;height:70px;">
+                    <div class="col-sm-2" id="icons">
+                        <img src="../wp-content/uploads/2017/02/github.png" alt="GitHub" style="width:100%;height:65px;">
+                        <br><br><br>
+                        <img src="../wp-content/uploads/2017/02/jupyter.png" alt="GitHub" style="width:100%;height:70px;">
+                        <br><br><br>
+                        <img src="../wp-content/uploads/2017/02/python.png" alt="GitHub" style="width:100%;height:70px;">
+                        <br><br><br><br>
+                        <img src="../wp-content/uploads/2017/02/genepattern.png" alt="GitHub" style="width:100%;height:70px;">
+                        <br><br><br>
+                        <img src="../wp-content/uploads/2017/02/gparc.png" alt="GitHub" style="width:100%;height:70px;">
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-sm-10" id="contentbutton">
                         <h3>GenePattern Notebook on GitHub</h3>
+                        <a href="https://github.com/genepattern" role="button" class="btn btn-warning" style="float: right;">Go Here</a>
                         <p style="font-size: 15px;">Here you can access our most recent software updates and report any bugs or software related issues.</p>
                         <hr>
                         <h3 align="left">Jupyter</h3>
+                        <a href="http://jupyter.org/" role="button" class="btn btn-warning" style="float: right;">Go Here</a>
                         <p style="font-size: 15px;">GenePattern Notebooks are built off of the Jupyter Notebook platform. You can find more information on their website.</p>
                         <hr>
                         <h3>Python</h3>
+                        <a href="https://www.python.org/" role="button" class="btn btn-warning" style="float: right;">Go Here</a>
                         <p style="font-size: 15px;">GenePattern notebooks use the Python as their primary programming language. You can find more information on their website.</p>
                         <hr>
                         <h3>GenePattern</h3> 
+                        <a href="http://software.broadinstitute.org/cancer/software/genepattern#" role="button" class="btn btn-warning" style="float: right;">Go Here</a>
                         <p style="font-size: 15px;">Here you can find all the documentation regarding the GenePattern modules and GenePattern software.</p>
                         <hr>
                         <h3>GenePattern Archive (GParc)</h3>
+                        <a href="http://www.gparc.org/" role="button" class="btn btn-warning" style="float: right;">Go Here</a>
                         <p style="font-size: 15px;">GParc is a repository and community used to discuss GenePattern modules</p>
                         <hr>
-                    </div>
-                    <div class="col-sm-1">
-                        <br>
-                        <a href="https://github.com/genepattern" role="button" class="btn btn-warning">Go Here</a>
-                        <br><br><br><br><br>
-                        <a href="http://jupyter.org/" role="button" class="btn btn-warning">Go Here</a>
-                        <br><br><br><br><br>
-                        <a href="https://www.python.org/" role="button" class="btn btn-warning">Go Here</a>
-                        <br><br><br><br><br>
-                        <a href="http://software.broadinstitute.org/cancer/software/genepattern#" role="button" class="btn btn-warning">Go Here</a>
-                        <br><br><br><br>
-                        <a href="http://www.gparc.org/" role="button" class="btn btn-warning">Go Here</a>
                     </div>
                 </div>
             </section>
@@ -133,6 +127,5 @@
             </div>
         </footer>
     </div>
-    <script type='text/javascript' src='wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
 </body>
 </html>
