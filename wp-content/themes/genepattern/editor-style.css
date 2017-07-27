@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,700');
+
+/* WordPress required styles */
+.alignright { float: right; margin: 0 0 10px 15px; }
+.alignleft { float: left; margin: 0 15px 10px 0; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.wp-caption img { margin: 0; padding: 0; border: 0 none; }
+.wp-caption-dd { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+
+/* Custom Styles */
+p, div, li, h1, h2, h3, h4, td, th, input, select, textarea { font: normal 18px/1.48 "Source Sans Pro", sans-serif; color: #4d2b40; font-weight: 300; }
+p, h1, h2, h3, h4, section ul, section ol, section table { margin-bottom: 15px; }
+h1, h2, h3 { line-height: 1.1; }
+a img, :link img, :visited img { border: none }
+a { color: #534f98; text-decoration: underline; }
+a:hover { color: #ed1c24; }
+div.clear { clear: both; overflow: hidden; height: 1px; }
+
+h1 { font-size: 50px; color: #3b2942; }
+h2 { font-size: 35px; color: #3b2942; }
+h3 { font-size: 30px; color: #3b2942; margin: 0 0 10px 0; }

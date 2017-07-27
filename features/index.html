@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Features &#8211; Gene Pattern Notebook</title>
+    <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
+    <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
+    <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
+    <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
+    <link rel='https://api.w.org/' href='../wp-json/'/>
+    <style type="text/css">
+        h3 a {
+            text-decoration: none;
+        }
+    </style>
+    <script type='text/javascript'>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
+</head>
+    
+<body class="page-template-default page page-id-9">
+    <div id="wrapper">
+        <header id="header">
+            <div class="container cf">
+                <a href=".." id="logo"><img src="../wp-content/themes/genepattern/images/logo.png" alt="Gene Pattern Notebook" /></a>
+                <nav>
+                    <a href="#" id="mobile-menu"><i class="fa fa-bars"></i></a>
+                    <ul id="menu-main-menu" class="menu">
+                        <li id="dropdown" class="menu-item">
+                            <ol class="dropdown">
+                                <li class="dropbtn" onclick="myFunction()">Guides</li>
+                                <hr style="height: 18px; visibility: hidden;" id="mobile">
+                                <div class="dropdown-content" id="myDropdown">
+                                    <a href="../user-guide/">Getting Started</a>
+                                    <a href="../install/">Local Installation</a>
+                                    <a href="../tutorials/">Videos/Tutorials</a>
+                                    <a href="../features/">Features</a>
+                                    <a href="../for-jupyter-users/">Jupyter Users</a>
+                                </div>         
+                            </ol>
+                        </li>
+                        <li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
+                        <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../resources/">Resources</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../releases/">Releases</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
+                        <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
+                    </ul>			
+                </nav>
+            </div>
+        </header>
+        <div id="main" class="container cf">
+            <section>
+                <h1>GenePattern Notebook Environment Features</h1>
+                <p>The GenePattern Notebook Environment provides a variety of features for both basic and advanced users. The most commonly used features are detailed below.</p>
+                <h2 id="basic">Basic Features</h2>
+                <p>These features are the most commonly used features in the GenePattern Notebook environment. They also form the building blocks for most advanced use cases.</p>
+                <h3>GenePattern Cells</h3>
+                <p>The GenePattern Notebook environment provides a number of graphical widgets that make performing analyses easy, even for non-programming users. These widgets take the form of <em>GenePattern Cells</em> that allow a user to prepare analyses, launch jobs and visualize results.</p>
+                <p>To insert a GenePattern Cell, insert a new cell, either through the <em>Insert > Insert Cell Below</em> menu or by clicking the <i class="fa-plus fa"></i> button in the notebook toolbar. Once a new cell has been inserted, you can select the cell and then change the cell type to <em>GenePattern</em> either by using the <em>Cell > Cell Type > GenePattern</em> menu or by going to the dropdown menu in the notebook toolbar and selecting <em>GenePattern</em> from the list of options.</p>
+                <h4>Authentication Cells</h4>
+                <p>The first GenePattern cell that a user is likely to encounter is an Authentication Cell. This cell allows a user to sign into a GenePattern server. Doing this allows GenePattern to keep a user's results private, and to remember a user's settings.</p>
+                <p>Authentication cells will look like a login form with the additional option of selecting which GenePattern server to sign into. If the user has already authenticated, such as when usng the GenePattern Notebook Repository, the user will instead be prompted to either sign in as the current user or to cancel and sign in as a different user</p>
+                <p><img class="alignnone size-full wp-image-33" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png" alt="" width="800" height="295" srcset="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png 800w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12-300x111.png 300w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12-768x283.png 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+                <h4>Analysis Cells</h4>
+                <p>After a user has signed in using an Authentication Cell, the next task is usually to insert an Analysis Cell to perform an analysis. To do this click the <em><i class="fa-th fa"></i> Tools</em> button in the notebook toolbar. This wll open a dialog box with a list of available GenePattern analyses. Search or browse through the list and then click one of the options to insert an Analysis Cell of that type.</p>
+                <p>Every Analysis Cell has a number of parameters, which can be used to upload data and to select other options for the analysis. Once you fill in these parameters, click <em>Run</em> to submit them as a job on the GenePattern server.</p>
+                <p>Once the <em>Run</em> button has been clicked, all selected files will upload and then a Job Cell will be inserted below to indicate the status of the job in GenePattern’s queue (see Job Cells below).</p>
+                <p><img class="alignnone size-full wp-image-36" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png" alt="" width="800" height="432" srcset="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png 800w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11-300x162.png 300w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11-768x415.png 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+                <h4>Job Cells</h4>
+                <p>The third and final kind of GenePattern cell are Job Cells. These cells represent an analysis job that has been submitted to GenePattern queue for processing. Jobs progress through the states of Pending, Running and finally either to Completed or Error.</p>
+                <p>Once a job has completed or experienced an error, the cell will update to display a list of outputs. These outputs are files which can be displayed in the browser, downloaded or sent as input to another GenePattern analysis. Outputs are indicated by the <i class="fa fa-info-circle" style="color: rgb(128, 128, 128);"></i> icon.</p>
+                <p>To see a list of all output file options, simply click that output in the list and a menu wll open, displaying the available options.</p>
+                <p>If this analysis includes visualization, the visualization will load and appear inside the Job Cell as well.</p>
+                <p><img class="alignnone size-full wp-image-37" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png" alt="" width="800" height="129" srcset="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png 800w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20-300x48.png 300w, ../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20-768x124.png 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+                <h3>Markdown Cells</h3>
+                <p>Markdown cells are another cell type available in the GenePattern Notebook environment. They allow a notebook author to take notes, document methods or embed images in a notebook document.</p>
+                <p>To insert a markdown cell, first insert a new cell, either through the <em>Insert > Insert Cell Below</em> menu or by clicking the <i class="fa-plus fa"></i> button in the notebook toolbar. Once a new cell has been inserted, you can select the cell and then change the cell type to <em>Markdown</em> either by using the <em>Cell > Cell Type > Markdown</em> menu or by going to the dropdown menu in the notebook toolbar and selecting <em>Markdown</em> from the list of options.</p>
+                <p>Markdown cells allow the user to format text using either <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a> or the <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown</a> syntax. Additionally, we provide a "What You See is What You Get" rich text editor (see the feature below).</p>
+                <h3>Rich Text Editor</h3>
+                <p>The GenePattern Rich Text Editor allows a user to format notes and documentation in a notebook in much the same way that one might use Microsoft Word or Libre Office &mdash; without the need to write a single HTML tag or line of markdown.</p>
+                <p>To use the Rich Text Editor, first insert a markdown cell (see the instructions above). Once a cell has been changed to the markdown type, two buttons should appear to the left of the cell. The <i class="fa fa-file-code-o"></i> button opens the Rich Text Editor and the <i class="fa-step-forward fa"></i> button finalizes the cell and renders the text.</p>
+                <p>Click the <i class="fa fa-file-code-o"></i> button and the editor will appear. A toolbar will show above the cell, allowing the user to format text, insert headers or add links. Style the text as desired, and when finished, click the <i class="fa-step-forward fa"></i> button to finish editing.</p>
+                <p><img alt="" src="../wp-content/uploads/2017/02/wysiwyg.jpg" style="width: 800px; border-width: 1px; border-style: solid;"/></p>
+                <h2 id="advanced">Publishing & Sharing Features</h2>
+                <p>When using the <a href="https://notebook.genepattern.org" target="_blank">GenePattern Notebook Repository</a>, users have the ability to publicly share their notebooks and to run notebooks shared by others.</p>
+                <h3>Browsing Public Notebooks</h3>
+                <ul>
+                    <li>To view the available notebooks, click the &quot;Public Notebooks&quot; tab and browse through the list.</li>
+                    <li>To obtain a copy and run the shared notebook, click the notebook in the list and then select &quot;Get a Copy&quot; on the confirmation dialog that pops up. This will make a copy of the chosen notebook in your current directory, accessible by clicking on the Files tab.
+                    </li>
+                    <li>To run the notebook, click the &quot;Click here if you would like to open this notebook&quot; link in the resulting dialog, or go back to the &quot;Files&quot; tab and run the notebook as normal from there.
+                    </li>
+                </ul>
+                <p><img alt="" src="../wp-content/uploads/2017/02/content_notebook-tab.jpg" style="width: 800px; height: 503px; border-width: 1px; border-style: solid;"/></p>
+                <h3>Publicly Sharing Notebooks</h3>
+                <ul>
+                    <li>To publicly share a notebook, click the checkbox next to that notebook and then click the &quot;Publish&quot; button on the toolbar above.
+                    </li>
+                    <li>This will open a dialog with a short form, prompting you to enter the author&#39;s name, the quality and a brief description. Fill out this information and then click the &quot;Publish&quot; button on the dialog.
+                    </li>
+                    <li>Your notebook should now be available to the public and should appear on the &quot;Public Notebooks&quot; tab. The published version of the notebook is checkpoint of the notebook at the time it was published. Any changes you make to the notebook in the future are not copied over to the published version unless you explicitly choose to update the notebook in the public repository.
+                    </li>
+                </ul>
+                <p><img alt="" src="../wp-content/uploads/2017/02/content_share-notebook.jpg" style="width: 800px; height: 218px; border-width: 1px; border-style: solid;"/></p>
+                <h3>Updating or Removing&nbsp;a Public Notebook</h3>
+                <ul>
+                    <li>You can update or remove a notebook that you have made public by first clicking the checkbox next to the notebook and then clicking the &quot;Publish&quot; button.
+                    </li>
+                    <li>In the dialog that comes up you will have the option to edit any of the notebook&#39;s metadata, such as author name, description, etc.</li>
+                    <li>To update or remove the notebook, click the &quot;Update&quot; or &quot;Unpublish&quot; buttons, respectively.</li>
+                </ul>
+                <h2 id="programmatic">Programmatic Features</h2>
+                <p>In addition to the basic and publishing features intended for use by both non-programming and programming users alike, the GenePattern Notebook environment also provides a variety of features intended primarily for use by coders.</p>
+                <h3>Code Cells</h3>
+                <p>Code cells allow a user to type in execute Python code. They are the default type of cell. Simply enter the Python code you want to run and then click the <i class="fa-step-forward fa"></i> (run cell) button in the notebook toolbar.</p>
+                <p>More information on code cells and their variousoptions is available in the <a href="https://jupyter.readthedocs.io/en/latest/" target="_blank">Jupyter documentation</a>.</p>
+                <h3>GenePattern Python Library</h3>
+                <p>A library is available for using Python to interact with available GenePattern's service. This allows a user to programmatically prepare analyses, launch jobs and retrieve results.</p>
+                <p>A complete tutorial on using the GenePattern Python Library is available as a public notebook in the <a href="https://notebook.genepattern.org">GenePattern Notebook Repository</a>. Additional information is available in our <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb" target="_blank">documentation</a>.</p>
+                <h3>Send to Code</h3>
+                <p>The GenePattern Python Library seamlessly integrates with GenePattern cells. Code examples of how to reference GenePattern jobs or GenePattern result files are available in GenePattern Job Cells by clicking a job result and selecting “Send to Code” in the menu.</p>
+                <p><img class="alignnone size-full wp-image-40" src="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg" alt="" width="800" height="212" srcset="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg 800w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-300x80.jpg 300w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-768x204.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+                <h3>Send to Dataframe</h3>
+                <p>The GenePattern Python Library also provides functionality for common GenePattern file formats, allowing them seamlessly integrate with <a href="http://pandas.pydata.org/" target="_blank">Pandas</a>, a popular Python data analysis library.</p>
+                <p>Both the <a href="http://software.broadinstitute.org/cancer/software/genepattern/file-formats-guide" target="_blank">GCT and ODF file formats</a> are easily loaded as Pandas Dataframes. Code examples of how to load these files are available in GenePattern Job Cells by clicking a GCT or ODF job result and selecting “Send to Dataframe” in the menu.</p>
+                <h3>Python Variable Input</h3>
+                <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable <code>foo</code> would appear as <code>{{ foo }}</code></p>
+                <p>When the <em>Run</em> button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
+            </section>
+            <aside>
+                <ul id="section-menu">
+                    <li><a href="#basic">Basic Features</a></li>
+                    <li><a href="#advanced">Publishing & Sharing Features</a></li>
+                    <li><a href="#programmatic">Programmatic Features</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source
+                    under a BSD-style license.</p>
+                <p>© 2017 GenePattern. All rights reserved. </p>
+            </div>
+        </footer>
+    </div>
+    <script type='text/javascript' src='../wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
+    
+</body>
+</html>
