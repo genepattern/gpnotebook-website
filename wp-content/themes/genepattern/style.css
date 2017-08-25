@@ -81,11 +81,12 @@ input { vertical-align: middle; }
 /* HOME
 /* ----------------------------------- */
 .home #header { padding: 75px 0 0 0; position: absolute; top: 0; left: 0; width: 100%; }
-#banner { background: transparent url(images/banner.jpg) center center no-repeat; background-size: cover; height: 846px; text-align: center; border-bottom: 30px solid #c1c1c1; }
+#banner { background: transparent url(images/banner.jpg) center center no-repeat; background-size: cover; height: 846px; text-align: center;}
 #banner-content { position: relative; top: 50%; transform: translateY(-50%); padding-top: 100px; }
 #banner h1 { color: #FFF; font-size: 55px; max-width: 780px; margin: 0 auto; }
 #banner a.button { font-size: 20px; padding: 13px 45px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px; }
 #banner a.button:hover { background: #FFF; color: #365e9f; }
+.login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
 
 #intros { padding: 115px 0; }
 #intros ul { display: flex; align-items: stretch; justify-content: space-around; }
@@ -163,7 +164,7 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 @media screen and (max-width: 767px) {
 
 	#banner { padding: 350px 5% 100px 5%; height: auto; }
-	#banner-content { padding: 0; }
+	#banner-content { padding: 0; top: 100px}
 
 	#intros ul { display: block; }
 	#intros li { width: 100%; margin: 0 0 70px 0; }
@@ -171,10 +172,10 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 }
 @media screen and (max-width: 568px) {
 
-	.home #header { padding-top: 30px; }
+	.home #header { padding-top: 100px; }
 	#header #logo img { max-width: 80%; height: auto; }
-	#mobile-menu { position: fixed; top: 18px; right: 0; background: #FFF; padding: 5px 15px; color: #365e9f; }
-	#banner h1 { font-size: 40px; }
+	#mobile-menu { position: fixed; top: 50px; right: 0; background: #FFF; padding: 5px 15px; color: #365e9f; }
+	#banner h1 { font-size: 25px;}
 
 	#main section, #main aside { float: none; width: 90%; }
 
