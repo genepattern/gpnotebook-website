@@ -31,6 +31,29 @@
       }
     }
     </script>
+    <script type="text/javascript">
+         jQuery(document).ready(function($) {
+            $.ajax({
+              method: "GET",
+              url: "https://genepattern.broadinstitute.org/gp/rest/v1/config/system-message",
+              xhrFields: {
+                withCredentials: true
+              },
+              beforeSend: function (xhr) {
+                xhr.setRequestHeader ("Authorization", "Basic c3RhdHVzX3F1ZXJ5OnN0YXR1c19xdWVyeQ==");
+              },
+              success: function(x, y) {
+                  $("#genepattern-status").empty();
+                  $("#genepattern-status").append(x)
+              },
+              error: function(x, y) {
+                  $("#genepattern-status").empty();
+                  $("#genepattern-status").append("<p style='color:red; font-weight:bold;'>The GenePattern public server currently appears to be experiencing technical difficulties.</p><p>You may encounter errors when attempting to log in or access otherwise access the server.</p><p>Please try again in a few minutes.</p>")
+              }
+            });
+        });
+        
+    </script>
     <link rel="stylesheet" href="wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
@@ -68,10 +91,20 @@
             </div>
         </header>
         <div id="banner">
-            <div id="banner-content">
+            <div id="banner-content" style="top: 50%;">
                 <h1>Integrating Genomic Analysis with Interactive Notebooks</h1>
                 <p><a href="#intros" class="button">Learn More</a></p>
             </div>
+            <!-- <div class="panel panel-primary" style="width: 80%; margin-left: 12%; top = 20%; position: relative" align ="center" id="status">
+                <div class="panel-heading" style = "font-size: large;">GenePattern Server Status (<code style="color: red;">Live</code>) 
+                </div>
+                <div id="genepattern-status" class="panel-body" style="">Loading...</div>
+            </div> -->
+        </div>
+        <div class="panel panel-primary" style="width: 100%;" id="status">
+                <div class="panel-heading" style = "font-size: large;">GenePattern Server Status (<code style="color: red;">Live</code>) 
+                </div>
+                <div id="genepattern-status" class="panel-body" style="">Loading...</div>
         </div>
         <div id="intros" class="container">
             <ul>
@@ -91,7 +124,7 @@
         </div>
         <div id="welcome">
             <div class="container cf">
-                <h1 style="color: white; font-size: 1.5em; font-weight: bold;">Introduction to the GenePattern Notebook Environment</h1>
+                <h1 style="color: white; font-size: 1.5em;">Introduction to the GenePattern Notebook Environment</h1>
                 <iframe width="100%" height="500" src="https://www.youtube.com/embed/r5Km4UPhb1Q" frameborder="5" allowfullscreen align="center"></iframe>
             </div>
         </div>
@@ -106,6 +139,14 @@
         </div>
 </div>
 -->
+        <!--<aside>
+            <ul id="section-menu">
+                <li><a href="#banner">Top</a></li>
+                <li><a href="#status">System Status</a></li>
+                <li><a href="#intros">Learn More</a></li>
+                <li><a href="#welcome">Welcome Video</a></li>
+            </ul>
+        </aside> -->
         <footer id="footer">
                 <div class="container">
                         <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source under a BSD-style license.</p>
