@@ -31,29 +31,6 @@
       }
     }
     </script>
-    <script type="text/javascript">
-         jQuery(document).ready(function($) {
-            $.ajax({
-              method: "GET",
-              url: "https://genepattern.broadinstitute.org/gp/rest/v1/config/system-message",
-              xhrFields: {
-                withCredentials: true
-              },
-              beforeSend: function (xhr) {
-                xhr.setRequestHeader ("Authorization", "Basic c3RhdHVzX3F1ZXJ5OnN0YXR1c19xdWVyeQ==");
-              },
-              success: function(x, y) {
-                  $("#genepattern-status").empty();
-                  $("#genepattern-status").append(x)
-              },
-              error: function(x, y) {
-                  $("#genepattern-status").empty();
-                  $("#genepattern-status").append("<p style='color:red; font-weight:bold;'>The GenePattern public server currently appears to be experiencing technical difficulties.</p><p>You may encounter errors when attempting to log in or access otherwise access the server.</p><p>Please try again in a few minutes.</p>")
-              }
-            });
-        });
-        
-    </script>
     <link rel="stylesheet" href="wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
