@@ -87,6 +87,8 @@ input { vertical-align: middle; }
 #banner a.button { font-size: 20px; padding: 13px 45px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px;}
 #banner a.button:hover { background: #FFF; color: #365e9f; }
 .login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
+#pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 35%; margin-top: 8%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 16px;}
+#pub a:hover {background-color: #8580b3;}
 .panel { background: white; top: 20%; position: relative;}
 .panel {
     margin-bottom: 20px;
@@ -191,21 +193,22 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
     #icons img { display: none; }
 
 
+
 }
 @media screen and (max-width: 767px) {
 	#banner { padding: 350px 5% 100px 5%; height: auto; }
-	#banner-content { padding: 0; top: 100px}
+    #banner-content {margin-top: 10%}
 	#intros ul { display: block; }
 	#intros li { width: 100%; margin: 0 0 70px 0; }
 
 }
 @media screen and (max-width: 568px) {
-	.home #header { padding-top: 100px; }
-	#header #logo img { max-width: 80%; height: auto; }
-	#mobile-menu { position: fixed; top: 50px; right: 0; background: #FFF; padding: 5px 15px; color: #365e9f; }
-	#banner h1 { font-size: 25px;}
-	#main section, #main aside { float: none; width: 90%; }
+	.home #header { padding-top: 100px;}
+	#header #logo img { max-width: 80%; height: auto;}
+	#mobile-menu {position: fixed; top: 50px; right: 0; background: #FFF; padding: 5px 15px; color: #365e9f;}
+	#banner h1 {font-size: 25px;}
+	#main section, #main aside { float: none; width: 90%;}
 
-	#section-menu { display: none; }
+	#section-menu {display: none;}
 
 }
