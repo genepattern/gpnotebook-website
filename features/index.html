@@ -131,20 +131,35 @@
                     <li>In the dialog that comes up you will have the option to edit any of the notebook&#39;s metadata, such as author name, description, etc.</li>
                     <li>To update or remove the notebook, click the &quot;Update&quot; or &quot;Unpublish&quot; buttons, respectively.</li>
                 </ul>
+
                 <h2 id="programmatic">Programmatic Features</h2>
                 <p>In addition to the basic and publishing features intended for use by both non-programming and programming users alike, the GenePattern Notebook environment also provides a variety of features intended primarily for use by coders.</p>
+
                 <h3>Code Cells</h3>
                 <p>Code cells allow a user to type in execute Python code. They are the default type of cell. Simply enter the Python code you want to run and then click the <i class="fa-step-forward fa"></i> (run cell) button in the notebook toolbar.</p>
                 <p>More information on code cells and their variousoptions is available in the <a href="https://jupyter.readthedocs.io/en/latest/" target="_blank">Jupyter documentation</a>.</p>
+
                 <h3>GenePattern Python Library</h3>
                 <p>A library is available for using Python to interact with available GenePattern's service. This allows a user to programmatically prepare analyses, launch jobs and retrieve results.</p>
                 <p>A complete tutorial on using the GenePattern Python Library is available as a public notebook in the <a href="https://notebook.genepattern.org">GenePattern Notebook Repository</a>. Additional information is available in our <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb" target="_blank">documentation</a>.</p>
+
+                <h3>Python Call Widget</h3>
+                <p>The Call Widget is a way to display any Python function or method call as an interactive widget. This will render the parameters of the
+                    function as a web form.</p>
+                <p>The Call Widget will use any existing docstring for the function as a description, will infer parameter types from default values and will
+                    display parameter annotations as helpful text near each input.</p>
+                <p>To use render a function, simply import the <em>GPCallWidget</em> class from the <em>genepattern</em> package and pass the function to its
+                    constructor.</p>
+                <p><img alt="" src="../for-jupyter-users/call-widget.jpg" style="width: 600px; border: 1px solid;"/></p>
+
                 <h3>Send to Code</h3>
                 <p>The GenePattern Python Library seamlessly integrates with GenePattern cells. Code examples of how to reference GenePattern jobs or GenePattern result files are available in GenePattern Job Cells by clicking a job result and selecting “Send to Code” in the menu.</p>
                 <p><img class="alignnone size-full wp-image-40" src="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg" alt="" width="800" height="212" srcset="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg 800w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-300x80.jpg 300w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-768x204.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+
                 <h3>Send to Dataframe</h3>
                 <p>The GenePattern Python Library also provides functionality for common GenePattern file formats, allowing them seamlessly integrate with <a href="http://pandas.pydata.org/" target="_blank">Pandas</a>, a popular Python data analysis library.</p>
                 <p>Both the <a href="http://software.broadinstitute.org/cancer/software/genepattern/file-formats-guide" target="_blank">GCT and ODF file formats</a> are easily loaded as Pandas Dataframes. Code examples of how to load these files are available in GenePattern Job Cells by clicking a GCT or ODF job result and selecting “Send to Dataframe” in the menu.</p>
+
                 <h3>Python Variable Input</h3>
                 <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable <code>foo</code> would appear as <code>{{ foo }}</code></p>
                 <p>When the <em>Run</em> button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
