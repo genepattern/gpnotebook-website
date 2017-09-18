@@ -81,45 +81,18 @@ input { vertical-align: middle; }
 /* HOME
 /* ----------------------------------- */
 .home #header { padding: 75px 0 0 0; position: absolute; top: 0; left: 0; width: 100%; }
-#banner { background: transparent url(images/banner.jpg) center center no-repeat; background-size: cover; height: 846px; text-align: center;}
+#banner { background: transparent url(images/banner.jpg) center center no-repeat; background-size: cover; height: 1200px; text-align: center;}
 #banner-content { position: relative; top: 0; transform: translateY(-50%); padding-top: 100px; left: 10px}
 #banner h1 { color: #FFF; font-size: 55px; max-width: 780px; margin: 0 auto; }
 #banner a.button { font-size: 20px; padding: 13px 45px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px;}
 #banner a.button:hover { background: #FFF; color: #365e9f; }
 .login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
-#pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 35%; margin-top: 8%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 16px;}
+#pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
 #pub a:hover {background-color: #8580b3;}
-.panel { background: white; top: 20%; position: relative;}
-.panel {
-    margin-bottom: 20px;
-    font: normal 18px/1.48 "Source Sans Pro", sans-serif;
-    color: black;
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 2px;
-}
-.panel-body {
-    padding: 15px
-}
-
-.panel-heading {
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-top-right-radius: 1px;
-    border-top-left-radius: 1px
-}
-
-.panel-primary {
-    border: none;
-}
-
-.panel-primary > .panel-heading {
-    color: #fff;
-    background-color: #3865A9;
-    border-color: #3865A9;
-}
-
-
+#news { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 2%; font-size: 20px;}
+#news a:hover {background-color: #8580b3}
+#news img {height: 50px; width: 150px; margin-bottom: 3%; margin-right: 20px;}
+#news-img a:hover {background-color: transparent}
 
 
 #intros { padding: 115px 0; }
@@ -196,8 +169,10 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 
 }
 @media screen and (max-width: 767px) {
-	#banner { padding: 350px 5% 100px 5%; height: auto; }
-    #banner-content {margin-top: 10%}
+	#banner { padding: 350px 5% 100px 5%; height:auto; }
+    #banner-content {margin-top: 45%}
+    #pub {width: 70%;}
+    #news {width: 70%;}
 	#intros ul { display: block; }
 	#intros li { width: 100%; margin: 0 0 70px 0; }
 
@@ -207,6 +182,7 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 	#header #logo img { max-width: 80%; height: auto;}
 	#mobile-menu {position: fixed; top: 50px; right: 0; background: #FFF; padding: 5px 15px; color: #365e9f;}
 	#banner h1 {font-size: 25px;}
+    #banner-content {margin-top: 75%}
 	#main section, #main aside { float: none; width: 90%;}
 
 	#section-menu {display: none;}
