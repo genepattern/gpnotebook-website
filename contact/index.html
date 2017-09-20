@@ -19,7 +19,15 @@
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.2.1.2'></script>
     <script type='text/javascript' src='../wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.2.1.2'></script>
-    <script type="text/javascript" src='wp-content/themes/genepattern/gtag.js'></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106705148-1');
+    </script>
     <link rel='https://api.w.org/' href='../wp-json/' />
     <link rel="canonical" href="contact/" />
     <link rel='shortlink' href='?p=11' />
@@ -29,10 +37,18 @@
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
-
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown2");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
         var myDropdown = document.getElementById("myDropdown");
           if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
@@ -54,21 +70,35 @@
                     <ul id="menu-main-menu" class="menu">
                         <li id="dropdown" class="menu-item">
                             <ol class="dropdown">
-                                <li class="dropbtn" onclick="myFunction()">Guides</li>
+                                <li class="dropbtn" onclick="myFunction()" style="margin-left: 0%">Guides</li>
                                 <hr style="height: 18px; visibility: hidden;" id="mobile">
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="../user-guide/">Getting Started</a>
+                                    <hr style="margin: 1%">
+                                    <a href="../basic-features/">Basic Features</a>
+                                    <a href="../public-notebooks/">Public Notebooks</a>
+                                    <a href="../notebook-collection/">Notebook Collection</a>
+                                    <a href="../cheat-sheet/">Cheat Sheet</a>
+                                    <hr style="margin: 1%">
+                                    <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
-                                    <a href="../tutorials/">Videos/Tutorials</a>
-                                    <a href="../features/">Features</a>
                                     <a href="../for-jupyter-users/">Jupyter Users</a>
                                 </div>         
                             </ol>
                         </li>
-                        <li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
+                        <li id="menu-item-18" class="menu-item"><a href="../tutorials/">Videos/Tutorials</a></li>
                         <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../resources/">Resources</a></li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../releases/">Releases</a></li>
+                        <li id="dropdown" class="menu-item">
+                            <ol class="dropdown">
+                                <li class="dropbtn" onclick="myFunction2()" style="margin-left: 0%">Resources</li>
+                                <hr style="height: 18px; visibility: hidden;" id="mobile">
+                                <div class="dropdown-content" id="myDropdown2">
+                                    <a href="../community/">Community</a>
+                                    <a href="../releases/">Releases</a>
+                                </div>         
+                            </ol>
+                        </li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
                         <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
@@ -100,7 +130,7 @@
                     <li>For Jupyter Users - <a href="http://genepattern-notebook.org/for-jupyter-users">http://genepattern-notebook.org/for-jupyter-users</a></li>
                     <li>Release Notes - <a href="http://genepattern-notebook.org/releases">http://genepattern-notebook.org/releases</a></li>
                 </ul>
-                <ul><h3><a href="http://genepattern.org">GenePattern</a>:</h3>
+                <ul><h3><a href="http://genepattern.org" style="text-decoration-line: none;">GenePattern</a>:</h3>
                     <li>User Guide - <a href="http://software.broadinstitute.org/cancer/software/genepattern/user-guide", target="_blank">http://software.broadinstitute.org/cancer/software/genepattern/user-guide</a></li>
                     <li>Videos - <a href="http://software.broadinstitute.org/cancer/software/genepattern/video-tutorials", target="_blank">http://software.broadinstitute.org/cancer/software/genepattern/video-tutorials</a></li>
                     <li>FAQ - <a href="http://software.broadinstitute.org/cancer/software/genepattern/FAQ", target="_blank">http://software.broadinstitute.org/cancer/software/genepattern/FAQ</a></li>

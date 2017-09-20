@@ -18,10 +18,18 @@
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
-
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown2");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
         var myDropdown = document.getElementById("myDropdown");
           if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
@@ -29,7 +37,15 @@
       }
     }
     </script>
-    <script type="text/javascript" src='wp-content/themes/genepattern/gtag.js'></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106705148-1');
+    </script>
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
 </head>
@@ -44,21 +60,35 @@
                     <ul id="menu-main-menu" class="menu">
                         <li id="dropdown" class="menu-item">
                             <ol class="dropdown">
-                                <li class="dropbtn" onclick="myFunction()">Guides</li>
+                                <li class="dropbtn" onclick="myFunction()" style="margin-left: 0%">Guides</li>
                                 <hr style="height: 18px; visibility: hidden;" id="mobile">
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="../user-guide/">Getting Started</a>
+                                    <hr style="margin: 1%">
+                                    <a href="../basic-features/">Basic Features</a>
+                                    <a href="../public-notebooks/">Public Notebooks</a>
+                                    <a href="../notebook-collection/">Notebook Collection</a>
+                                    <a href="../cheat-sheet/">Cheat Sheet</a>
+                                    <hr style="margin: 1%">
+                                    <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
-                                    <a href="../tutorials/">Videos/Tutorials</a>
-                                    <a href="../features/">Features</a>
                                     <a href="../for-jupyter-users/">Jupyter Users</a>
                                 </div>         
                             </ol>
                         </li>
-                        <li id="menu-item-18" class="menu-item"><a href="../notebook-collection/">Notebook Collection</a></li>
+                        <li id="menu-item-18" class="menu-item"><a href="../tutorials/">Videos/Tutorials</a></li>
                         <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../resources/">Resources</a></li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../releases/">Releases</a></li>
+                        <li id="dropdown" class="menu-item">
+                            <ol class="dropdown">
+                                <li class="dropbtn" onclick="myFunction2()" style="margin-left: 0%">Resources</li>
+                                <hr style="height: 18px; visibility: hidden;" id="mobile">
+                                <div class="dropdown-content" id="myDropdown2">
+                                    <a href="../community/">Community</a>
+                                    <a href="../releases/">Releases</a>
+                                </div>         
+                            </ol>
+                        </li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
                         <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
@@ -94,7 +124,7 @@
                 <ul id="section-menu">
                     <li><a href="#intro">Introduction to GP Notebook</a></li>
                     <li><a href="#python">Python Integration</a></li>
-                    <li><a href="#slides">Overview Slides</a></li>
+                    <li><a href="#slides">JuptyerCon Slides</a></li>
                 </ul>
             </aside>
         </div>

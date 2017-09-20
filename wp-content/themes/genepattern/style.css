@@ -74,7 +74,8 @@ input { vertical-align: middle; }
 
 #mobile-menu { display: none; }
 #mobile { display:none; }
-
+#dropdown .dropbtn {margin-left: 0%}
+#dropdown .dropdown-content {border: 1px solid grey}
 
 
 /* ----------------------------------- */
@@ -86,11 +87,12 @@ input { vertical-align: middle; }
 #banner h1 { color: #FFF; font-size: 55px; max-width: 780px; margin: 0 auto; }
 #banner a.button { font-size: 20px; padding: 13px 45px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px; font-weight: 100}
 #banner a.button:hover { background: #FFF; color: #365e9f; }
+#banner a {text-decoration-line: none;}
 .login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
 #pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
-#pub a:hover {background-color: #8580b3;}
+#banner a:hover {color: #ed1c24;}
+
 #news { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 2%; font-size: 20px;}
-#news a:hover {background-color: #8580b3}
 #news img {height: 50px; width: 150px; margin-bottom: 3%; margin-right: 20px;}
 #news-img a:hover {background-color: transparent}
 
@@ -123,7 +125,9 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 #main section h3 { font-size: 30px; color: #3b2942; margin: 0 0 10px 0; }
 #main section img { max-width: 100%; height: auto;}
 #main section code { background: #EFEFEF; padding: 20px 30px; margin: 0 0 15px 0; display: block; }
-#contentbutton a { float: right; } 
+#contentbutton a { float: right; text-decoration-line: none;}
+#pdf {float: left; left: 0px}
+#main a {text-decoration-line: none;}
 
 .page-template-full-width #main section { width: 100%; float: none; }
 
@@ -164,10 +168,10 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
     #header nav ul li ol li { font: 30px; float: none; position: fixed; margin: 0px 0px 10px 0px;
     }
     #icons img { display: none; }
-
-
+    #cheatsheet {display: none;}
 
 }
+
 @media screen and (max-width: 767px) {
 	#banner { padding: 350px 5% 100px 5%; height:auto; }
     #banner-content {margin-top: 45%}

@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Notebook Collection &#8211; Gene Pattern Notebook</title>
-    <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Public Notebooks &#8211; Gene Pattern Notebook</title>
+    <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
-    <link rel='https://api.w.org/' href='../wp-json/' />
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106705148-1');
+    </script>
+    <link rel='https://api.w.org/' href='../wp-json/'/>
+    <style type="text/css">
+        h3 a {
+            text-decoration: none;
+        }
+    </style>
     <script type='text/javascript'>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -39,20 +51,11 @@
       }
     }
     </script>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
-      gtag('js', new Date());
-
-      gtag('config', 'UA-106705148-1');
-    </script>
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
 </head>
     
-<body class="page-template-default page page-id-7">
+<body class="page-template-default page page-id-9">
     <div id="wrapper">
         <header id="header">
             <div class="container cf">
@@ -100,32 +103,52 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1>Notebook Collection</h1>
+                <h1>GenePattern Notebook Environment Features</h1>
                 <hr>
-                <p>The following GenePattern Notebook files provide examples of how to perform analyses using the GenePattern Notebook environment. To view and use these notebooks in your own GenePattern Notebook environment:</p>
-                <ol>
-                    <li><a href="https://notebook.genepattern.org">Log in</a> to the GenePattern Notebook Repository</li>
-                    <li>You will see a listing of files similar to that shown below</li>
-                    <li>If you are new to GenePattern Notebook, select one of the tutorial notebooks in the home directory. You can click on these to learn the basics of the notebook environment.</li>
-                </ol>
-                <p><img class="alignnone wp-image-72 size-large" src="../wp-content/uploads/2017/02/gpnb1-1024x473.png" width="1024" height="473" srcset="../wp-content/uploads/2017/02/gpnb1-1024x473.png 1024w, ../wp-content/uploads/2017/02/gpnb1-300x139.png 300w, ../wp-content/uploads/2017/02/gpnb1-768x355.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+                <h2 id="advanced">Public Notebooks</h2>
+                <p>When using the <a href="https://notebook.genepattern.org" target="_blank">GenePattern Notebook Repository</a>, users have the ability to publicly share their notebooks and to run notebooks shared by others.</p>
+                <h3>1. Browsing Public Notebooks</h3>
                 <ul>
-                    <li>To view analysis-based notebooks, navigate to the Public Notebooks tab.</li>
-                    <li>You will see a listing of notebooks. Click on any of these notebooks and select Get a Copy. Click on the "Click here" link in the resulting dialog and follow the instructions in blue.</li>
+                    <li>To view the available notebooks, click the &quot;Public Notebooks&quot; tab and browse through the list.</li>
+                    <li>To obtain a copy and run the shared notebook, click the notebook in the list and then select &quot;Get a Copy&quot; on the confirmation dialog that pops up. This will make a copy of the chosen notebook in your current directory, accessible by clicking on the Files tab.
+                    </li>
+                    <li>To run the notebook, click the &quot;Click here if you would like to open this notebook&quot; link in the resulting dialog, or go back to the &quot;Files&quot; tab and run the notebook as normal from there.
+                    </li>
                 </ul>
-                <p><img class="alignnone ../wp-image-73 size-large" src="../wp-content/uploads/2017/02/content_notebook-tab.jpg" width="1024" height="807" srcset="../wp-content/uploads/2017/02/content_notebook-tab.jpg 1024w, ../wp-content/uploads/2017/02/content_notebook-tab.jpg 300w, ../wp-content/uploads/2017/02/content_notebook-tab.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+                <p><img alt="" src="../wp-content/uploads/2017/02/content_notebook-tab.jpg" style="width: 800px; height: 503px; border-width: 1px; border-style: solid;"/></p>
+                <h3>2. Publicly Sharing Notebooks</h3>
+                <ul>
+                    <li>To publicly share a notebook, click the checkbox next to that notebook and then click the &quot;Publish&quot; button on the toolbar above.
+                    </li>
+                    <li>This will open a dialog with a short form, prompting you to enter the author&#39;s name, the quality and a brief description. Fill out this information and then click the &quot;Publish&quot; button on the dialog.
+                    </li>
+                    <li>Your notebook should now be available to the public and should appear on the &quot;Public Notebooks&quot; tab. The published version of the notebook is checkpoint of the notebook at the time it was published. Any changes you make to the notebook in the future are not copied over to the published version unless you explicitly choose to update the notebook in the public repository.
+                    </li>
+                </ul>
+                <p><img alt="" src="../wp-content/uploads/2017/02/content_share-notebook.jpg" style="width: 800px; height: 218px; border-width: 1px; border-style: solid;"/></p>
+                <h3>3. Updating or Removing&nbsp;a Public Notebook</h3>
+                <ul>
+                    <li>You can update or remove a notebook that you have made public by first clicking the checkbox next to the notebook and then clicking the &quot;Publish&quot; button.
+                    </li>
+                    <li>In the dialog that comes up you will have the option to edit any of the notebook&#39;s metadata, such as author name, description, etc.</li>
+                    <li>To update or remove the notebook, click the &quot;Update&quot; or &quot;Unpublish&quot; buttons, respectively.</li>
+                </ul>
             </section>
             <aside>
+                <ul id="section-menu">
+                    <li><a href="#advanced">Public Notebooks</a></li>
+                </ul>
             </aside>
         </div>
         <footer id="footer">
             <div class="container">
-                <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source under a BSD-style license.</p>
+                <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source
+                    under a BSD-style license.</p>
                 <p>© 2017 GenePattern. All rights reserved. </p>
             </div>
         </footer>
     </div>
     <script type='text/javascript' src='../wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
-
+    
 </body>
 </html>
