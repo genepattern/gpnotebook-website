@@ -116,30 +116,164 @@
                 <p>A library is available for using Python to interact with available GenePattern's service. This allows a user to programmatically prepare analyses, launch jobs and retrieve results.</p>
                 <p>A complete tutorial on using the GenePattern Python Library is available as a public notebook in the <a href="https://notebook.genepattern.org">GenePattern Notebook Repository</a>. Additional information is available in our <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb" target="_blank">documentation</a>.</p>
 
-                <h3>3. UI Builder</h3>
+                <h3>3. Send to Code</h3>
+                <p>The GenePattern Python Library seamlessly integrates with GenePattern cells. Code examples of how to reference GenePattern jobs or GenePattern result files are available in GenePattern Job Cells by clicking a job result and selecting “Send to Code” in the menu.</p>
+                <p><img class="alignnone size-full wp-image-40" src="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg" alt="" width="800" height="212" srcset="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg 800w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-300x80.jpg 300w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-768x204.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+
+                <h3>4. Send to Dataframe</h3>
+                <p>The GenePattern Python Library also provides functionality for common GenePattern file formats, allowing them seamlessly integrate with <a href="http://pandas.pydata.org/" target="_blank">Pandas</a>, a popular Python data analysis library.</p>
+                <p>Both the <a href="http://software.broadinstitute.org/cancer/software/genepattern/file-formats-guide" target="_blank">GCT and ODF file formats</a> are easily loaded as Pandas Dataframes. Code examples of how to load these files are available in GenePattern Job Cells by clicking a GCT or ODF job result and selecting “Send to Dataframe” in the menu.</p>
+
+                <h3>5. Python Variable Input</h3>
+                <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable <code>foo</code> would appear as <code>{{ foo }}</code></p>
+                <p>When the <em>Run</em> button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
+
+                <h2 id="ui-builder">UI Builder</h2>
                 <p>The UI Builder is a way to display any Python function or method call as an interactive widget. This will render the parameters of the
                     function as a web form.</p>
                 <p>The UI Builder will use any existing docstring for the function as a description, will infer parameter types from default values and will
                     display parameter annotations as helpful text near each input.</p>
-                <p>To use render a function, simply import the <em>GPUIBuilder</em> class from the <em>genepattern</em> package and pass the function to its
-                    constructor.</p>
-                <p><img alt="" src="../for-jupyter-users/call-widget.jpg" style="width: 600px; border: 1px solid;"/></p>
+                <p><img alt="" src="ui_builder_1.jpg" style="width: 100%;"/></p>
 
-                <h3>4. Send to Code</h3>
-                <p>The GenePattern Python Library seamlessly integrates with GenePattern cells. Code examples of how to reference GenePattern jobs or GenePattern result files are available in GenePattern Job Cells by clicking a job result and selecting “Send to Code” in the menu.</p>
-                <p><img class="alignnone size-full wp-image-40" src="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg" alt="" width="800" height="212" srcset="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg 800w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-300x80.jpg 300w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-768x204.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+                <h3>1. Build the UI</h3>
+                <p>The simplest way to render a function using the UI Builder is to import the <em>genepattern</em> package and then attach the <em>build_ui</em>
+                    decorator to the function's definition. A code example for this is given below:</p>
 
-                <h3>5. Send to Dataframe</h3>
-                <p>The GenePattern Python Library also provides functionality for common GenePattern file formats, allowing them seamlessly integrate with <a href="http://pandas.pydata.org/" target="_blank">Pandas</a>, a popular Python data analysis library.</p>
-                <p>Both the <a href="http://software.broadinstitute.org/cancer/software/genepattern/file-formats-guide" target="_blank">GCT and ODF file formats</a> are easily loaded as Pandas Dataframes. Code examples of how to load these files are available in GenePattern Job Cells by clicking a GCT or ODF job result and selecting “Send to Dataframe” in the menu.</p>
+                <code><pre>
+import genepattern
 
-                <h3>6. Python Variable Input</h3>
-                <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable <code>foo</code> would appear as <code>{{ foo }}</code></p>
-                <p>When the <em>Run</em> button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
+@genepattern.build_ui
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
+
+                <p>Alternatively, the UI Builder widget may defined and referenced directly. To render a function in this way, simply import the
+                    <em>GPUIBuilder</em> class from the <em>genepattern</em> package and pass the function to the <em>GPUIBuilder</em> constructor. To display
+                    the widget, just return the <em>GPUIBuilder</em> object in a Jupyter code cell. A code example is provided below:</p>
+
+                <code><pre>
+from genepattern import GPUIBuilder
+
+def example_function(first_parameter, second_parameter):
+    . . .
+
+# Create the GPUIBuilder object and immediately
+# return it for display in Jupyter
+GPUIBuilder(example_function)</pre></code>
+
+
+                <h3>2. Python Variables & String Literals</h3>
+                <p>Python variables may be used as input when filling out a UI Builder form.  To do this, simply type the name of the variable into the
+                    input field. When the form is submitted, the widget will pass a reference to the variable to the resulting function call.</p>
+
+                <p><img alt="" src="ui_builder_2.jpg" style="width: 100%;"/></p>
+
+                <p>Conversely, to ensure that an input value is evaluated as a string literal rather than a variable name, a user can wrap the input to a
+                    particular field in either single or double quotes (<em>'</em> or <em>"</em>). This tells the UI Builder to skip checking for variable names
+                    and to treat the value in quotes as a literal string. For example, forcing the string <em>foo</em> to be treated as a string literal would
+                    be entered in the input field as:</p>
+                <code>"foo"</code>
+
+                <h3>3. String Serialization</h3>
+
+                <p>The input to a UI Builder form may include a string representation of a variable's <em>value</em> rather than a reference to the variable
+                    itself. This is useful for embedding the value inside a larger string, or when passing a variable reference would be unwanted.</p>
+                <p>This functionality can be achieved by placing the variable name inside double curly brackets. For example, embedding the string
+                    serialization of the variable <em>foo</em> would be entered into an input field as:</p>
+                <code>{{ foo }}</code>
+
+                <p><img alt="" src="ui_builder_3.jpg" style="width: 100%;"/></p>
+
+                <h3>4. Rendering Existing Functions</h3>
+
+                <p>Existing Python functions, such as those included in third-party Python libraries, can also be used with the UI Builder. To display an
+                    existing function first import it and then pass the function into the constructor of the <em>GPUIBuilder</em> object. Return this object in
+                    a cell to display the resulting widget. For example, the code for displaying <em>scikit-learn</em>'s KMeans function is given below.</p>
+
+                <code><pre>
+import genepattern
+import sklearn.cluster
+
+genepattern.GPUIBuilder(sklearn.cluster.KMeans)</pre></code>
+
+                <h3>5. Overriding Properties</h3>
+
+                <p>By default, the widget name will be the function name, the description will be the docstring of the function and the parameter names will be the
+                    same as the parameters defined in the code. All of these, however, can be manually overridden. This is particularly useful whe providing
+                    better names or descriptions that users would find helpful.</p>
+                <p>To override the default values, optional parameters may be passed into the <em>build_ui</em> decorator or into the <em>GPUIBuilder</em>
+                    constructor. Examples overriding the widget name and description are given below:</p>
+                <code><pre>
+@genepattern.build_ui(name="Simple Example",
+                      description="This is an example function.")
+def example_function(param_1, param_2):
+    . . .</pre></code>
+                <p>The same effect can be also achieved when directly instantiating the <em>GPUIBuilder</em> object.</p>
+                <code><pre>
+genepattern.GPUIBuilder(sklearn.cluster.KMeans,
+                        name="KMeans Clustering",
+                        description="Groups data into K clusters")</pre></code>
+
+                <p><img alt="" src="ui_builder_4.jpg" style="width: 100%;"/></p>
+
+                <h3>6. Overriding Parameters</h3>
+
+                <p>The names and descriptions of individual parameters may also be overridden. In this case, a dictionary may be passed to the <em>build_ui</em>
+                    decorator or the <em>GPUIBuilder</em> constructor with the parameter's name as the key and the properties to override as the value.</p>
+                <p>A code example is given below which overrides the name of a parameter, the description of the parameter and the default value of the parameter.</p>
+                <code><pre>
+@genepattern.build_ui(parameters={
+    "param_1": {
+        "name": "foo",
+        "description": "This parameter has been renamed.",
+        "default": "bar"
+    }
+})
+def example_function(param_1, param_2):
+    . . .</pre></code>
+
+                <p><img alt="" src="ui_builder_5.jpg" style="width: 100%;"/></p>
+
+                <h3>7. Hiding Parameters</h3>
+                <p>Sometimes a particular function has parameters that shouldn't be changed in the current context. The UI Builder has the ability to hide the
+                    input for these parameters, simplifying the user interface and allowing users to focus only on the relevant inputs. When the function is
+                    called, the hidden parameters will automatically use their default values. This may be combined with overriding the default value for
+                    the parameter in question in order to force a particular input.</p>
+                <p>A code example is given below in which several parameters of <em>scikit-learn</em>'s KMeans implementation are hidden.</p>
+
+                <code><pre>
+genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
+    "init": { "hide": True },
+    "verbose": { "hide": True },
+    "random_state": { "hide": True, "default": 1234 },
+    "copy_x": { "hide": True }
+})</pre></code>
+
+                <p><img alt="" src="ui_builder_6.jpg" style="width: 100%;"/></p>
+
+                <h3>8. Choice Parameters</h3>
+                <p>Sometimes a parameter only accepts a limited set of valid input values. This is often represented in a user interface as a dropdown
+                    (<em>select</em>) input. The UI Builder has support for this functionality. To change a particular parameter into a dropdown input, simply
+                    provide the parameter with a dictionary of available choices. A code example is given below.</p>
+                <code><pre>
+@genepattern.build_ui(parameters={
+    "param_1": {
+        "default": "some_value",
+        "choices": {
+            "foo label": "foo value",
+            "bar label": "bar value",
+            "some_label": "some_value"
+        }
+    }
+})
+def example_function(param_1, param_2):
+    . . .</pre></code>
+
+                <p><img alt="" src="ui_builder_7.jpg" style="width: 100%;"/></p>
             </section>
             <aside>
                 <ul id="section-menu">
                     <li><a href="#programmatic">Programmatic Features</a></li>
+                    <li><a href="#ui-builder">UI Builder</a></li>
                 </ul>
             </aside>
         </div>
