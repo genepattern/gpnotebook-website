@@ -23,10 +23,18 @@
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
-
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown2");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
         var myDropdown = document.getElementById("myDropdown");
           if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
@@ -55,8 +63,6 @@
                                     <hr style="margin: 1%">
                                     <a href="../basic-features/">Basic Features</a>
                                     <a href="../public-notebooks/">Public Notebooks</a>
-                                    <a href="../notebook-collection/">Notebook Collection</a>
-                                    <a href="../cheat-sheet/">Cheat Sheet</a>
                                     <hr style="margin: 1%">
                                     <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
@@ -73,10 +79,12 @@
                                 <div class="dropdown-content" id="myDropdown2">
                                     <a href="../community/">Community</a>
                                     <a href="../releases/">Releases</a>
+                                    <a href="../example-notebooks/">Example Notebooks</a>
+                                    <a href="../cheat-sheet/">Cheat Sheet</a>
                                 </div>         
                             </ol>
                         </li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li>
+                        <!-- <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li> -->
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
                         <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
