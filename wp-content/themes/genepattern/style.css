@@ -163,7 +163,9 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
     width: auto;
     margin-bottom: -50px;
 }
-
+#news a, #pub a {
+    font-weight: 100;
+}
 
 /* ----------------------------------- */
 /* FOOTER
