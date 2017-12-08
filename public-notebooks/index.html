@@ -8,6 +8,7 @@
     <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
@@ -72,8 +73,6 @@
                                     <hr style="margin: 1%">
                                     <a href="../basic-features/">Basic Features</a>
                                     <a href="../public-notebooks/">Public Notebooks</a>
-                                    <a href="../notebook-collection/">Notebook Collection</a>
-                                    <a href="../cheat-sheet/">Cheat Sheet</a>
                                     <hr style="margin: 1%">
                                     <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
@@ -90,10 +89,12 @@
                                 <div class="dropdown-content" id="myDropdown2">
                                     <a href="../community/">Community</a>
                                     <a href="../releases/">Releases</a>
+                                    <a href="../example-notebooks/">Example Notebooks</a>
+                                    <a href="../cheat-sheet/">Cheat Sheet</a>
                                 </div>         
                             </ol>
                         </li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li>
+                        <!-- <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li> -->
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
                         <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
@@ -103,30 +104,33 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1>GenePattern Notebook Environment Features</h1>
+                <h1>Public Notebook Collection</h1>
                 <hr>
-                <h2 id="advanced">Public Notebooks</h2>
-                <p>When using the <a href="https://notebook.genepattern.org" target="_blank">GenePattern Notebook Repository</a>, users have the ability to publicly share their notebooks and to run notebooks shared by others.</p>
-                <h3>1. Browsing Public Notebooks</h3>
+                <p>GenePattern Notebook provides a repository where users can publicly disseminate their notebooks. It includes notebooks developed by the GenePattern team demonstrating a number of genomic and machine learning analyses, as well as notebooks contributed by the user community.</p>
+                
+                <p>When using the <a href="https://notebook.genepattern.org" target="_blank"><b>GenePattern Public Notebook Collection</b></a>, users have the ability to publicly share their notebooks and to run notebooks shared by others.</p>
+
+                <h3 style="margin-top: 0px;" id="browsing">1. Browsing and Loading Public Notebooks</h3>
                 <ul>
+                    <li><a href="https://notebook.genepattern.org"><b>Log in</b></a> to the GenePattern Notebook Repository</li>
                     <li>To view the available notebooks, click the &quot;Public Notebooks&quot; tab and browse through the list.</li>
                     <li>To obtain a copy and run the shared notebook, click the notebook in the list and then select &quot;Get a Copy&quot; on the confirmation dialog that pops up. This will make a copy of the chosen notebook in your current directory, accessible by clicking on the Files tab.
                     </li>
                     <li>To run the notebook, click the &quot;Click here if you would like to open this notebook&quot; link in the resulting dialog, or go back to the &quot;Files&quot; tab and run the notebook as normal from there.
                     </li>
                 </ul>
-                <p><img alt="" src="../wp-content/uploads/2017/02/content_notebook-tab.jpg" style="width: 800px; height: 503px; border-width: 1px; border-style: solid;"/></p>
-                <h3>2. Publicly Sharing Notebooks</h3>
+                <p><img src="../wp-content/uploads/2017/02/content_notebook-tab.jpg?x=1" style="border: 1px solid black"/></p>
+                <h3 id="sharing">2. Publicly Sharing Notebooks</h3>
                 <ul>
                     <li>To publicly share a notebook, click the checkbox next to that notebook and then click the &quot;Publish&quot; button on the toolbar above.
                     </li>
                     <li>This will open a dialog with a short form, prompting you to enter the author&#39;s name, the quality and a brief description. Fill out this information and then click the &quot;Publish&quot; button on the dialog.
                     </li>
-                    <li>Your notebook should now be available to the public and should appear on the &quot;Public Notebooks&quot; tab. The published version of the notebook is checkpoint of the notebook at the time it was published. Any changes you make to the notebook in the future are not copied over to the published version unless you explicitly choose to update the notebook in the public repository.
+                    <li>Your notebook should now be available to the public and should appear on the &quot;Public Notebooks&quot; tab. The published version of the notebook is a checkpoint of the notebook at the time it was published. Any changes you make to the notebook in the future are not copied over to the published version unless you explicitly choose to update the notebook in the public repository.
                     </li>
                 </ul>
                 <p><img alt="" src="../wp-content/uploads/2017/02/content_share-notebook.jpg" style="width: 800px; height: 218px; border-width: 1px; border-style: solid;"/></p>
-                <h3>3. Updating or Removing&nbsp;a Public Notebook</h3>
+                <h3 id="up-rm">3. Updating or Removing&nbsp;a Public Notebook</h3>
                 <ul>
                     <li>You can update or remove a notebook that you have made public by first clicking the checkbox next to the notebook and then clicking the &quot;Publish&quot; button.
                     </li>
@@ -136,7 +140,9 @@
             </section>
             <aside>
                 <ul id="section-menu">
-                    <li><a href="#advanced">Public Notebooks</a></li>
+                    <li><a href="#browsing">Browsing Notebooks</a></li>
+                    <li><a href="#sharing">Sharing Notebooks</a></li>
+                    <li><a href="#up-rm">Updating/Removing Notebooks</a></li>
                 </ul>
             </aside>
         </div>

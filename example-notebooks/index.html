@@ -10,6 +10,7 @@
     <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
@@ -69,8 +70,6 @@
                                     <hr style="margin: 1%">
                                     <a href="../basic-features/">Basic Features</a>
                                     <a href="../public-notebooks/">Public Notebooks</a>
-                                    <a href="../notebook-collection/">Notebook Collection</a>
-                                    <a href="../cheat-sheet/">Cheat Sheet</a>
                                     <hr style="margin: 1%">
                                     <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
@@ -87,10 +86,12 @@
                                 <div class="dropdown-content" id="myDropdown2">
                                     <a href="../community/">Community</a>
                                     <a href="../releases/">Releases</a>
+                                    <a href="../example-notebooks/">Example Notebooks</a>
+                                    <a href="../cheat-sheet/">Cheat Sheet</a>
                                 </div>         
                             </ol>
                         </li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li>
+                        <!-- <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li> -->
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
                         <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
                         <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
@@ -100,20 +101,39 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1>Notebook Collection</h1>
+                <h1>Example Notebooks</h1>
                 <hr>
-                <p>The following GenePattern Notebook files provide examples of how to perform analyses using the GenePattern Notebook environment. To view and use these notebooks in your own GenePattern Notebook environment:</p>
-                <ol>
-                    <li><a href="https://notebook.genepattern.org">Log in</a> to the GenePattern Notebook Repository</li>
-                    <li>You will see a listing of files similar to that shown below</li>
-                    <li>If you are new to GenePattern Notebook, select one of the tutorial notebooks in the home directory. You can click on these to learn the basics of the notebook environment.</li>
-                </ol>
-                <p><img class="alignnone wp-image-72 size-large" src="../wp-content/uploads/2017/02/gpnb1-1024x473.png" width="1024" height="473" srcset="../wp-content/uploads/2017/02/gpnb1-1024x473.png 1024w, ../wp-content/uploads/2017/02/gpnb1-300x139.png 300w, ../wp-content/uploads/2017/02/gpnb1-768x355.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
-                <ul>
-                    <li>To view analysis-based notebooks, navigate to the Public Notebooks tab.</li>
-                    <li>You will see a listing of notebooks. Click on any of these notebooks and select Get a Copy. Click on the "Click here" link in the resulting dialog and follow the instructions in blue.</li>
-                </ul>
-                <p><img class="alignnone ../wp-image-73 size-large" src="../wp-content/uploads/2017/02/content_notebook-tab.jpg" width="1024" height="807" srcset="../wp-content/uploads/2017/02/content_notebook-tab.jpg 1024w, ../wp-content/uploads/2017/02/content_notebook-tab.jpg 300w, ../wp-content/uploads/2017/02/content_notebook-tab.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+                <p>The GenePattern Team has developed a number of tutorial and analysis notebooks that have been published in the <a href="../public-notebooks/"><b>Public Notebook Repository</b></a>.</p>
+                <br>
+                <h1 style="margin-bottom: 20px; font-size: 25px;">List of the current public notebooks</h1>
+                <hr>
+                <div id="notebook_list" class="scrollable-menu" role="menu" style="height:auto; max-height: 500px; overflow-x: hidden;">
+                </div>
+                <script type="application/javascript">
+                    $.ajax({
+                        type: "GET",
+                        url: "https://notebook.genepattern.org:8000/notebooks/",
+                        dataType: "json",
+                        cache: false,
+                        success: function(data) {
+                            const notebooks = data.results;
+                            notebooks.forEach(function(nb) {
+                                if (nb.author == "GenePattern Team") {
+                                $(`<div class="notebook-listing"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin-bottom: 0px;">${nb.name}</h3>
+                                <address class="notebook-author" rel="author" style="font-size: 14px;">${nb.author}</address>
+                                <address class="notebook-quality" rel="quality" style="font-size: 12px;">${nb.quality}</address>
+                                <p class="notebook-description" style="font-size: 12px;">${nb.description}</p><hr></div>`)
+                                    .appendTo("#notebook_list");
+                                }
+                            });
+                        },
+                        error: function(error) {
+                            console.log(error);
+                        }
+                    });
+                </script>
+                <h1 style="font-size: 17px; margin-top: 30px;">Note - To view and use these notebooks in your own environment see the <a href="../public-notebooks/"><b>Public Notebooks Page</b></a></h1>
+                
             </section>
             <aside>
             </aside>
