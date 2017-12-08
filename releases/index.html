@@ -76,26 +76,51 @@
                 <hr/>
                 <h2 id="repo">GenePattern Notebook Repository</h2>
                 <p>Release updates for the <a href="https://notebook.genepattern.org" target="_blank">GenePattern Notebook Repository</a>.</p>
+
+                <h3>GenePattern Notebook Repository 17.12 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
+                <ul>
+                    <li>Improved compute node scaling and performance.</li>
+                    <li>Public notebook service port change.</li>
+                </ul>
+
                 <h3>GenePattern Notebook Repository 17.07 <em style="font-size: 0.8em; color: gray;">(July 27, 2017)</em></h3>
                 <ul>
-                    <li>Support for Python environment versioning added</li>
-                    <li>Python 3 kernel updated to Python 3.6</li>
-                    <li>GenePattern Notebook extension updated to v0.6.4</li>
-                    <li>GenePattern Python library updated to v1.3.0</li>
-                    <li>Scientific computing libraries updated</li>
-                    <li>Deprecated Python 2 kernel</li>
+                    <li>Support for Python environment versioning added.</li>
+                    <li>Python 3 kernel updated to Python 3.6.</li>
+                    <li>GenePattern Notebook extension updated to v0.6.4.</li>
+                    <li>GenePattern Python library updated to v1.3.0.</li>
+                    <li>Scientific computing libraries updated.</li>
+                    <li>Deprecated Python 2 kernel.</li>
                 </ul>
-                <h3><a href="notebook-repo-17.05/">GenePattern
-                    Notebook Repository 17.05</a> <em style="font-size: 0.8em; color: gray;">(May 15, 2017)</em></h3>
+
+                <h3><a href="notebook-repo-17.05/">GenePattern Notebook Repository 17.05</a> <em style="font-size: 0.8em; color: gray;">(May 15, 2017)</em></h3>
                 <ul>
-                    <li>Notebook sharing functionality</li>
-                    <li>Infrastructure update (AWS hosting)</li>
+                    <li>Notebook sharing functionality.</li>
+                    <li>Infrastructure update (AWS hosting).</li>
                 </ul>
 
                 <hr/>
 
                 <h2 id="extension">GenePattern Notebook Extension</h2>
                 <p>Release updates for the <a href="https://github.com/genepattern/genepattern-notebook" target="_blank">GenePattern Notebook nbextension</a>. Install using <em>pip install genepattern-notebook</em> or <em>conda install -c genepattern genepattern-notebook</em>.</p>
+
+                <h3>GenePattern Notebook 0.6.8 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
+                <ul>
+                    <li>UI Builder now has type-specific support for file, number, password and bool parameters.</li>
+                    <li>Placeholder job cells added.</li>
+                    <li>Job cells can now send a browser notification when a job completes.</li>
+                    <li>Added the ability to programmatically set the output variable in the UI Builder.</li>
+                    <li>Add ability to pass in custom function import path in the UI Builder.</li>
+                    <li>Bug fixes.</li>
+                </ul>
+
+                <h3>GenePattern Notebook 0.6.7 <em style="font-size: 0.8em; color: gray;">(November 8, 2017)</em></h3>
+                <ul>
+                    <li>Improved UI Builder customization and features.</li>
+                    <li>Usability improvements.</li>
+                    <li>Bug fixes.</li>
+                </ul>
+
                 <h3>GenePattern Notebook 0.6.6 <em style="font-size: 0.8em; color: gray;">(October 13, 2017)</em></h3>
                 <ul>
                     <li>UI Builder support for choice parameters and dynamic configuration.</li>
@@ -123,7 +148,15 @@
                 <hr/>
 
                 <h2 id="python">GenePattern Python Library</h2>
-                <p>Release updates for the <a href="https://github.com/genepattern/genepattern-notebook" target="_blank">GenePattern Notebook nbextension</a>. Install using <em>pip install genepattern-notebook</em> or <em>conda install -c genepattern genepattern-notebook</em>.</p>
+                <p>Release updates for the <a href="https://github.com/genepattern/genepattern-python" target="_blank">GenePattern Python Library</a>. Install using <em>pip install genepattern-python</em> or <em>conda install -c genepattern genepattern-python</em>.</p>
+
+                <h3>GenePattern Python 1.4.0 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
+                <ul>
+                    <li>Added write_gct() and write_odf(), which write pandas dataframes to disk in GCT or ODF formats, respectively.</li>
+                    <li>ODF() and GCT() now directly create pandas dataframes from the loaded data.</li>
+                    <li>Added get_recent_jobs() function to retrieve a list of recently launched jobs.</li>
+                    <li>Dropped Python 2 support.</li>
+                </ul>
 
                 <h3>GenePattern Python 1.3.1 <em style="font-size: 0.8em; color: gray;">(September 15, 2017)</em></h3>
                 <ul>
@@ -134,6 +167,21 @@
                 <ul>
                     <li>Functionality added for creating GenePattern modules from Python (gp.modules)</li>
                 </ul>
+
+                <hr/>
+
+                <h2 id="nbtools">Notebook Tool Manager</h2>
+                <p>Release updates for the <a href="https://github.com/genepattern/nbtool-manager" target="_blank">Notebook Tool Manager</a>. Install using <em>pip install nbtools</em> or <em>conda install -c genepattern nbtools</em>.</p>
+
+                <h3>Notebook Tool Manager 0.1.6 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
+                <ul>
+                    <li>Focus is now automatically given to the search/filter box when the toolbox is opened.</li>
+                </ul>
+
+                <h3>Notebook Tool Manager 0.1.5 <em style="font-size: 0.8em; color: gray;">(October 19, 2017)</em></h3>
+                <ul>
+                    <li>Button label for for Jupyter >= 5.1.0.</li>
+                </ul>
             </section>
 
             <aside>
@@ -141,14 +189,14 @@
                     <li><a href="#repo">Notebook Repository</a></li>
                     <li><a href="#extension">GenePattern Extension</a></li>
                     <li><a href="#python">GenePattern Python</a></li>
+                    <li><a href="#nbtools">Notebook Tool Manager</a></li>
                 </ul>
             </aside>
         </div>
         <footer id="footer">
             <div class="container">
-                <p>To use the GenePattern Notebook extension, you will need to register for an account. GenePattern usage is free and the software is open source
-                    under a BSD-style license.</p>
-                <p>© 2017 GenePattern. All rights reserved. </p>
+                <p>GenePattern Notebook usage is free and the software is open source under a BSD-style license.</p>
+                <p>© 2017 Regents of the University of California and the Broad Institute. </p>
             </div>
         </footer>
     </div>
