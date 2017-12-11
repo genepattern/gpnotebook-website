@@ -250,7 +250,47 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
 
                 <p><img alt="" src="ui_builder_6.jpg" style="width: 100%;"/></p>
 
-                <h3>8. Choice Parameters</h3>
+                <h3>8. Parameter Types</h3>
+                <p>The UI Builder supports a number of parameter types and implements features to make handling those types easier. Supported types include:</p>
+                <ul>
+                    <li><strong>Text:</strong> Supports any text value. Unless referencing an existing Python variable, any input gets cast to a Python string
+                        value. Text is also the default parameter type if no other type information has been specified or can be determined.</li>
+                    <li><strong>Number:</strong> Accepts any numerical value and renders in a notebook as an HTML number input.</li>
+                    <li><strong>Password:</strong> Works exactly like a text input, but obfuscates the input value as a password field.</li>
+                    <li><strong>Choice:</strong> When provided with a list of choices, this input will render as a dropdown parameter, with the default value
+                        selected. Choice parameters are described in their own section below.</li>
+                    <li><strong>Bool:</strong> A boolean input representing True and False. Renders as a choice parameter with those two choices.</li>
+                    <li><strong>File:</strong> An input intended to receive a file or file-like object. File parameters are described in their own section
+                        below.</li>
+                </ul>
+
+                <p>The UI Builder will infer a parameter's type from its default value, defaulting to a text parameter if no value is available or if the
+                    default value's type doesn't match one of the known types above. Alternatively, the developer can specify a parameter's type in the code. A
+                    code example is provided below, illustrating how to specify each type - except for choice and file parameters, which are each detailed in
+                    their own sections.</p>
+
+                <code><pre>
+@genepattern.build_ui(parameters={
+    "a_text_param": {
+        "type": "text"
+    },
+    "a_number_param": {
+        "type": "number"
+    },
+    "a_password_param": {
+        "type": "password"
+    },
+    "a_bool_param": {
+        "type": "bool"
+    },
+})
+def example_function(a_text_param, a_number_param,
+                     a_password_param, a_bool_param=True):
+    . . .</pre></code>
+
+                <p><img alt="" src="ui_builder_8.jpg" style="width: 100%;"/></p>
+
+                <h3>9. Choice Parameters</h3>
                 <p>Sometimes a parameter only accepts a limited set of valid input values. This is often represented in a user interface as a dropdown
                     (<em>select</em>) input. The UI Builder has support for this functionality. To change a particular parameter into a dropdown input, simply
                     provide the parameter with a dictionary of available choices. A code example is given below.</p>
@@ -258,6 +298,7 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
 @genepattern.build_ui(parameters={
     "param_1": {
         "default": "some_value",
+        "type": "choice",
         "choices": {
             "foo label": "foo value",
             "bar label": "bar value",
@@ -269,6 +310,28 @@ def example_function(param_1, param_2):
     . . .</pre></code>
 
                 <p><img alt="" src="ui_builder_7.jpg" style="width: 100%;"/></p>
+
+                <h3>10. File Parameters</h3>
+                <p>File parameters are intended to handle input representing a file or file-like object. They are integrated with GenePattern job widgets, such
+                    that available GenePattern files will appear in a menu when a file parameter is first selected, thereby allowing the user to easily select
+                    the desired file.</p>
+                <p>Optionally, the developer can specify the kinds of files that a file parameter accepts. This is accomplished by providing a list of file
+                    extension strings. For example, a parameter that expects a gct, odf or res files would list: <em>["gct", "odf", "res"]</em>.</p>
+                <p>It is worth noting that when a GenePattern file is selected in the menu, the value provided to the function will actually be a string
+                    containing a URL to the specified file. The developer may then take this string and use it to create a file-like object, pass it to a
+                    function that will download the file or otherwise perform any desired tasks.</p>
+                <p>A code example is provided below.</p>
+                <code><pre>
+@genepattern.build_ui(parameters={
+    "param_1": {
+        "type": "file",
+        "kinds": ["gct", "odf"]
+    }
+})
+def example_function(param_1, param_2):
+    . . .</pre></code>
+
+                <p><img alt="" src="ui_builder_9.jpg" style="width: 100%;"/></p>
             </section>
             <aside>
                 <ul id="section-menu">
@@ -279,8 +342,7 @@ def example_function(param_1, param_2):
         </div>
         <footer id="footer">
             <div class="container">
-                <p>GenePattern Notebook usage is free and the software is open source
-                    under a BSD-style license.</p>
+                <p>GenePattern Notebook usage is free and the software is open source under a BSD-style license.</p>
                 <p>© 2017 Regents of the University of California and the Broad Institute. </p>
             </div>
         </footer>
