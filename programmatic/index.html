@@ -108,25 +108,37 @@
                 <h2 id="programmatic">Programmatic Features</h2>
                 <p>In addition to the basic and publishing features intended for use by both non-programming and programming users alike, the GenePattern Notebook environment also provides a variety of features intended primarily for use by coders.</p>
 
-                <h3>1. Code Cells</h3>
+                <h3 id="code-cells">1. Code Cells</h3>
                 <p>Code cells allow a user to type in execute Python code. They are the default type of cell. Simply enter the Python code you want to run and then click the <i class="fa-step-forward fa"></i> (run cell) button in the notebook toolbar.</p>
                 <p>More information on code cells and their variousoptions is available in the <a href="https://jupyter.readthedocs.io/en/latest/" target="_blank">Jupyter documentation</a>.</p>
 
-                <h3>2. GenePattern Python Library</h3>
+                <h3 id="python-library">2. GenePattern Python Library</h3>
                 <p>A library is available for using Python to interact with available GenePattern's service. This allows a user to programmatically prepare analyses, launch jobs and retrieve results.</p>
                 <p>A complete tutorial on using the GenePattern Python Library is available as a public notebook in the <a href="https://notebook.genepattern.org">GenePattern Notebook Repository</a>. Additional information is available in our <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb" target="_blank">documentation</a>.</p>
 
-                <h3>3. Send to Code</h3>
+                <h3 id="to-code">3. Send to Code</h3>
                 <p>The GenePattern Python Library seamlessly integrates with GenePattern cells. Code examples of how to reference GenePattern jobs or GenePattern result files are available in GenePattern Job Cells by clicking a job result and selecting “Send to Code” in the menu.</p>
                 <p><img class="alignnone size-full wp-image-40" src="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg" alt="" width="800" height="212" srcset="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg 800w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-300x80.jpg 300w, ../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50-768x204.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
 
-                <h3>4. Send to Dataframe</h3>
+                <h3 id="to-dataframe">4. Send to Dataframe</h3>
                 <p>The GenePattern Python Library also provides functionality for common GenePattern file formats, allowing them seamlessly integrate with <a href="http://pandas.pydata.org/" target="_blank">Pandas</a>, a popular Python data analysis library.</p>
                 <p>Both the <a href="http://software.broadinstitute.org/cancer/software/genepattern/file-formats-guide" target="_blank">GCT and ODF file formats</a> are easily loaded as Pandas Dataframes. Code examples of how to load these files are available in GenePattern Job Cells by clicking a GCT or ODF job result and selecting “Send to Dataframe” in the menu.</p>
 
-                <h3>5. Python Variable Input</h3>
+                <h3 id="python-variable">5. Python Variable Input</h3>
                 <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable <code>foo</code> would appear as <code>{{ foo }}</code></p>
                 <p>When the <em>Run</em> button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
+
+                <h3 id="r-support">6. R Support</h3>
+                <p>The GenePattern Notebook Environment supports R through the use of R magic commands. To begin using R magics, you first need to load the R magics extension. This can be achieved by running the following code within your notebook: <code>%load_ext rpy2.ipython</code></p>
+                <p>After the extension has been loaded, beginning a cell with <code>%%R</code> will tell the notebook environment to execute the rest of the code in the cell using R rather than Python. An example is given below.</p>
+                <code>
+                    %%R<br/><br/>
+                    # Define a vector with 5 values and show the plot<br/>
+                    values <- c(1, 3, 6, 4, 9)<br/>
+                    plot(values, type="o", col="blue")<br/>
+                    title(main="Example Plot Created With R", col.main="red", font.main=4)
+                </code>
+
 
                 <h2 id="ui-builder">UI Builder</h2>
                 <p>The UI Builder is a way to display any Python function or method call as an interactive widget. This will render the parameters of the
