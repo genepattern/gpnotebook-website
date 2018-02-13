@@ -99,6 +99,13 @@
                 <h2 id="repo">GenePattern Notebook Repository</h2>
                 <p>Release updates for the <a href="https://notebook.genepattern.org" target="_blank">GenePattern Notebook Repository</a>.</p>
 
+                <h3>GenePattern Notebook Repository 18.01 <em style="font-size: 0.8em; color: gray;">(January 19, 2018)</em></h3>
+                <ul>
+                    <li>Upgraded repository to JupyterHub 0.8, Jupyter 5.3 and ipywidgets 7.</li>
+                    <li>Updated repository containers to include R 3.4.3 and rpy2 package. See <a href="/programmatic/#r-support">R Support documentation</a> for more details.</li>
+                    <li>Updated spawner and authenticator plugins to latest JupyterHub API.</li>
+                </ul>
+
                 <h3>GenePattern Notebook Repository 17.12 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
                 <ul>
                     <li>Improved compute node scaling and performance.</li>
@@ -125,6 +132,17 @@
 
                 <h2 id="extension">GenePattern Notebook Extension</h2>
                 <p>Release updates for the <a href="https://github.com/genepattern/genepattern-notebook" target="_blank">GenePattern Notebook nbextension</a>. Install using <em>pip install genepattern-notebook</em> or <em>conda install -c genepattern genepattern-notebook</em>.</p>
+
+                <h3>GenePattern Notebook 0.7.0 <em style="font-size: 0.8em; color: gray;">(February 16, 2018)</em></h3>
+                <ul>
+                    <li>GenePattern workflow execution interface added. For more information see the <a href="../basic-features/#workflow-execution">Workflow Execution documentation</a>.</li>
+                    <li>Support for job result syntax added to GenePattern analyses. This is a simple syntax for specifying GenePattern analysis inputs based on the output of of upstream jobs. For more information see the <a href="../programmatic/#result-syntax">Job Result Syntax documentation</a>.</li>
+                    <li>Added support for renaming, hiding or overriding the output variable in the UI Builder.</li>
+                    <li>Major refactoring of code structure and file names.</li>
+                    <li>Updated Javascript code to ES6 standard.</li>
+                    <li>New webpack build process added.</li>
+                    <li>Bug fixes.</li>
+                </ul>
 
                 <h3>GenePattern Notebook 0.6.8 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
                 <ul>
@@ -172,6 +190,12 @@
                 <h2 id="python">GenePattern Python Library</h2>
                 <p>Release updates for the <a href="https://github.com/genepattern/genepattern-python" target="_blank">GenePattern Python Library</a>. Install using <em>pip install genepattern-python</em> or <em>conda install -c genepattern genepattern-python</em>.</p>
 
+                <h3>GenePattern Python 1.4.1 <em style="font-size: 0.8em; color: gray;">(February 16, 2017)</em></h3>
+                <ul>
+                    <li>CLS file creation function added to gp.data package.</li>
+                    <li>JSON serialization added to GPFile object.</li>
+                </ul>
+
                 <h3>GenePattern Python 1.4.0 <em style="font-size: 0.8em; color: gray;">(December 8, 2017)</em></h3>
                 <ul>
                     <li>Added write_gct() and write_odf(), which write pandas dataframes to disk in GCT or ODF formats, respectively.</li>
@@ -204,6 +228,14 @@
                 <ul>
                     <li>Button label for for Jupyter >= 5.1.0.</li>
                 </ul>
+
+                <h2 id="wysiwyg">Rich Text Editor</h2>
+                <p>Release updates for the <a href="https://github.com/genepattern/jupyter-wysiwyg" target="_blank">Rich Text Editor</a>. Install using <em>pip install jupyter-wysiwyg</em> or <em>conda install -c genepattern jupyter-wysiwyg</em>.</p>
+
+                <h3>Rich Text Editor 0.1.5 <em style="font-size: 0.8em; color: gray;">(February 16, 2018)</em></h3>
+                <ul>
+                    <li>Bootstrap style support added to the editor.</li>
+                </ul>
             </section>
 
             <aside>
@@ -212,6 +244,7 @@
                     <li><a href="#extension">GenePattern Extension</a></li>
                     <li><a href="#python">GenePattern Python</a></li>
                     <li><a href="#nbtools">Notebook Tool Manager</a></li>
+                    <li><a href="#wysiwyg">Rich Text Editor</a></li>
                 </ul>
             </aside>
         </div>

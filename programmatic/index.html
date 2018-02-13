@@ -139,6 +139,26 @@
                     title(main="Example Plot Created With R", col.main="red", font.main=4)
                 </code>
 
+                <h3 id="result-syntax">7. Job Result Syntax</h3>
+                <p>When specifying the input to a GenePattern analysis cell, a simple syntax can be used to select the output of a upstream job. To do this, inside double curly brackets, write the name of the GenePattern module and extension of the output file separated by a period. If multiple jobs exist in the notebook using that module, or multiple files are returned of that type, an index can optionally be specified in square brackets. Several examples are given below.</p>
+                <p>
+                    <code>{{ PreprocessDataset.gct }}</code>
+                    Use the first GCT file output by the first PreprocessDataset job in the notebook.
+                </p>
+                <p>
+                    <code>{{ PreprocessDataset[1].gct[1] }}</code>
+                    This is functionally the same as the first example, but the index is made explicit for both which PreprocessDataset job in the notebook to use and which GCT file to use.
+                </p>
+
+                <p>
+                    <code>{{ PCA[2].odf }}</code>
+                    Use the first ODF file output by the second PCA job.
+                </p>
+
+                <p>
+                    <code>{{ FlowMeansCluster.csv[3] }}</code>
+                    Use the third CSV file output by the first FlowMeansCluster job.
+                </p>
 
                 <h2 id="ui-builder">UI Builder</h2>
                 <p>The UI Builder is a way to display any Python function or method call as an interactive widget. This will render the parameters of the
