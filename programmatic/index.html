@@ -281,8 +281,24 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
 })</pre></code>
 
                 <p><img alt="" src="ui_builder_6.jpg" style="width: 100%;"/></p>
+                
+                <h3>8. Output Variable</h3>
+                <p>The result of a UI Builder function can optionally be assigned to a Python variable. By default, a text field for this variable will appear at the bottom of each UI Builder widget. This field can be overridden just like any other parameter using the <em>output_var</em> parameter name. This includes the ability to change the label, description, assign a default value or hide the parameter. A code example is given below.</p>
+                
+                <code><pre>
+@genepattern.build_ui(parameters={
+    "output_var": {
+        "name": "results",
+        "description": "The results of the function",
+        "default": "variable_name",
+        "hide": False,
+    }
+})
+def example_function(a_text_param, a_number_param,
+                     a_password_param, a_bool_param=True):
+    . . .</pre></code>
 
-                <h3>8. Parameter Types</h3>
+                <h3>9. Parameter Types</h3>
                 <p>The UI Builder supports a number of parameter types and implements features to make handling those types easier. Supported types include:</p>
                 <ul>
                     <li><strong>Text:</strong> Supports any text value. Unless referencing an existing Python variable, any input gets cast to a Python string
@@ -322,7 +338,7 @@ def example_function(a_text_param, a_number_param,
 
                 <p><img alt="" src="ui_builder_8.jpg" style="width: 100%;"/></p>
 
-                <h3>9. Choice Parameters</h3>
+                <h3>10. Choice Parameters</h3>
                 <p>Sometimes a parameter only accepts a limited set of valid input values. This is often represented in a user interface as a dropdown
                     (<em>select</em>) input. The UI Builder has support for this functionality. To change a particular parameter into a dropdown input, simply
                     provide the parameter with a dictionary of available choices. A code example is given below.</p>
@@ -343,7 +359,7 @@ def example_function(param_1, param_2):
 
                 <p><img alt="" src="ui_builder_7.jpg" style="width: 100%;"/></p>
 
-                <h3>10. File Parameters</h3>
+                <h3>11. File Parameters</h3>
                 <p>File parameters are intended to handle input representing a file or file-like object. They are integrated with GenePattern job widgets, such
                     that available GenePattern files will appear in a menu when a file parameter is first selected, thereby allowing the user to easily select
                     the desired file.</p>
