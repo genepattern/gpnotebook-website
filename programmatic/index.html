@@ -233,7 +233,9 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans)</pre></code>
                     same as the parameters defined in the code. All of these, however, can be manually overridden. This is particularly useful whe providing
                     better names or descriptions that users would find helpful.</p>
                 <p>To override the default values, optional parameters may be passed into the <em>build_ui</em> decorator or into the <em>GPUIBuilder</em>
-                    constructor. Examples overriding the widget name and description are given below:</p>
+                    constructor. Examples overriding the widget name and description are given below.</p>
+                <p>The bottom example also demonstrates overriding the canonical name of the function being rendered. This is sometimes helpful if the function
+                    has been imported into the code in a non-top level namespace.</p>
                 <code><pre>
 @genepattern.build_ui(name="Simple Example",
                       description="This is an example function.")
@@ -243,7 +245,8 @@ def example_function(param_1, param_2):
                 <code><pre>
 genepattern.GPUIBuilder(sklearn.cluster.KMeans,
                         name="KMeans Clustering",
-                        description="Groups data into K clusters")</pre></code>
+                        description="Groups data into K clusters",
+                        function_import="sklearn.cluster.KMeans")</pre></code>
 
                 <p><img alt="" src="ui_builder_4.jpg" style="width: 100%;"/></p>
 
