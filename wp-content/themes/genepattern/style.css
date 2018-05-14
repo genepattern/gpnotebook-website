@@ -99,10 +99,10 @@ td {
 #banner a.button:hover { background: #FFF; color: #365e9f; }
 #banner a {text-decoration-line: none;}
 .login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
-#pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 60%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
+#pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
 #banner a:hover {color: #ed1c24;}
 
-#news { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 60%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 10%; font-size: 20px;}
+#news { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 2%; font-size: 20px;}
 #news img {height: 50px; width: 150px; margin-bottom: 3%; margin-right: 20px;}
 #news-img a:hover {background-color: transparent}
 
