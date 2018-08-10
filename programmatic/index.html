@@ -387,14 +387,44 @@ def example_function(param_1, param_2):
     . . .</pre></code>
 
                 <p><img alt="" src="ui_builder_9.jpg" style="width: 100%;"/></p>
+                
+                
+                <h3>12. Client-side Interactivity</h3>
+                <p>Notebook authors who wish to integrate the UI Builder with client-side programmatic functionality can make use of the <em>id</em> and <em>events</em> attribute of parameters.</p>
+                
+                <p>The <em>id</em> attribute allows the author to specify an ID for the parameter's element in the DOM. As with all DOM IDs, it must be both unique and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">adhere to the naming rules in the HTML specification</a>.</p>
 
+                <p>The <em>events</em> attribute allows the author to attach Javascript functionality to the parameter. It should be specified a a dict, where the keys are Javascript events and the values are strings containing the Javascript code to be executed.</p>
 
-                <h3>12. Other Options</h3>
+                <p>An example of using both of these attributes is given below.</p>
+
+                <code><pre>
+@nbtools.build_ui(parameters={
+    "param_1": {
+        "id": "example_function_param_1",
+        "events": {
+            "click": "console.log('Hello World!');"
+        }
+    }
+})
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
+
+                <h3>13. Other Options</h3>
                 <p>The following minor features are available available in the UI Builder.</p>
                 <ul>
                     <li><strong>register_tool:</strong> Sets whether to register this function with the Notebook Tool Manager. Defaults to True.</li>
                     <li><strong>function_import:</strong> Override the import name of an existing function.</li>
                 </ul>
+                
+                <code><pre>
+@nbtools.build_ui(register_tool=False, function_import='example_package.example_function')
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
+                
+                
+                
+                
             </section>
             <aside>
                 <ul id="section-menu">
