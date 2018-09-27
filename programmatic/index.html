@@ -410,6 +410,25 @@ def example_function(param_1, param_2):
 })
 def example_function(first_parameter, second_parameter):
     . . .</pre></code>
+                
+                <p>Additionally, the top-level <em>events</em> attribute is available for handling events associated with the UI Builder widget itself, rather than individual parameters. This accepts a dictionary pairing event names to strings containing Javscript to be executed when the event occurs. Supported events are presented below:</p>
+                
+                <ul>
+                    <li><strong>load:</strong> Executed when the widget is initialized.</li>
+                    <li><strong>run:</strong> Event fires when the Run button is clicked.</li>
+                    <li><strong>click:</strong> Executed when the widget is clicked.</li>
+                    <li><strong>focus:</strong> Event fires when the widget obtains focus.</li>
+                </ul>
+                
+                <code><pre>
+@nbtools.build_ui(
+    events={
+        "load": "console.log('Write to the Javascript console when the widget is loaded.')",
+        "run": "console.log('Write to the Javascript console when the Run button is clicked.')"
+    }
+)
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
 
                 <h3>13. Other Options</h3>
                 <p>The following minor features are available available in the UI Builder.</p>
