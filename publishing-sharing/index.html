@@ -4,9 +4,19 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>FAQ &#8211; Gene Pattern Notebook</title>
+	<title>Publishing & Sharing Notebooks &#8211; Gene Pattern Notebook</title>
     <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
+    <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
+    <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
+    <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
+    <link rel='https://api.w.org/' href='../wp-json/' />
     <script type='text/javascript'>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -32,13 +42,6 @@
       }
     }
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
-    <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
-    <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
-    <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
     <script>
@@ -48,7 +51,6 @@
 
       gtag('config', 'UA-106705148-1');
     </script>
-    <link rel='https://api.w.org/' href='../wp-json/' />
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
@@ -101,36 +103,74 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1>FAQ</h1>
+                <h1>Publishing & Sharing Notebooks</h1>
+                <p>Notebooks in the GenePattern </p>
                 <hr>
-                <h3 id="move">Q: How do I move notebooks or other files to different directories?</h3>
-                <p><b style="font-weight: 100; font-size: 25px">A:</b> You can move a notebook or other file to another directory by clicking the checkbox next to the file and then clicking the <em>Rename</em> button. At the prompt, simply type the name of the directory you wish to move the file to, followed by <em>/</em> (slash) and then the file&#8217;s name. For example, to move the <em>Emails.ipynb</em> notebook the <em>Example Notebooks</em> subdirectory, you would type <em>Example Notebooks/Emails.ipynb</em>. To move a file to the parent directory, you would rename the file <em>../</em> and then the file&#8217;s name. For example, if I wanted to move the <em>Run an Analysis.ipynb</em> notebook up a directory, I would rename the file ../<em>Run an Analysis.ipynb</em>.</p>
-                <p><img class="alignnone size-full wp-image-46" src="../wp-content/uploads/2017/02/content_move.jpg" alt="" width="707" height="225" srcset="../wp-content/uploads/2017/02/content_move.jpg 707w, ../wp-content/uploads/2017/02/content_move-300x95.jpg 300w" sizes="(max-width: 707px) 100vw, 707px" /></p>
-                <h3 id="code">Q: I opened the notebook and I only see code.</h3>
-                <p><b style="font-weight: 100; font-size: 25px">A:</b> If you ever load a notebook and see only code instead of your GenePattern cells, this is an indicator that IPython/Jupyter has for some reason failed to load the GenePattern Notebook extension.</p>
-                <p>This issue can be solved by executing the top code cell for GenePattern. Simply select this cell and then select Cell &gt; Run from the menu. A screenshot of the code for this cell is below.</p>
-                <p><img class="alignnone size-full wp-image-47" src="../wp-content/uploads/2017/02/content_screen_shot_2015-10-19_at_13_24_05.png" alt="" width="800" height="389" srcset="../wp-content/uploads/2017/02/content_screen_shot_2015-10-19_at_13_24_05.png 800w, ../wp-content/uploads/2017/02/content_screen_shot_2015-10-19_at_13_24_05-300x146.png 300w, ../wp-content/uploads/2017/02/content_screen_shot_2015-10-19_at_13_24_05-768x373.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
-                <h3 id="reset">Q: I received a "Connection Reset by Peer" Error, what does it mean?</h3>
-                <p><b style="font-weight: 100; font-size: 25px">A:</b> If you are attempting to programmatically connect to GenePattern and receive a <em>Connection Reset by Peer</em> error, this is likely caused by your Python environment using an outdated version of SSL/TLS. GenePattern only accepts connections using TLS 1.2 or later.</p>
-                <p>To fix this issue you will need to update the version of OpenSSL used by your operating system or Python installation. This is particularly an issue with older versions of macOS. Instructions on how to update the version of OpenSSL used by macOS can be <a href="http://apple.stackexchange.com/questions/126830/how-to-upgrade-openssl-in-os-x">found here</a>.</p>
-                <p><img class="alignnone size-full wp-image-49" src="../wp-content/uploads/2017/02/content_reset.jpg" alt="" width="800" height="278" srcset="../wp-content/uploads/2017/02/content_reset.jpg 800w, ../wp-content/uploads/2017/02/content_reset-300x104.jpg 300w, ../wp-content/uploads/2017/02/content_reset-768x267.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+                <h3 id="publish">1. Publishing Notebooks</h3>
+                <p><img src="../wp-content/uploads/2017/02/content_notebook-tab.jpg?x=1" style="border: 1px solid black"/></p>
+                <ul>
+                    <li>To publicly share a notebook, click the checkbox next to that notebook and then click the &quot;Publish&quot; button on the toolbar above.
+                    </li>
+                    <li>This will open a dialog with a short form, prompting you to enter the author&#39;s name, the quality and a brief description. Fill out this information and then click the &quot;Publish&quot; button on the dialog.
+                    </li>
+                    <li>Your notebook should now be available to the public and should appear on the &quot;Public Notebooks&quot; tab. The published version of the notebook is a checkpoint of the notebook at the time it was published. Any changes you make to the notebook in the future are not copied over to the published version unless you explicitly choose to update the notebook in the public repository.
+                    </li>
+                </ul>
+                <p><img alt="" src="../wp-content/uploads/2017/02/content_share-notebook.jpg" style="width: 800px; height: 218px; border-width: 1px; border-style: solid;"/></p>
+                <h3 id="up-rm">2. Updating or Removing&nbsp;a Public Notebook</h3>
+                <ul>
+                    <li>You can update or remove a notebook that you have made public by first clicking the checkbox next to the notebook and then clicking the &quot;Publish&quot; button.
+                    </li>
+                    <li>In the dialog that comes up you will have the option to edit any of the notebook&#39;s metadata, such as author name, description, etc.</li>
+                    <li>To update or remove the notebook, click the &quot;Update&quot; or &quot;Unpublish&quot; buttons, respectively.</li>
+                </ul>
+
+
+                <h1 id="share">Sharing Notebooks</h1>
+                <hr>
+                <p>GenePattern Notebook provides the ability to share notebooks with others. This allows for easy collaboration between notebook users.</p>
+
+                <h3>1. Sharing a Notebook</h3>
+                <ul>
+                    <li>Log in to the GenePattern Notebook Repository.</li>
+                    <li>Click the checkbox next to that notebook you wish to share and then click the "Share" button on the toolbar above.</li>
+                    <li>This will open a dialog with a short form, prompting you to enter the username or email of each user with which you wish to share the notebook. Enter this information and click the "Add" button. Do this for each user you wish to share with and then click "Share."</li>
+                    <li>A sharing invitation will be sent to these users. Once they accept, they will be able to view and edit the notebook.</li>
+                </ul>
+
+                <h3>2. Accepting the Invitation</h3>
+                <ul>
+                    <li>Log in to the GenePattern Notebook Repository.</li>
+                    <li>To view your sharing invites, click the &quot;Public Notebooks&quot; tab and then click "Sharing Invites" on the left. This will display a list of invitations.</li>
+                    <li>Click an invite in the list and a dialog box will open, prompting you to accept or decline the invitation. Click the corresponding button.</li>
+                    <li>If you accept the invitation, you will be prompted to either run the notebook or close the dialog.</li>
+                </ul>
+
+                <h3>3. Accessing the Shared Notebook</h3>
+                <ul>
+                    <li>Log in to the GenePattern Notebook Repository.</li>
+                    <li>To view your shared notebooks, click the &quot;Public Notebooks&quot; tab and then click "Shared Notebooks" on the left. This will display a list of notebooks that you are either sharing or which are currently being shared with you.</li>
+                    <li>Click the notebook in the list. This will open a dialog with some information about the notebook and your avalable options.</li>
+                    <li>Click the "Run Notebook" button.</li>
+                </ul>
             </section>
             <aside>
                 <ul id="section-menu">
-                    <li><a href="#move">Moving Notebooks</a></li>
-                    <li><a href="#code">Seeing Only Code</a></li>
-                    <li><a href="#reset">Connection Reset</a></li>
+                    <li><a href="#publish">Publishing Notebooks</a></li>
+                    <li><a href="#up-rm">Updating/Removing Notebooks</a></li>
+                    <li><a href="#share">Sharing Notebooks</a></li>
                 </ul>
             </aside>
         </div>
         <footer id="footer">
             <div class="container">
-                <p>GenePattern Notebook usage is free and the software is open source under a BSD-style license.</p>
+                <p>GenePattern Notebook usage is free and the software is open source
+                    under a BSD-style license.</p>
                 <p>© 2017 Regents of the University of California and the Broad Institute. </p>
             </div>
         </footer>
     </div>
     <script type='text/javascript' src='../wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
-
+    
 </body>
 </html>
