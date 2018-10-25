@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Programmatic Features &#8211; Gene Pattern Notebook</title>
     <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
@@ -72,6 +73,7 @@
                                     <hr style="margin: 1%">
                                     <a href="../basic-features/">Basic Features</a>
                                     <a href="../public-notebooks/">Public Notebooks</a>
+                                    <a href="../publishing-sharing/">Publishing & Sharing Notebooks</a>
                                     <hr style="margin: 1%">
                                     <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
@@ -387,14 +389,63 @@ def example_function(param_1, param_2):
     . . .</pre></code>
 
                 <p><img alt="" src="ui_builder_9.jpg" style="width: 100%;"/></p>
+                
+                
+                <h3>12. Client-side Interactivity</h3>
+                <p>Notebook authors who wish to integrate the UI Builder with client-side programmatic functionality can make use of the <em>id</em> and <em>events</em> attribute of parameters.</p>
+                
+                <p>The <em>id</em> attribute allows the author to specify an ID for the parameter's element in the DOM. As with all DOM IDs, it must be both unique and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">adhere to the naming rules in the HTML specification</a>.</p>
 
+                <p>The <em>events</em> attribute allows the author to attach Javascript functionality to the parameter. It should be specified a a dict, where the keys are Javascript events and the values are strings containing the Javascript code to be executed.</p>
 
-                <h3>12. Other Options</h3>
+                <p>An example of using both of these attributes is given below.</p>
+
+                <code><pre>
+@nbtools.build_ui(parameters={
+    "param_1": {
+        "id": "example_function_param_1",
+        "events": {
+            "click": "console.log('Hello World!');"
+        }
+    }
+})
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
+                
+                <p>Additionally, the top-level <em>events</em> attribute is available for handling events associated with the UI Builder widget itself, rather than individual parameters. This accepts a dictionary pairing event names to strings containing Javscript to be executed when the event occurs. Supported events are presented below:</p>
+                
+                <ul>
+                    <li><strong>load:</strong> Executed when the widget is initialized.</li>
+                    <li><strong>run:</strong> Event fires when the Run button is clicked.</li>
+                    <li><strong>click:</strong> Executed when the widget is clicked.</li>
+                    <li><strong>focus:</strong> Event fires when the widget obtains focus.</li>
+                </ul>
+                
+                <code><pre>
+@nbtools.build_ui(
+    events={
+        "load": "console.log('Write to the Javascript console when the widget is loaded.')",
+        "run": "console.log('Write to the Javascript console when the Run button is clicked.')"
+    }
+)
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
+
+                <h3>13. Other Options</h3>
                 <p>The following minor features are available available in the UI Builder.</p>
                 <ul>
                     <li><strong>register_tool:</strong> Sets whether to register this function with the Notebook Tool Manager. Defaults to True.</li>
                     <li><strong>function_import:</strong> Override the import name of an existing function.</li>
                 </ul>
+                
+                <code><pre>
+@nbtools.build_ui(register_tool=False, function_import='example_package.example_function')
+def example_function(first_parameter, second_parameter):
+    . . .</pre></code>
+                
+                
+                
+                
             </section>
             <aside>
                 <ul id="section-menu">
