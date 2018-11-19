@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Publishing & Sharing Notebooks &#8211; Gene Pattern Notebook</title>
-    <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>New Features &#8211; Gene Pattern Notebook</title>
+    <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
-    <link rel='https://api.w.org/' href='../wp-json/' />
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106705148-1');
+    </script>
+    <link rel='https://api.w.org/' href='../wp-json/'/>
+    <style type="text/css">
+        h3 a {
+            text-decoration: none;
+        }
+    </style>
     <script type='text/javascript'>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -42,17 +52,8 @@
       }
     }
     </script>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
-      gtag('js', new Date());
-
-      gtag('config', 'UA-106705148-1');
-    </script>
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
 </head>
     
 <body class="page-template-default page page-id-9">
@@ -105,61 +106,13 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1>Publishing & Sharing Notebooks</h1>
-                <p>Notebooks in the GenePattern </p>
+                <h1 id="new">New GenePattern Notebook Features</h1>
                 <hr>
-                <h3 id="publish">1. Publishing Notebooks</h3>
-                <p><img src="../wp-content/uploads/2017/02/content_notebook-tab.jpg?x=1" style="border: 1px solid black"/></p>
-                <ul>
-                    <li>To publicly share a notebook, click the checkbox next to that notebook and then click the &quot;Publish&quot; button on the toolbar above.
-                    </li>
-                    <li>This will open a dialog with a short form, prompting you to enter the author&#39;s name, the quality and a brief description. Fill out this information and then click the &quot;Publish&quot; button on the dialog.
-                    </li>
-                    <li>Your notebook should now be available to the public and should appear on the &quot;Public Notebooks&quot; tab. The published version of the notebook is a checkpoint of the notebook at the time it was published. Any changes you make to the notebook in the future are not copied over to the published version unless you explicitly choose to update the notebook in the public repository.
-                    </li>
-                </ul>
-                <p><img alt="" src="../wp-content/uploads/2017/02/content_share-notebook.jpg" style="width: 800px; height: 218px; border-width: 1px; border-style: solid;"/></p>
-                <h3 id="up-rm">2. Updating or Removing&nbsp;a Public Notebook</h3>
-                <ul>
-                    <li>You can update or remove a notebook that you have made public by first clicking the checkbox next to the notebook and then clicking the &quot;Publish&quot; button.
-                    </li>
-                    <li>In the dialog that comes up you will have the option to edit any of the notebook&#39;s metadata, such as author name, description, etc.</li>
-                    <li>To update or remove the notebook, click the &quot;Update&quot; or &quot;Unpublish&quot; buttons, respectively.</li>
-                </ul>
 
-                <h1 id="share">Sharing Notebooks</h1>
-                <hr>
-                <p>GenePattern Notebook provides the ability to share notebooks with others. This allows for easy collaboration between notebook users.</p>
-
-                <h3>1. Sharing a Notebook</h3>
-                <ul>
-                    <li>Log in to the GenePattern Notebook Repository.</li>
-                    <li>Click the checkbox next to that notebook you wish to share and then click the "Share" button on the toolbar above.</li>
-                    <li>This will open a dialog with a short form, prompting you to enter the username or email of each user with which you wish to share the notebook. Enter this information and click the "Add" button. Do this for each user you wish to share with and then click "Share."</li>
-                    <li>A sharing invitation will be sent to these users. Once they accept, they will be able to view and edit the notebook.</li>
-                </ul>
-
-                <h3>2. Accepting the Invitation</h3>
-                <ul>
-                    <li>Log in to the GenePattern Notebook Repository.</li>
-                    <li>To view your sharing invites, click the &quot;Public Notebooks&quot; tab and then click "Sharing Invites" on the left. This will display a list of invitations.</li>
-                    <li>Click an invite in the list and a dialog box will open, prompting you to accept or decline the invitation. Click the corresponding button.</li>
-                    <li>If you accept the invitation, you will be prompted to either run the notebook or close the dialog.</li>
-                </ul>
-
-                <h3>3. Accessing the Shared Notebook</h3>
-                <ul>
-                    <li>Log in to the GenePattern Notebook Repository.</li>
-                    <li>To view your shared notebooks, click the &quot;Public Notebooks&quot; tab and then click "Shared Notebooks" on the left. This will display a list of notebooks that you are either sharing or which are currently being shared with you.</li>
-                    <li>Click the notebook in the list. This will open a dialog with some information about the notebook and your avalable options.</li>
-                    <li>Click the "Run Notebook" button.</li>
-                </ul>
             </section>
             <aside>
                 <ul id="section-menu">
-                    <li><a href="#publish">Publishing Notebooks</a></li>
-                    <li><a href="#up-rm">Updating/Removing Notebooks</a></li>
-                    <li><a href="#share">Sharing Notebooks</a></li>
+                    <li><a href="#new">New Features</a></li>
                 </ul>
             </aside>
         </div>
