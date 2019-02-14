@@ -268,7 +268,8 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans,
     "param_1": {
         "name": "foo",
         "description": "This parameter has been renamed.",
-        "default": "bar"
+        "default": "bar",
+        "optional": True
     }
 })
 def example_function(param_1, param_2):
@@ -433,7 +434,13 @@ def example_function(first_parameter, second_parameter):
 def example_function(first_parameter, second_parameter):
     . . .</pre></code>
 
-                <h3>13. Other Options</h3>
+                <h3>13. Send to Text</h3>
+                <p>Specific text options can be made easily accessible from a text input by annotating them with the <em>nbtools-text-option</em> class. Any
+                    text annotated in this way will appear in a dropdown whenever a text input parameter is selected.</p>
+                <code><pre>
+&lt;span class="nbtools-text-option">Text to send to parameter&lt;/span></pre></code>
+
+                <h3>14. Other Options</h3>
                 <p>The following minor features are available available in the UI Builder.</p>
                 <ul>
                     <li><strong>register_tool:</strong> Sets whether to register this function with the Notebook Tool Manager. Defaults to True.</li>
@@ -444,15 +451,49 @@ def example_function(first_parameter, second_parameter):
 @nbtools.build_ui(register_tool=False, function_import='example_package.example_function')
 def example_function(first_parameter, second_parameter):
     . . .</pre></code>
-                
-                
-                
-                
+
+                <h2 id="ui-output">UI Output</h2>
+                <p>UIOutput is a widget that can be created programmatically and displayed as the output to a UI Builder cell or any code cell. It's intended to
+                    display results in a fashion similar to a GenePattern analysis cell, thereby providing a consistent user interface.</p>
+
+                <h3>1. Create the widget</h3>
+                <p>The simplest way to render a function using the UI Builder is to import the <em>genepattern</em> package and then attach the <em>build_ui</em>
+                    decorator to the function's definition. A code example for this is given below:</p>
+
+                <code><pre>
+import genepattern
+
+genepattern.UIOutput()
+</pre></code>
+
+                <h3>2. Specify Parameters</h3>
+                <p>The UIOutput widget supports a number of parameters, which should be set to present as output. Options include:</p>
+
+                <ul>
+                    <li><strong>description:</strong> A text blurb describing what is being output.</li>
+                    <li><strong>files:</strong> A list of URLs to files being output by the widget.</li>
+                    <li><strong>name:</strong> A name to display in the header of the widget.</li>
+                    <li><strong>status:</strong> A terse indicator of the output status. Can be dynamically updated as an analysis progresses (see below).</li>
+                    <li><strong>text:</strong> Intended for long text output, such as logging or other information.</li>
+                </ul>
+
+                <h3>3. Dynamically Updating Status</h3>
+                <p>The status of a UIOutput widget can be dynamically updated by setting the status property of the widget object. This is useful for
+                    long-running analyses and  allows a function to alert the user when an analysis is complete, or when a new stage of analysis has been reached.</p>
+                <code><pre>
+import genepattern
+
+uio = genepattern.UIOutput(status="Running")
+# Perform long-running analysis here
+uio.status = "Complete"
+                </pre></code>
+
             </section>
             <aside>
                 <ul id="section-menu">
                     <li><a href="#programmatic">Programmatic Features</a></li>
                     <li><a href="#ui-builder">UI Builder</a></li>
+                    <li><a href="#ui-output">UI Output</a></li>
                 </ul>
             </aside>
         </div>
