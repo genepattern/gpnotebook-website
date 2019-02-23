@@ -22,11 +22,15 @@ How to install:
     conda install -c genepattern genepattern-notebook 
 
 
+.. toctree::
+    :maxdepth: 2
+    :caption: Release Notes
 
+    releases
 
 .. toctree::
     :maxdepth: 2
-    :caption: Table of Contents
+    :caption: Documentation
 
     getting-started
     basic-features
@@ -36,13 +40,6 @@ How to install:
     programmatic
     local-installation
     jupyter-users
-    contact
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Release Notes
-
-    releases
 
 .. toctree::
     :maxdepth: 2
@@ -50,6 +47,11 @@ How to install:
 
     faq
 
+.. toctree::
+    :maxdepth: 2
+    :caption: Contact
+
+    contact
 
 
 

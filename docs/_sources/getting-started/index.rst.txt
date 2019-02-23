@@ -1,5 +1,0 @@
-Getting Started
-===============
-
-Using the GenePattern Notebook Environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

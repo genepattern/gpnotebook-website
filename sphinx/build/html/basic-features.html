@@ -80,7 +80,11 @@
               
             
             
-              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              <p class="caption"><span class="caption-text">Release Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Release Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Features</a><ul>
@@ -101,11 +105,14 @@
 <li class="toctree-l1"><a class="reference internal" href="programmatic.html">Programmatic Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="local-installation.html">Local Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jupyter-users.html">Jupyter Users</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Release Notes</span></p>
+<p class="caption"><span class="caption-text">FAQ</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="releases.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contact</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
 </ul>
 
             
@@ -181,12 +188,14 @@
 <h3>A. Authentication Cells<a class="headerlink" href="#a-authentication-cells" title="Permalink to this headline">¶</a></h3>
 <p>The first GenePattern cell that a user is likely to encounter is an Authentication Cell. This cell allows a user to sign into a GenePattern server. Doing this allows GenePattern to keep a user’s results private, and to remember a user’s settings.</p>
 <p>Authentication cells will look like a login form with the additional option of selecting which GenePattern server to sign into. If the user has already authenticated, such as when usng the GenePattern Notebook Repository, the user will instead be prompted to either sign in as the current user or to cancel and sign in as a different user</p>
+<img alt="http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png" src="http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png" />
 </div>
 <div class="section" id="b-analysis-cells">
 <h3>B. Analysis Cells<a class="headerlink" href="#b-analysis-cells" title="Permalink to this headline">¶</a></h3>
 <p>After a user has signed in using an Authentication Cell, the next task is usually to insert an Analysis Cell to perform an analysis. To do this click the  Tools button in the notebook toolbar. This wll open a dialog box with a list of available GenePattern analyses. Search or browse through the list and then click one of the options to insert an Analysis Cell of that type.</p>
 <p>Every Analysis Cell has a number of parameters, which can be used to upload data and to select other options for the analysis. Once you fill in these parameters, click Run to submit them as a job on the GenePattern server.</p>
 <p>Once the Run button has been clicked, all selected files will upload and then a Job Cell will be inserted below to indicate the status of the job in GenePattern’s queue (see Job Cells below).</p>
+<img alt="http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png" src="http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png" />
 </div>
 <div class="section" id="c-analysis-jobs">
 <h3>C. Analysis Jobs<a class="headerlink" href="#c-analysis-jobs" title="Permalink to this headline">¶</a></h3>
@@ -195,6 +204,7 @@
 <p>To see a list of all output file options, simply click that output in the list and a menu wll open, displaying the available options.</p>
 <p>If this analysis includes visualization, the visualization will load and appear inside the Job Cell as well.</p>
 <p>Additional options, such as memory requirements, can be specified when submitting a job. These options are hidden by default, but can be made visible by going to the cell’s Gear () menu and selecting Toggle Job Options.</p>
+<img alt="http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png" src="http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png" />
 </div>
 </div>
 <div class="section" id="markdown-cells">
@@ -208,12 +218,14 @@
 <p>The GenePattern Rich Text Editor allows a user to format notes and documentation in a notebook in much the same way that one might use Microsoft Word or Libre Office — without the need to write a single HTML tag or line of markdown.</p>
 <p>To use the Rich Text Editor, first insert a markdown cell (see the instructions above). Once a cell has been changed to the markdown type, two buttons should appear to the left of the cell. The  button opens the Rich Text Editor and the  button finalizes the cell and renders the text.</p>
 <p>Click the  button and the editor will appear. A toolbar will show above the cell, allowing the user to format text, insert headers or add links. Style the text as desired, and when finished, click the  button to finish editing.</p>
+<img alt="http://genepattern-notebook.org/wp-content/uploads/2017/02/wysiwyg.jpg" src="http://genepattern-notebook.org/wp-content/uploads/2017/02/wysiwyg.jpg" />
 </div>
 <div class="section" id="workflow-execution">
 <h2>4. Workflow Execution<a class="headerlink" href="#workflow-execution" title="Permalink to this headline">¶</a></h2>
 <p>A GenePattern notebook can be executed as an automated workflow. When this happens, each cell is run in order, starting with the top. Code cells execute their contained code. GenePattern analyses are launched and the workflow waits for the analysis to complete before moving forward. If an error is encountered - either as the result of a code cell or the status of a GenePattern job - execution halts and waits for user input.</p>
 <p>By combining this feature with the Job Result Syntax feature, a workflow can be configured to run each step in sequence, taking the output of upstream steps and sending the results as the input to downstream analyses.</p>
 <p>To run a GenePattern notebook as a workflow, first locate an authentication cell and click on the gear menu. Select Run Notebook as Workflow. A dialog box will pop up displaying the status of running the workflow. Simply wait for execution to complete.</p>
+<img alt="http://genepattern-notebook.org/basic-features/workflow-execution.jpg" src="http://genepattern-notebook.org/basic-features/workflow-execution.jpg" />
 </div>
 </div>
 

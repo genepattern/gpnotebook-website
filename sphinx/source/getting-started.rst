@@ -1,9 +1,11 @@
 Getting Started
 ===============
 
-Using the GenePattern Notebook Environment
-------------------------------------------
-NOTE: You can use the GenePattern Notebook environment by registering for a GenePattern account if you do not already have one, and logging into the GenePattern Notebook Repository. This option requires no installation and provides the advantage of running your notebooks in the Amazon cloud. If you wish to install the GenePattern Notebook environment on a local machine, you can follow these instructions.
+NOTE: You can use the GenePattern Notebook environment by `registering for a GenePattern account`__ if you do not already have one, and logging into the `GenePattern Notebook Repository`__. This option requires no installation and provides the advantage of running your notebooks in the Amazon cloud. If you wish to install the GenePattern Notebook environment on a local machine, you can follow `these instructions`__.
+
+.. __: https://notebook.genepattern.org/
+.. __: https://notebook.genepattern.org/
+.. __: http://www.genepattern-notebook.org/install/
 
 1. Login to the GenePattern Notebook Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -15,8 +17,9 @@ Open up the GenePattern Notebook Repository by visiting https://notebook.genepat
 On the page listing notebook files, look in the upper right and you should see three buttons: Upload, New and a Refresh icon. Pull down the New menu and select Notebooks > Python 3. This will create a new GenePattern notebook, which will open in a new browser tab. It should look something like the screenshot below.
 
 
+At the top of this page is a menu bar and toolbar for working with the notebook. Below this is the notebook’s first cell. Python code can executed from cells, documentation can be added and GenePattern widgets can be entered to launch analyses. For general information on how to use Jupyter notebooks, see the `Jupyter documentation`__.
 
-At the top of this page is a menu bar and toolbar for working with the notebook. Below this is the notebook’s first cell. Python code can executed from cells, documentation can be added and GenePattern widgets can be entered to launch analyses. For general information on how to use Jupyter notebooks, see the Jupyter documentation.
+.. __: http://jupyter.org/
 
 3. Log into GenePattern
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
