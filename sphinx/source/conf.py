@@ -98,6 +98,8 @@ html_static_path = []
 #
 # html_sidebars = {}
 
+# HTML Logo
+# html_logo = 'logo.png'
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

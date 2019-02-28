@@ -1,6 +1,9 @@
 
-GenePattern Notebook documentation
-=====================================
+|genepattern| GenePattern Notebook documentation
+===========================================================
+
+.. |genepattern| image:: http://genepattern-notebook.org/wp-content/uploads/2017/02/genepattern.png
+    :width: 50px
 
 **GenePattern Notebook** is the first system to integrate the dynamic capabilities of notebook systems with an investigator-focused, easy-to-use interface that provides access to hundreds of genomic tools without the need to write code.
 
