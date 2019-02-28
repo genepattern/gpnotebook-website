@@ -141,7 +141,7 @@ GenePattern Python 1.3.0 (July 27, 2017)
 
 Notebook Tool Manager
 -----------------------
-- Release updates for the Notebook Tool Manager. Install using ``pip install nbtools`` or ``conda install -c genepattern nbtools``.
+Release updates for the Notebook Tool Manager. Install using ``pip install nbtools`` or ``conda install -c genepattern nbtools``.
 
 Notebook Tool Manager 0.1.7 (April 3, 2018)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
