@@ -6,4 +6,4 @@ date: 2017-08-31 14:45:52
 tags: article
 ---
 
-http://www.bio-itworld.com/2017/08/31/genepattern-notebook-environment-needs-only-web-browser-analyses.aspx
+https://www.bio-itworld.com/2017/08/31/genepattern-notebook-environment-needs-only-web-browser-analyses.aspx

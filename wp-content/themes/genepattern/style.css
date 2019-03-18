@@ -1,7 +1,7 @@
 /*
 Theme Name: 	GenePattern
 Author:         Derek Ashauer; Forrest Kim
-Author URI:     http://www.ashwebstudio.com
+Author URI:     https://www.ashwebstudio.com
 */
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,700');
@@ -46,6 +46,7 @@ h1, h2, h3 { line-height: 1.1; }
 a img, :link img, :visited img { border: none }
 a { color: #534f98; text-decoration: underline; font-weight: 600;}
 a:hover { color: #ed1c24; }
+a:active {color:#534f98}
 div.clear { clear: both; overflow: hidden; height: 1px; }
 input { vertical-align: middle; }
 .cf:before, .cf:after { content: " "; display: table; }
@@ -99,28 +100,30 @@ hr {
 .home #header { padding: 75px 0 0 0; position: absolute; top: 0; left: 0; width: 100%; }
 #banner { background: transparent url(images/banner.jpg) center center no-repeat; background-size: cover; height: 1200px; text-align: center;}
 #banner-content { position: relative; top: 0; transform: translateY(-50%); padding-top: 100px; left: 10px}
-#banner h1 { color: #FFF; font-size: 55px; max-width: 780px; margin: 0 auto; }
+#banner h1 { color: #FFF; font-size: 45px; max-width: 780px; margin: 0 auto; }
 #banner a.button { font-size: 20px; padding: 13px 45px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px; font-weight: 100}
 #banner a.button:hover { background: #FFF; color: #365e9f; }
 #banner a {text-decoration-line: none;}
+/* #banner a.button:visited { color: white;} */
 .login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
 #pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
 #banner a:hover {color: #ed1c24;}
-
 #news { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 2%; font-size: 20px;}
 #news img {height: 50px; width: 150px; margin-bottom: 3%; margin-right: 20px;}
 #news-img a:hover {background-color: transparent}
 
 
-#intros { padding: 115px 0; }
+#intros { padding: 70px 0; }
 #intros ul { display: flex; align-items: stretch; justify-content: space-around; }
-#intros li { position: relative; background: #FFF; background-position: center 75%; background-repeat: no-repeat; box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.28); width: 32%; list-style: none; text-align: center; padding: 75px 0 0 0; }
-#intros li h2 { font-size: 30px; padding: 0 30px 200px 30px; color: #3b2942; }
+/* #intros li { position: relative; background: #FFF; background-position: center 75%; background-repeat: no-repeat; box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.28); width: 32%; list-style: none; text-align: center; padding: 75px 0 0 0; } */
+#intros li { position: relative; background: #FFF; background-position: center 100%; background-repeat: no-repeat; list-style: none; text-align: center; padding: 30px 0 0 0; width: 32%}
+#intros li h2 { font-size: 30px; padding: 0 30px 50px 30px; color: #3b2942; }
+#intros li p.detail {width: 100%; text-align: center; margin: 0; padding: 0px 50px 100px 50px;}
 #intros li p.more { position: absolute; bottom: -25px; width: 100%; text-align: center; margin: 0; }
 #intros li a.button { font-size: 20px; padding: 12px 40px; }
-#intros li:before { content: ""; display: inline-block; width: 20px; height: 20px; background: #534f98; position: absolute; left: 50%; top: -10px; margin-left: -10px; }
+/* #intros li:before { content: ""; display: inline-block; width: 20px; height: 20px; background: #534f98; position: absolute; left: 50%; top: -10px; margin-left: -10px; }
 #intros li:nth-child( 2 ):before { background-color: #f08a5d; }
-#intros li:nth-child( 3 ):before { background-color: #ed1c24; }
+#intros li:nth-child( 3 ):before { background-color: #ed1c24; } */
 
 #welcome { background: transparent url(images/logo-bg.jpg) center center no-repeat; background-size: cover; padding: 150px 0; }
 #welcome .container { max-width: 780px; }
