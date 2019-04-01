@@ -392,6 +392,22 @@ def example_function(param_1, param_2):
     . . .</pre></code>
 
                 <p><img alt="" src="ui_builder_9.jpg" style="width: 100%;"/></p>
+
+                <p>Similar to choice parameters, a file parameter may likewise be given a list of possible options. These options will appear in a dropdown when the parameter it selected.</p>
+
+                <code><pre>
+@genepattern.build_ui(parameters={
+    "param_1": {
+        "type": "file",
+        "choices": {
+            "Example Label #1": "ftp://fake.example.com/example_1.csv",
+            "Example Label #2": "ftp://fake.example.com/example2.csv",
+            "Example Label #3": "ftp://fake.example.com/example_3.csv"
+        }
+    }
+})
+def file_choice_example(param_1):
+    . . .</pre></code>
                 
                 
                 <h3>12. Client-side Interactivity</h3>
