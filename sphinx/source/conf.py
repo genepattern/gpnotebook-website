@@ -24,9 +24,9 @@ copyright = '2019, Jill P. Mesirov Lab'
 author = 'Jill P. Mesirov Lab'
 
 # The short X.Y version
-version = ''
+version = '0.0.1'
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = 'beta'
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,7 +39,7 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
+    'sphinx.ext.autodoc', 'recommonmark'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
