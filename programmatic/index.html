@@ -461,10 +461,11 @@ def example_function(first_parameter, second_parameter):
                 <ul>
                     <li><strong>register_tool:</strong> Sets whether to register this function with the Notebook Tool Manager. Defaults to True.</li>
                     <li><strong>function_import:</strong> Override the import name of an existing function.</li>
+                    <li><strong>collapse:</strong> Set whether the widget collapses upon submission (default=True).</li>
                 </ul>
                 
                 <code><pre>
-@nbtools.build_ui(register_tool=False, function_import='example_package.example_function')
+@nbtools.build_ui(register_tool=False, function_import='example_package.example_function', collapse=False)
 def example_function(first_parameter, second_parameter):
     . . .</pre></code>
 
