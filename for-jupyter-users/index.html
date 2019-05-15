@@ -127,15 +127,13 @@
                 through the GenePattern Notebook search functionality.</p>
                 <p><img alt="" src="../wp-content/uploads/2017/02/content_screen_shot_2015-10-22_at_11_50_01.png" style="width: 600px; height: 251px; border-width: 1px; border-style: solid;"/></p>
                 <p><img alt="" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_30_39.png" style="width: 600px; height: 296px; border-width: 1px; border-style: solid;"/></p>
-                <p>GenePattern cells come in three types: authentication, task cells and job cells.</p>
-                <p><strong>A. Authentication cells</strong> are used to authenticate the notebook user with a GenePattern server. One of these cells must be added to a notebook and the user authenticated before the functionality of other GenePattern cells becomes available. If a GenePattern cell is added to a notebook before authentication has happened, it will automatically become one of these cells.</p>
+                <p>GenePattern cells come in three types: authentication, analysis cells and UI Builder cells.</p>
+                <p><strong>A. Authentication cells</strong> are used to authenticate the notebook user with a GenePattern server. One of these cells must be added to a notebook before Analysis cells becomes available. If a GenePattern cell is added to a notebook before authentication has happened, it will automatically become one of these cells.</p>
                 <p><img alt="" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png" style="width: 600px; height: 221px; border-width: 1px; border-style: solid;"/></p>
-                <p><strong>B. Task cells</strong> each represent a particular type of analysis on the GenePattern platform. Hundreds of diferent analyses are available. These cells will present a form to the user, accepting data or other parameters. Once one of these forms has been filled out, the user can then run the analysis by clicking the Run button. This will submit the analysis to the GenePattern server, and create a Job cell which represents that particular submission.</p>
+                <p><strong>B. Analysis cells</strong> each represent a particular type of analysis on the GenePattern platform. Hundreds of diferent analyses are available. These cells will present a form to the user, accepting data or other parameters. Once one of these forms has been filled out, the user can then run the analysis by clicking the Run button. This will submit the analysis to the GenePattern server and display the results.</p>
                 <p><img alt="" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png" style="width: 600px; height: 324px; border-width: 1px; border-style: solid;"/></p>
-                <p><strong>C. Job cells</strong> are created when a GenePattern task cells are submitted to the GenePattern server. These cells will appear below the
-                submitting task cell. The left of the cell will contain the timestamp for when the job was submitted, and the right will contain the job&#39;s status in GenePattern&#39;s queuing system. All jobs pass from a PENDING state into RUNNING, and from there either into the COMPLETE or ERROR states.</p>
-                <p>Once a job has finished running, any results output by the job will appear on the left below the submission timestamp. Clicking any of these results will open a menu containing different options for working with these files.</p>
-                <p><img alt="" src="../wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png" style="width: 600px; height: 97px; border-width: 1px; border-style: solid;"/></p>
+                <p><strong>C. UI Builder cells</strong> are a way to display any Python function or method call as an interactive widget. This will render the parameters of the function as a web form. The UI Builder will use any existing docstring for the function as a description, will infer parameter types from default values and will display parameter annotations as helpful text near each input.</p>
+                <p><img alt="" src="../programmatic/ui_builder_1.jpg" style="width: 100%;"></p>
                 <p>Since GenePattern cells are also Python code cells, all changes to the information in these widgets is reflected in the code and will be saved in
                 the notebook&#39;s ipynb file. Similarly, sending one of these notebook files to a user without the GenePattern Notebook extension installed, will result in a complete notebook, albeit one where the cells with visual widgets are instead displayed as code.</p>
                 <p>To view the code backing a GenePattern cell, simply click the &quot;Gear&quot;&nbsp;button found on a GenePattern widget in the upper right
@@ -147,8 +145,9 @@
                     <em>Run</em> button on the widget will validate the form and execute the function using the supplied values.</p>
                 <p>The UI Builder will use any existing docstring for the function as a description in the widget, will infer parameter types from default
                     values and will display parameter annotations as helpful text near each input.</p>
-                <p>To use render a function, simply import the <em>GPUIBuilder</em> class from the <em>genepattern</em> package and pass the function to its
+                <p>To use render a function, simply import the <em>UIBuilder</em> class from the <em>nbtools</em> package and pass the function to its
                     constructor.</p>
+                <p><a href="/programmatic/#ui-builder">For more information see the Programmatic Features page</a></p>
                 <p><img alt="" src="call-widget.jpg" style="width: 600px; border: 1px solid;"/></p>
 
                 <h3>5. GenePattern Python Library</h3>
