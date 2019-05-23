@@ -49,6 +49,12 @@
     </script>
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
+    <style type="text/css">
+        table td {
+            font-size: 0.8em;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body class="page-template-default page page-id-9">
@@ -165,6 +171,236 @@
                 <p><img alt="" src="../wp-content/uploads/2017/02/content_screen-shot-2015-10-15-at-13_50.jpg" style="width: 600px; height: 159px; border-width: 1px; border-style: solid;"/></p>
                 <p>GPJob objects can also be programmatically created and executed without the need for a GenePattern cell or widget. For information on how to do
                 this see the <a href="https://genepattern.org/programmers-guide#_Using_GenePattern_from_Python">GenePattern Programmer&#39;s Guide</a>&nbsp;or the <a href="https://github.com/genepattern/example-notebooks/blob/master/GenePattern%20Python%20Tutorial.ipynb">GenePattern Python Tutorial</a> notebook.</p>
+
+                <h1>Python Packages</h1>
+                <p>The GenePattern Notebook Repository comes with a wide selection of Python packages installed in the base environment. Users can also supplement this list by installing their own packages. The base environment includes:</p>
+                <table class="table table-striped">
+                    <tr>
+                        <td><strong>anndata</strong></td>
+                        <td>argcomplete</td>
+                        <td>asnrypto</td>
+                        <td>attrs</td>
+                        <td>Babel</td>
+                    </tr>
+                    <tr>
+                        <td>backcall</td>
+                        <td>beautifulsoup</td>
+                        <td><strong>biopython</strong></td>
+                        <td>bleach</td>
+                        <td><strong>bokeh</strong></td>
+                    </tr>
+                    <tr>
+                        <td>boto</td>
+                        <td>botocore</td>
+                        <td>cachetools</td>
+                        <td><strong>ccalnoir</strong></td>
+                        <td>certifi</td>
+                    </tr>
+                    <tr>
+                        <td>cffi</td>
+                        <td>chardet</td>
+                        <td>cloudpickle</td>
+                        <td>CommonMark</td>
+                        <td>crc32c</td>
+                    </tr>
+                    <tr>
+                        <td>crcmod</td>
+                        <td>cryptography</td>
+                        <td><strong>cuzcatlan</strong></td>
+                        <td>cycler</td>
+                        <td><strong><a href="https://github.com/cytoscape/cytoscape-jupyter-widget" target="_blank">cyjupyter</a></strong></td>
+                    </tr>
+                    <tr>
+                        <td>Cython</td>
+                        <td>cytoolz</td>
+                        <td>dask</td>
+                        <td>dcplib</td>
+                        <td>decorator</td>
+                    </tr>
+                    <tr>
+                        <td>defusedxml</td>
+                        <td>dill</td>
+                        <td>docutils</td>
+                        <td>entrypoints</td>
+                        <td>enum34</td>
+                    </tr>
+                    <tr>
+                        <td>fastcache</td>
+                        <td>future</td>
+                        <td><strong>genefab</strong></td>
+                        <td><strong>genepattern-notebook</strong></td>
+                        <td><strong>genepattern-python</strong></td>
+                    </tr>
+                    <tr>
+                        <td>gmpy2</td>
+                        <td>google-auth</td>
+                        <td>google-auth-oauthlib</td>
+                        <td>h5py</td>
+                        <td><strong>hca</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>humanfriendly</strong></td>
+                        <td>idna</td>
+                        <td><strong><a href="https://github.com/igvteam/igv-jupyter#igvjs-jupyter-extension" target="_blank">igv-jupyter</a></strong></td>
+                        <td>ijson</td>
+                        <td>imageio</td>
+                    </tr>
+                    <tr>
+                        <td>ipykernel</td>
+                        <td>ipython</td>
+                        <td>ipython-genutils</td>
+                        <td><strong>ipywidgets</strong></td>
+                        <td>jedi</td>
+                    </tr>
+                    <tr>
+                        <td>Jinja2</td>
+                        <td>jmespath4</td>
+                        <td>joblib</td>
+                        <td>jsonpointer</td>
+                        <td>jsonschema</td>
+                    </tr>
+                    <tr>
+                        <td>jupyter</td>
+                        <td>jupyter-client</td>
+                        <td>jupyter-console</td>
+                        <td>jupyter-core</td>
+                        <td><strong>jupyter-wysiwyg</strong></td>
+                    </tr>
+                    <tr>
+                        <td>kiwisolver</td>
+                        <td>llvmlite</td>
+                        <td>louvain</td>
+                        <td>MarkupSafe</td>
+                        <td><strong>matplotlib</strong></td>
+                    </tr>
+                    <tr>
+                        <td>memory-profiler</td>
+                        <td>mistune</td>
+                        <td>mock</td>
+                        <td>mpmath</td>
+                        <td>natsort</td>
+                    </tr>
+                    <tr>
+                        <td>nbconvert</td>
+                        <td>nbformat</td>
+                        <td><strong>nbtools</strong></td>
+                        <td><strong>ndex2</strong></td>
+                        <td><strong>networkx</strong></td>
+                    </tr>
+                    <tr>
+                        <td>notebook</td>
+                        <td><strong>numba</strong></td>
+                        <td>numexpr</td>
+                        <td><strong>numpy</strong></td>
+                        <td>oauthlib1</td>
+                    </tr>
+                    <tr>
+                        <td>olefile</td>
+                        <td>opencv-python</td>
+                        <td>packaging</td>
+                        <td><strong>pandas</strong></td>
+                        <td>pandocfilters</td>
+                    </tr>
+                    <tr>
+                        <td>parso</td>
+                        <td>patsy</td>
+                        <td>pexpect</td>
+                        <td>pickleshare</td>
+                        <td>Pillow</td>
+                    </tr>
+                    <tr>
+                        <td><strong>plotly</strong></td>
+                        <td>prometheus-client</td>
+                        <td>prompt-toolkit</td>
+                        <td>protobuf</td>
+                        <td>psutil2</td>
+                    </tr>
+                    <tr>
+                        <td>ptyprocess</td>
+                        <td>puremagic</td>
+                        <td><strong>py2cytoscape</strong></td>
+                        <td>pyasn5</td>
+                        <td>pyasnmodules</td>
+                    </tr>
+                    <tr>
+                        <td>pycairo</td>
+                        <td>pycparser</td>
+                        <td>pydot1</td>
+                        <td>pydotplus</td>
+                        <td>Pygments</td>
+                    </tr>
+                    <tr>
+                        <td>PyJWT1</td>
+                        <td>pyparsing</td>
+                        <td>pyrsistent</td>
+                        <td><strong>pysam</strong></td>
+                        <td>pysolr</td>
+                    </tr>
+                    <tr>
+                        <td>python-dateutil</td>
+                        <td>python-igraphpost</td>
+                        <td>pytz</td>
+                        <td>PyWavelets</td>
+                        <td>PyYAML</td>
+                    </tr>
+                    <tr>
+                        <td>pyzmq</td>
+                        <td>qtconsole</td>
+                        <td>requests</td>
+                        <td>requests-oauthlib</td>
+                        <td>requests-toolbelt</td>
+                    </tr>
+                    <tr>
+                        <td><strong>rpy2</strong></td>
+                        <td>rsa</td>
+                        <td>s3transfer</td>
+                        <td><strong>scanpy</strong></td>
+                        <td>scikit-image</td>
+                    </tr>
+                    <tr>
+                        <td><strong>scikit-learn</strong></td>
+                        <td><strong>scipy</strong></td>
+                        <td><strong>seaborn</strong></td>
+                        <td>Send2Trash</td>
+                        <td>simplegeneric</td>
+                    </tr>
+                    <tr>
+                        <td>six</td>
+                        <td>soupsieve</td>
+                        <td>SQLAlchemy</td>
+                        <td>statsmodels</td>
+                        <td>sympy</td>
+                    </tr>
+                    <tr>
+                        <td>tables</td>
+                        <td>tenacity</td>
+                        <td>terminado</td>
+                        <td>testpath</td>
+                        <td>toolz</td>
+                    </tr>
+                    <tr>
+                        <td>tornado</td>
+                        <td>tqdm</td>
+                        <td>traitlets</td>
+                        <td>tweak</td>
+                        <td>tzlocal</td>
+                    </tr>
+                    <tr>
+                        <td>umap-learn</td>
+                        <td>urllib</td>
+                        <td>validators</td>
+                        <td>vincent</td>
+                        <td>wcwidth</td>
+                    </tr>
+                    <tr>
+                        <td>webencodings</td>
+                        <td>widgetsnbextension</td>
+                        <td>xlrd</td>
+                    </tr>
+                </table>
+
+
+
             </section>
             <aside>
             </aside>
