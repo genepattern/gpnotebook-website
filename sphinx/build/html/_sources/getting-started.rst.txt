@@ -5,7 +5,7 @@ NOTE: You can use the GenePattern Notebook environment by `registering for a Gen
 
 .. __: https://notebook.genepattern.org/
 .. __: https://notebook.genepattern.org/
-.. __: http://www.genepattern-notebook.org/install/
+.. __: https://www.genepattern-notebook.org/install/
 
 1. Login to the GenePattern Notebook Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -19,13 +19,13 @@ On the page listing notebook files, look in the upper right and you should see t
 
 At the top of this page is a menu bar and toolbar for working with the notebook. Below this is the notebook’s first cell. Python code can executed from cells, documentation can be added and GenePattern widgets can be entered to launch analyses. For general information on how to use Jupyter notebooks, see the `Jupyter documentation`__.
 
-.. __: http://jupyter.org/
+.. __: https://jupyter.org/
 
 3. Log into GenePattern
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Select any blank cell
 Change that cell’s type to GenePattern using the menu found in the Jupyter toolbar. You may be prompted to confirm that you want to turn this cell into a GenePattern cell. This is expected.
-Once inserted, the cell will prompt you to select a GenePattern server, as well as to enter a username and password. The default server to select is the Broad-hosted GenePattern server, http://genepattern.broadinstitute.org.
+Once inserted, the cell will prompt you to select a GenePattern server, as well as to enter a username and password. The default server to select is the Broad-hosted GenePattern server, https://genepattern.broadinstitute.org.
 Once you have filled in these fields, click Log into GenePattern.
 If one does not have a GenePattern account, first select the server and then click Register an Account.
 

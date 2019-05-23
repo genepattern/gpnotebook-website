@@ -15,7 +15,7 @@ The first GenePattern cell that a user is likely to encounter is an Authenticati
 
 Authentication cells will look like a login form with the additional option of selecting which GenePattern server to sign into. If the user has already authenticated, such as when usng the GenePattern Notebook Repository, the user will instead be prompted to either sign in as the current user or to cancel and sign in as a different user
 
-.. image:: http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png
+.. image:: https://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_27_12.png
 
 
 B. Analysis Cells
@@ -26,7 +26,7 @@ Every Analysis Cell has a number of parameters, which can be used to upload data
 
 Once the Run button has been clicked, all selected files will upload and then a Job Cell will be inserted below to indicate the status of the job in GenePattern’s queue (see Job Cells below).
 
-.. image:: http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png
+.. image:: https://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_32_11.png
 
 C. Analysis Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -40,7 +40,7 @@ If this analysis includes visualization, the visualization will load and appear 
 
 Additional options, such as memory requirements, can be specified when submitting a job. These options are hidden by default, but can be made visible by going to the cell's Gear () menu and selecting Toggle Job Options.
 
-.. image:: http://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png
+.. image:: https://genepattern-notebook.org/wp-content/uploads/2017/02/content_screen_shot_2015-08-24_at_10_33_20.png
 
 2. Markdown Cells
 -------------------------------
@@ -58,7 +58,7 @@ To use the Rich Text Editor, first insert a markdown cell (see the instructions 
 
 Click the  button and the editor will appear. A toolbar will show above the cell, allowing the user to format text, insert headers or add links. Style the text as desired, and when finished, click the  button to finish editing.
 
-.. image:: http://genepattern-notebook.org/wp-content/uploads/2017/02/wysiwyg.jpg
+.. image:: https://genepattern-notebook.org/wp-content/uploads/2017/02/wysiwyg.jpg
 
 4. Workflow Execution
 -------------------------------
@@ -68,4 +68,4 @@ By combining this feature with the Job Result Syntax feature, a workflow can be 
 
 To run a GenePattern notebook as a workflow, first locate an authentication cell and click on the gear menu. Select Run Notebook as Workflow. A dialog box will pop up displaying the status of running the workflow. Simply wait for execution to complete.
 
-.. image:: http://genepattern-notebook.org/basic-features/workflow-execution.jpg
+.. image:: https://genepattern-notebook.org/basic-features/workflow-execution.jpg
