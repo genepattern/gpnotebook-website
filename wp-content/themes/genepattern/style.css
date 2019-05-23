@@ -104,7 +104,7 @@ hr {
 #banner a.button:hover { background: #FFF; color: #365e9f; }
 #banner a {text-decoration-line: none;}
 .login-box { min-height:255px; position: relative; top: 180px; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 6px 10px 0 10px;}
-#pub { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
+#pub, #hca { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin-top: 2%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 7%; font-size: 20px;}
 #banner a:hover {color: #ed1c24;}
 
 #news { padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid; border-color: white; width: 55%; margin: auto; color: white; text-align: left; border-radius: 10px; margin-top: 2%; font-size: 20px;}
@@ -168,7 +168,8 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
     width: auto;
     margin-bottom: -50px;
 }
-#news a, #pub a {
+#news a, #pub a, #hca a {
+    color: #ACC6EF;
     font-weight: 100;
 }
 
@@ -207,7 +208,7 @@ body { background: #e4e8ea url(images/bg.png) top center repeat-x; }
 @media screen and (max-width: 767px) {
 	#banner { padding: 350px 5% 100px 5%; height:auto; }
     #banner-content {margin-top: 45%}
-    #pub {width: 70%;}
+    #pub, #hca {width: 70%;}
     #news {width: 70%;}
 	#intros ul { display: block; }
 	#intros li { width: 100%; margin: 0 0 70px 0; }
