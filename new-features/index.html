@@ -108,7 +108,52 @@
             <section>
                 <h1 id="new">New GenePattern Notebook Features</h1>
                 <hr>
+                <p>The following new features have recently been added to the GenePattern Notebook environment.</p>
 
+                <h2>General Features</h2>
+                <ul>
+                    <li>Table of contents functionality had been added to the GenePattern Notebook environment. To access
+                        this functionality, click the new <em>Table of Contents</em> button in the toolbar. This will open a
+                        panel on the left-hand side of the screen. From this panel, various
+                        options can be selected, including the automatic numbering of headers and the generation of
+                        automatically-updated table of contents cells.</li>
+                    <li>Public notebooks now have improved preview functionality. To access a notebook's preview, click
+                        any public notebook on the <em>Notebook Library</em> tab and select the <em>Preview</em> button.
+                        This will bring you to a new page with basic information about the notebook and a complete
+                        preview image. From here you can download the notebook or run a copy of the notebook. You may
+                        also use the URL of the preview page as a sharable link which can be distributed to collaborators.</li>
+                    <li>Users now have the ability to add comments to public notebooks. This can be done from either the
+                        notebook via the <em>Comments</em> button on the toolbar, or from the <em>Notebook Library</em> tab.</li>
+                    <li>Users may now search over all public notebooks at once in the <em>Notebook Library</em> tab.</li>
+                    <li>New users are now presented with a tour of GenePattern Notebook features when they first log in.
+                        Existing users can view this tour from the help panel, accessed by clicking on the <em>i</em>
+                        icon in the lower right.</li>
+                </ul>
+
+                <h2>Programmatic Features</h2>
+                <ul>
+                    <li>The ability to turn on or off the collapsing of widgets has been added to the UI Builder. To make
+                        use of this feature, add the <em>collapse=False</em> option to the UI Builder call.</li>
+                    <li>The ability to annotate parameters as required or optional has been added to the UI Builder. To
+                        make use of this functionality, add <em>optional=True</em> to the UI Builder call</li>
+                    <li>Notebook authors now have the ability to mark text as potential input to UI Builder text parameters.
+                        This can be accomplished by adding the <em>nbtools-text-option</em> class to the text in question.</li>
+                    <li>Users may now add custom status messages to the UI Output widget. This can be done by
+                        instantiating a widget instance and then setting the status property (ex: <em>uioutput.status = "message"</em>).</li>
+                    <li>Added support for user-installed and configured nbextensions.</li>
+                    <li>New libraries have been added to the Python 3.7 environment. These include igv, cyjupyter,
+                        genefab, humanfriendly and ndex2.</li>
+                </ul>
+
+                <h2>Administrative & Miscellaneous Features</h2>
+                <ul>
+                    <li>Added support for Jupyter 5.7.8, ipywidgets 7.4.2 and JupyterHub 1.0.</li>
+                    <li>Updated GenePattern Notebook and GenePattern Notebook Repository Docker images have been
+                        released. These updates are based on the Jupyter Stacks and include improved support for common
+                        Python libraries, streamlined configuration, theming support and improved backend configuration.</li>
+                    <li>Wrapper scripts have been added to the GenePattern Notebook Repository Docker image, which allow
+                    for easier administration and theming of a Notebook Repository instance.</li>
+                </ul>
             </section>
             <aside>
                 <ul id="section-menu">
