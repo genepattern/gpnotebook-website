@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://genepattern-notebook.org/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/user-guide/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/basic-features/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/public-notebooks/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/publishing-sharing/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/new-features/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/programmatic/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/install/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/for-jupyter-users/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/tutorials/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/faq/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/community/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/releases/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/example-notebooks/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/cheat-sheet/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/about/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/contact/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/tutorials/JupyterCon.pdf</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/releases/notebook-repo-17.05/</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://genepattern-notebook.org/cheat-sheet/gpnb-cheatsheet.pdf</loc>
+  <lastmod>2019-05-15T20:32:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

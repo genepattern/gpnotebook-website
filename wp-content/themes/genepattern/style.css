@@ -100,7 +100,7 @@ hr {
 /* HOME
 /* ----------------------------------- */
 .home #header { padding: 50px 0 0 0; position: absolute; top: 0; left: 0; width: 100%; }
-#banner-content { position: relative; top: 0; padding-top: 250px;}
+#banner-content { position: relative; top: 0; padding-top: 150px;}
 #banner h1 { color: #FFF; max-width: 1000px; margin: 0 auto; margin-top: 10px; font-size: 25px;}
 #banner #front-title1 {font-size:70px;}
 #banner a.button { font-size: 18px; padding: 10px 30px; border: 1px solid #FFF; background: rgba(17,34,67,.3); margin-top: 40px; font-weight: 100}
@@ -131,7 +131,7 @@ a.button.col-sm-4:hover {
 }
 /* #intros ul { display: flex; align-items: stretch; justify-content: space-around; } */
 /* #intros li { position: relative; background: #FFF; background-position: center 75%; background-repeat: no-repeat; box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.28); width: 32%; list-style: none; text-align: center; padding: 75px 0 0 0; } */
-#intros {padding-top: 150px;}
+#intros {padding-top: 100px;}
 #intros .inner { position: relative; background: #FFF; background-repeat: no-repeat; padding: 30px; min-height: 280px}
 #intros h2 {font-size: 24px; color: #3b2942; text-align: left; font-weight: 100; padding: 0px; margin: 0; margin-bottom: 10px;}
 #intros p { font-size: 13px; padding: 0px; text-align: left; margin: 0;
