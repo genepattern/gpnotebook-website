@@ -477,7 +477,7 @@ def example_function(first_parameter, second_parameter):
                     R script's memory space. The return value of the cell is passed back to Python as the value of the output variable.</p>
                 <p>A code example is below.</p>
 
-                <code><pre>%load_ext r_support</pre></code>
+                <code><pre>%load_ext nbtools.r_support</pre></code>
 
                 <code><pre>
 %%r_build_ui { "name": "R Example", "parameters": { "param_from_ui_builder": { "type": "number" } } }
