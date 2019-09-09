@@ -168,6 +168,30 @@
                 <p>GenePattern Notebook makes doing this easy. Just give the link to the external file the <em>nbtools-markdown-file</em> class and the external file will automatically appear as an option in GenePattern Notebook's file menus. An example is given below.</p>
                 <code>&lt;a class="nbtools-markdown-file" href="https://example.url">The text to link here.&lt;/a></code>
 
+                <h3 id="installing-packages">9. Installing Packages</h3>
+                <p>While the GenePattern Notebook Workspace comes with many popular bioinformatic and machine learning packages already installed, it also
+                    provides the ability to customize your workspace by installing new libraries.</p>
+                <p>Behind the scenes, each kernel in the GenePattern Notebook Workspace is encapsulated in a conda environment. To install a new library, simply
+                    activate the appropriate environment and then install the package through either the PIP or conda package managers.</p>
+
+                <h4><strong>Conda Environments</strong></h4>
+                <p>To activate a conda environment, open a new terminal and then enter one of the following lines, as appropriate for your notebook's
+                    environment. Since the Python 3.7 kernel is used by default, if there is any doubt, activate that environment.</p>
+                <code>source activate python3.7</code>
+                <code>source activate python3.6</code>
+
+                <h4><strong>Installing Through PIP</strong></h4>
+                <p>Once the correct conda environment has been activated, installing new packages through PIP is as easy as adding the <em>--user</em> parameter
+                    to the PIP command. (You may need to shut down and restart your notebook if it was opened before the library was installed.)</p>
+                <code>pip install --user &lt;package_name></code>
+
+                <h4><strong>Installing Through Conda</strong></h4>
+                <p>Installing packages through conda requires one additional step. You must first tell conda where to install new packages, then you can install
+                    them using a simple <em>conda install</em> command. See the commands below.</p>
+                <p>Without this additional <em>conda config</em> command, packages will install successfully, but will be lost each time you log in.</p>
+                <code>conda config --add pkgs_dirs ~/.local/lib/python3.7/site-packages</code>
+                <code>conda install &lt;package_name></code>
+
                 <h2 id="ui-builder">UI Builder</h2>
                 <p>The UI Builder is a way to display any Python function or method call as an interactive widget. This will render the parameters of the
                     function as a web form.</p>
