@@ -107,11 +107,30 @@
                 <h1>Example Notebooks</h1>
                 <hr>
                 <div style="border: 1px solid black; padding: 20px; overflow-y: scroll; background-color: rgba(0,0,0,0.1); padding-bottom: 0px;">
+                    <input id="nb-search" type="search" placeholder="Search Notebooks" style="float: right; border-radius: 10px; padding: 3px; width: 300px;" >
                     <h1 style="margin-bottom: 20px; font-size: 30px;">List of the current public notebooks</h1>
                     <hr>
                     <div id="notebook_list" class="scrollable-menu" role="menu" style="max-height: 500px; overflow-x: hidden; overflow-y: scroll; margin-right: 1px;">
                     </div>
                     <script type="application/javascript">
+                        $("#nb-search").keypress(function() {
+                            const search_query = $("#nb-search").val().toLowerCase();
+                            $(".notebook-listing").each(function(i, e) {
+                                const listing_text = $(e).text().toLowerCase();
+                                if (listing_text.includes(search_query) || search_query === "") $(e).show();
+                                else $(e).hide();
+                            });
+                        });
+
+                        function workshop(nb) {
+                            let is_workshop = false;
+                            nb.tags.forEach(function(tag) {
+                                if (tag.label === "workshop") is_workshop = true;
+                            });
+
+                            return is_workshop;
+                        }
+
                         $.ajax({
                             type: "GET",
                             url: "https://notebook.genepattern.org/services/sharing/notebooks/",
@@ -120,7 +139,7 @@
                             success: function(data) {
                                 const notebooks = data.results;
                                 notebooks.forEach(function(nb) {
-                                    if (nb.author == "GenePattern Team") {
+                                    if (!workshop(nb)) {
                                     $(`<div class="notebook-listing" style="padding: 10px; background-color: white; margin: 0 auto; margin-bottom: 10px; border: 1px solid grey"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin: 0px auto;"><a href="https://notebook.genepattern.org/services/sharing/notebooks/${nb.id}/preview/" target="_blank">${nb.name}</a></h3>
                                     <address class="notebook-author" rel="author" style="font-size: 14px;">${nb.author}</address>
                                     <address class="notebook-quality" rel="quality" style="font-size: 12px;">${nb.quality}</address>
