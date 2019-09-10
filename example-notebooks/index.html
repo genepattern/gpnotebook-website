@@ -113,7 +113,7 @@
                     <div id="notebook_list" class="scrollable-menu" role="menu" style="max-height: 500px; overflow-x: hidden; overflow-y: scroll; margin-right: 1px;">
                     </div>
                     <script type="application/javascript">
-                        $("#nb-search").keypress(function() {
+                        $("#nb-search").keyup(function() {
                             const search_query = $("#nb-search").val().toLowerCase();
                             $(".notebook-listing").each(function(i, e) {
                                 const listing_text = $(e).text().toLowerCase();
