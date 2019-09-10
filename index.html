@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
     
-<body class="home page-template-default page page-id-2">
+<body class="home page-template-default page page-id-2" style="overflow-x: hidden;">
     <div id="wrapper">
         <header id="header">
             <div class="container cf">
@@ -69,7 +69,7 @@
                                     <a href="user-guide/">Getting Started</a>
                                     <hr style="margin: 1%">
                                     <a href="basic-features/">Basic Features</a>
-                                    <a href="public-notebooks/">Public Notebooks</a>
+                                    
                                     <a href="publishing-sharing/">Publishing & Sharing Notebooks</a>
                                     <a href="new-features/">New Features</a>
                                     <hr style="margin: 1%">
@@ -86,9 +86,10 @@
                                 <li class="dropbtn" onclick="myFunction2()" style="margin-left: 0%">Resources</li>
                                 <hr style="height: 18px; visibility: hidden;" id="mobile">
                                 <div class="dropdown-content" id="myDropdown2">
+                                    <a href="public-notebooks/">Featured Notebooks</a>
+                                    <a href="example-notebooks/"> Notebook Library</a>
                                     <a href="community/">Community</a>
                                     <a href="releases/">Releases</a>
-                                    <a href="example-notebooks/">Example Notebooks</a>
                                     <a href="cheat-sheet/">Cheat Sheet</a>
                                 </div>         
                             </ol>
@@ -103,16 +104,20 @@
         </header>
         <div id="banner">
             <div id="banner-content" style="top: 50%;">
-                <h1>Integrating Genomic Analysis with Interactive Notebooks</h1>
+                <h1 id="banner-title">Integrating  Genomic Analysis with Interactive Notebooks</h1>
                 <p>
                     <a href="https://notebook.genepattern.org/hub/login" class="button" style="margin-right: 2%;">Use GenePattern Notebook</a>
                     <a href="#intros" class="button" style="margin-right: 2%;">Learn More</a>
-                    <a href="/public-notebooks/" class="button">View Public Notebooks</a>
+                    <a href="/public-notebooks/" class="button">Featured Public Notebooks</a>
                 </p>
 
                 <div id="hca" style="font-size: 18px; margin: auto; margin-top: 5%; padding: 20px 20px; background: rgba(17,34,67,.3); border: 1px solid white; width: 55%; color: white; text-align: left; border-radius: 10px;">
-                    <p style="color:white; font-size: 20px; letter-spacing: 2px; margin-bottom: 20px;">New! HCA Notebook Workspace</p>
-                    <p style="color:white; margin-bottom: 0;">Working with data from the <a href="https://www.humancellatlas.org/" target="_blank">Human Cell Atlas</a>? The <a href="https://hca.genepattern.org" target="_blank">HCA Notebook Workspace</a> is a fully featured GenePattern Notebook repository for working with Human Cell Atlas data.</p>
+                    <p style="color:white; font-size: 20px; letter-spacing: 2px; margin-bottom: 20px;">New!</p>
+                    <ul style="margin-left: 20px">
+                    <li style="color:white; margin-bottom: 0;">HCA Notebook Workspace: Working with data from the <a href="https://www.humancellatlas.org/" target="_blank">Human Cell Atlas</a>? The <a href="https://hca.genepattern.org" target="_blank">HCA Notebook Workspace</a> is a fully featured GenePattern Notebook repository for working with Human Cell Atlas data.</li>
+                    <li style="color:white; margin-bottom: 0;">View our growing collection of <a href="/single-cell">single-cell notebooks</a></li>
+                    </ul>
+                    
                 </div>
                 
                 <div id="pub" style="font-size: 18px; margin-top: 30px;">
@@ -153,8 +158,8 @@
                     <p class="more"><a href="user-guide/" class="button">User Guide</a></p>
                 </li>
                 <li style="background-image: url(wp-content/uploads/2017/02/icon-browser.png);">
-                    <h2><strong>Explore</strong> working GenePattern Notebooks</h2>
-                    <p class="more"><a href="example-notebooks/" class="button">Notebook Collection</a></p>
+                    <h2><strong>Browse</strong> all public GenePattern notebooks</h2>
+                    <p class="more"><a href="example-notebooks/" class="button">Notebook Library</a></p>
                 </li>
             </ul>
         </div>

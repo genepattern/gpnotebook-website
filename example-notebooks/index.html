@@ -70,48 +70,71 @@
                                     <a href="../user-guide/">Getting Started</a>
                                     <hr style="margin: 1%">
                                     <a href="../basic-features/">Basic Features</a>
-                                    <a href="../public-notebooks/">Public Notebooks</a>
                                     <a href="../publishing-sharing/">Publishing & Sharing Notebooks</a>
                                     <a href="../new-features/">New Features</a>
                                     <hr style="margin: 1%">
                                     <a href="../programmatic/">Programmatic Features</a>
                                     <a href="../install/">Local Installation</a>
                                     <a href="../for-jupyter-users/">Jupyter Users</a>
-                                </div>         
+                                </div>
                             </ol>
                         </li>
                         <li id="menu-item-18" class="menu-item"><a href="../tutorials/">Videos/Tutorials</a></li>
-                        <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a href="../faq/">FAQ</a></li>
+                        <li id="menu-item-17" class="menu-item menu-item- ntype-post_type menu-item-object-page menu-item-17"><a
+                                href="../faq/">FAQ</a></li>
                         <li id="dropdown" class="menu-item">
                             <ol class="dropdown">
                                 <li class="dropbtn" onclick="myFunction2()" style="margin-left: 0%">Resources</li>
                                 <hr style="height: 18px; visibility: hidden;" id="mobile">
                                 <div class="dropdown-content" id="myDropdown2">
+                                    <a href="../public-notebooks/">Featured Notebooks</a>
+                                    <a href="../example-notebooks/">Notebook Library</a>
                                     <a href="../community/">Community</a>
                                     <a href="../releases/">Releases</a>
-                                    <a href="../example-notebooks/">Example Notebooks</a>
+                
                                     <a href="../cheat-sheet/">Cheat Sheet</a>
-                                </div>         
+                                </div>
                             </ol>
                         </li>
-                        <!-- <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../documentation/">Documentation</a></li> -->
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../about/">About</a></li>
-                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="../contact/">Contact</a></li>
-                        <li id="menu-item-51" class="button" style="font-weight: 300"><a href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
-                    </ul>			
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a
+                                href="../about/">About</a></li>
+                        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a
+                                href="../contact/">Contact</a></li>
+                        <li id="menu-item-51" class="button" style="font-weight: 300"><a
+                                href="https://notebook.genepattern.org/hub/login">Login/Register</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
         <div id="main" class="container cf">
             <section style="width: 100%;">
-                <h1>Example Notebooks</h1>
+                <h1>Notebook Library</h1>
                 <hr>
                 <div style="border: 1px solid black; padding: 20px; overflow-y: scroll; background-color: rgba(0,0,0,0.1); padding-bottom: 0px;">
+                    <input id="nb-search" type="search" placeholder="Search Notebooks" style="float: right; border-radius: 10px; padding: 3px; width: 300px;" >
                     <h1 style="margin-bottom: 20px; font-size: 30px;">List of the current public notebooks</h1>
                     <hr>
                     <div id="notebook_list" class="scrollable-menu" role="menu" style="max-height: 500px; overflow-x: hidden; overflow-y: scroll; margin-right: 1px;">
                     </div>
                     <script type="application/javascript">
+                        $("#nb-search").keyup(function() {
+                            const search_query = $("#nb-search").val().toLowerCase();
+                            $(".notebook-listing").each(function(i, e) {
+                                const listing_text = $(e).text().toLowerCase();
+                                if (listing_text.includes(search_query) || search_query === "") $(e).show();
+                                else $(e).hide();
+                            });
+                        });
+
+                        function workshop(nb) {
+                            let is_workshop = false;
+                            nb.tags.forEach(function(tag) {
+                                if (tag.label === "workshop") is_workshop = true;
+                            });
+
+                            return is_workshop;
+                        }
+
                         $.ajax({
                             type: "GET",
                             url: "https://notebook.genepattern.org/services/sharing/notebooks/",
@@ -120,7 +143,7 @@
                             success: function(data) {
                                 const notebooks = data.results;
                                 notebooks.forEach(function(nb) {
-                                    if (nb.author == "GenePattern Team") {
+                                    if (!workshop(nb)) {
                                     $(`<div class="notebook-listing" style="padding: 10px; background-color: white; margin: 0 auto; margin-bottom: 10px; border: 1px solid grey"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin: 0px auto;"><a href="https://notebook.genepattern.org/services/sharing/notebooks/${nb.id}/preview/" target="_blank">${nb.name}</a></h3>
                                     <address class="notebook-author" rel="author" style="font-size: 14px;">${nb.author}</address>
                                     <address class="notebook-quality" rel="quality" style="font-size: 12px;">${nb.quality}</address>
@@ -137,9 +160,7 @@
                     <p style="text-align: center; padding-top: 20px; padding-bottom: 0px; margin-top: -50px;"><span class="glyphicon glyphicon-chevron-down" style="font-size: 20px; color:"></span></p>
                 </div>
                 <br><br>
-                <p>The GenePattern Team has developed a number of tutorial and analysis notebooks that have been published in the <a href="../public-notebooks/"><b>Public Notebook Repository</b></a></p>
-                <p>Note - To view and use these notebooks in your own environment see the <a href="../public-notebooks/"><b>Public Notebooks Page</b></a></p>
-                
+
             </section>
         </div>
         <footer id="footer">

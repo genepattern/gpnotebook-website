@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>New Features &#8211; Gene Pattern Notebook</title>
-    <link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all'/>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Single Cell &#8211; Gene Pattern Notebook</title>
+    <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.4' type='text/css' media='all' />
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
     <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/onepagenav.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/stickykit.js?ver=4.7.4'></script>
     <script type='text/javascript' src='../wp-content/themes/genepattern/js/scripts.js?ver=4.7.4'></script>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
-      gtag('js', new Date());
-
-      gtag('config', 'UA-106705148-1');
-    </script>
-    <link rel='https://api.w.org/' href='../wp-json/'/>
-    <style type="text/css">
-        h3 a {
-            text-decoration: none;
-        }
-    </style>
+    <link rel='https://api.w.org/' href='../wp-json/' />
     <script type='text/javascript'>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -52,8 +42,17 @@
       }
     }
     </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106705148-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106705148-1');
+    </script>
     <link rel="stylesheet" href="../wp-content/themes/genepattern/dropdown.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../wp-content/themes/genepattern/style.css" type="text/css" media="screen" />
 </head>
     
 <body class="page-template-default page page-id-9">
@@ -110,61 +109,27 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1 id="new">New GenePattern Notebook Features June 2019</h1>
+                <h1>Single-Cell RNA-seq Analysis Notebooks</h1>
                 <hr>
-                <p>The following new features have recently been added to the GenePattern Notebook environment.</p>
 
-                <h2><a href="/basic-features/">General Features</a></h2>
-                <ul>
-                    <li>Table of contents functionality has been added to the GenePattern Notebook environment. To access
-                        this functionality, click the new <em>Table of Contents</em> button in the toolbar. This will open a
-                        panel on the left-hand side of the screen. From this panel, various
-                        options can be selected, including the automatic numbering of headers and the generation of
-                        automatically-updated table of contents cells.</li>
-                    <li>Public notebooks now have improved preview functionality. To access a notebook's preview, click
-                        any public notebook on the <em>Notebook Library</em> tab and select the <em>Preview</em> button.
-                        This will bring you to a new page with basic information about the notebook and a complete
-                        preview image. From here you can download the notebook or run a copy of the notebook. You may
-                        also use the URL of the preview page as a sharable link which can be distributed to collaborators.</li>
-                    <li>Users now have the ability to add comments to public notebooks. This can be done from either the
-                        notebook via the <em>Comments</em> button on the toolbar, or from the <em>Notebook Library</em> tab.</li>
-                    <li>Users may now search over all public notebooks at once in the <em>Notebook Library</em> tab.</li>
-                    <li>New users are now presented with a tour of GenePattern Notebook features when they first log in.
-                        Existing users can view this tour from the help panel, accessed by clicking on the <em>i</em>
-                        icon in the lower right.</li>
-                </ul>
+                <div id="scrna-seq">
+                    <h3><a href="https://notebooks.genepattern.org/services/sharing/notebooks/332/preview/">Single-Cell RNA-seq Clustering Analysis Notebook</a></h3>
+                    <p><small><i>This notebook is&nbsp;published in: <a href="https://f1000research.com/articles/7-1306/v2">https://f1000research.com/articles/7-1306/v2</a></i></small></p>
+                    <p>The goal of this notebook is to provide a standard single-cell RNA-seq analysis workflow for pre-processing, identifying sub-populations of cells by clustering, and exploring biomarkers to explain intra-population heterogeneity. The workflow is modeled after the <a href="http://satijalab.org/seurat/pbmc3k_tutorial.html">Seurat Guided Clustering Tutorial</a> and performs all analyses using the <a href="https://github.com/theislab/scanpy">scanpy</a> library.</p>
+                    <p><img src="/wp-content/uploads/2017/02/single-cell-cluster2.png" width="100%" /></p>
+                </div>
 
-                <h2><a href="/programmatic/">Programmatic Features</a></h2>
-                <ul>
-                    <li>The ability to turn on or off the collapsing of widgets has been added to the UI Builder. To make
-                        use of this feature, add the <em>collapse=False</em> option to the UI Builder call.</li>
-                    <li>The ability to annotate parameters as required or optional has been added to the UI Builder. To
-                        make use of this functionality, add <em>optional=True</em> to the UI Builder call</li>
-                    <li>Notebook authors now have the ability to mark text as potential input to UI Builder text parameters.
-                        This can be accomplished by adding the <em>nbtools-text-option</em> class to the text in question.</li>
-                    <li>Users may now add custom status messages to the UI Output widget. This can be done by
-                        instantiating a widget instance and then setting the status property (ex: <em>uioutput.status = "message"</em>).</li>
-                    <li>Added support for user-installed and configured nbextensions.</li>
-                    <li>New libraries have been added to the Python 3.7 environment. These include igv, cyjupyter,
-                        genefab, humanfriendly and ndex2.</li>
-                </ul>
+                <div id="cogaps">
+                    <h3><a href="https://notebooks.genepattern.org/services/sharing/notebooks/355/preview/">Census of Immune Cells: Single-Cell Workflow with CoGAPS</a></h3>
 
-                <h2>Administrative & Miscellaneous Features</h2>
-                <ul>
-                    <li>Added support for Jupyter 5.7.8, ipywidgets 7.4.2 and JupyterHub 1.0.</li>
-                    <li>Updated GenePattern Notebook and GenePattern Notebook Repository Docker images have been
-                        released. These updates are based on the Jupyter Stacks and include improved support for common
-                        Python libraries, streamlined configuration, theming support and improved backend configuration.</li>
-                    <li>Wrapper scripts have been added to the GenePattern Notebook Repository Docker image, which allow
-                    for easier administration and theming of a Notebook Repository instance.</li>
-                </ul>
-
-                <p>For full details, please see the <a href ="/releases/">Release Notes</a></p>
-                
+                    <p>This notebook identifies immune cell types by clustering single-cell RNA-seq data using R and Python to run non-negative matrix factorization.</p>
+                    <p><img src="/wp-content/uploads/2017/02/cogaps-2.png" width="100%" /></p>
+                </div>
             </section>
             <aside>
                 <ul id="section-menu">
-                    <li><a href="#new">New Features</a></li>
+                    <li><a href="#scrna-seq">Single-Cell RNA-seq Clustering</a></li>
+                    <li><a href="#cogaps">Single-Cell Workflow with CoGAPS</a></li>
                 </ul>
             </aside>
         </div>
