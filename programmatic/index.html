@@ -110,16 +110,17 @@
         </header>
         <div id="main" class="container cf">
             <section>
+
 <h1 id="genepatternnotebookenvironmentfeatures">GenePattern Notebook Environment Features</h1>
+<hr>
 
 <h2 id="programmaticfeatures">Programmatic Features</h2>
 
-<p>!!! note
-    In addition to the basic and publishing features intended for use by both non-programming and programming users alike, the GenePattern Notebook environment also provides a variety of features intended primarily for use by coders.</p>
+<p><b>Note:</b> In addition to the basic and publishing features intended for use by both non-programming and programming users alike, the GenePattern Notebook environment also provides a variety of features intended primarily for use by coders.</p>
 
 <h3 id="1codecells">1. Code Cells</h3>
 
-<p>Code cells allow a user to type in execute Python code. They are the default type of cell. Simply enter the Python code you want to run and then click the <i class="fas fa-step-forward"></i> (run cell) button in the notebook toolbar.</p>
+<p>Code cells allow a user to type in execute Python code. They are the default type of cell. Simply enter the Python code you want to run and then click the <i class="fa fa-step-forward"></i> (run cell) button in the notebook toolbar.</p>
 
 <p>More information on code cells and their variousoptions is available in the <a href="https://jupyter.readthedocs.io/en/latest/">Jupyter documentation</a>.</p>
 
@@ -151,13 +152,13 @@
 
 <p>As part of the seamless integration between Python and GenePattern, Python variables may be directly used as input in GenePattern Analysis Cells. To use a Python variable as input, first define the variable in a code cell, then in a GenePattern Analysis cell, enter the variable name surrounded by two sets of curly brackets. For example, using the variable</p>
 
-<pre><code>foo
-</code></pre>
+<code>foo
+</code>
 
 <p>would appear as</p>
 
-<pre><code>{{ foo }}
-</code></pre>
+<code>{{ foo }}
+</code>
 
 <p>When the Run button is clicked to launch the analysis job, the notebook will first obtain the value of the variable used as input and then send that to the GenePattern server. As the GenePattern services expect a string, non-string variables will be cast as strings when they are evaluated.</p>
 
@@ -165,13 +166,13 @@
 
 <p>The GenePattern Notebook Environment supports R through the use of R magic commands. To begin using R magics, you first need to load the R magics extension. This can be achieved by running the following code within your notebook:</p>
 
-<pre><code class="python language-python">%load_ext rpy2.ipython
-</code></pre>
+<code class="python language-python">%load_ext rpy2.ipython
+</code>
 
 <p>After the extension has been loaded, beginning a cell with</p>
 
-<pre><code>%%R
-</code></pre>
+<code>%%R
+</code>
 
 <p>will tell the notebook environment to execute the rest of the code in the cell using R rather than Python. An example is given below.</p>
 
@@ -181,23 +182,23 @@
 
 <p>When specifying the input to a GenePattern analysis cell, a simple syntax can be used to select the output of a upstream job. To do this, inside double curly brackets, write the name of the GenePattern module and extension of the output file separated by a period. If multiple jobs exist in the notebook using that module, or multiple files are returned of that type, an index can optionally be specified in square brackets. Several examples are given below.</p>
 
-<pre><code>{{ PreprocessDataset.gct }}
-</code></pre>
+<code>{{ PreprocessDataset.gct }}
+</code>
 
 <p>Use the first GCT file output by the first PreprocessDataset job in the notebook.</p>
 
-<pre><code>{{ PreprocessDataset[1].gct[1] }}
-</code></pre>
+<code>{{ PreprocessDataset[1].gct[1] }}
+</code>
 
 <p>This is functionally the same as the first example, but the index is made explicit for both which PreprocessDataset job in the notebook to use and which GCT file to use.</p>
 
-<pre><code>{{ PCA[2].odf }}
-</code></pre>
+<code>{{ PCA[2].odf }}
+</code>
 
 <p>Use the first ODF file output by the second PCA job.</p>
 
-<pre><code>{{ FlowMeansCluster.csv[3] }}
-</code></pre>
+<code>{{ FlowMeansCluster.csv[3] }}
+</code>
 
 <p>Use the third CSV file output by the first FlowMeansCluster job.</p>
 
@@ -211,8 +212,8 @@
 
 <p>GenePattern Notebook makes doing this easy. Just give the link to the external file the nbtools-markdown-file class and the external file will automatically appear as an option in GenePattern Notebook's file menus. An example is given below.</p>
 
-<pre><code class="html language-html">&lt;a class="nbtools-markdown-file" href="http://example.url"&gt;The text to link here.&lt;/a&gt;
-</code></pre>
+<code class="html language-html">&lt;a class="nbtools-markdown-file" href="http://example.url"&gt;The text to link here.&lt;/a&gt;
+</code>
 
 <p>An alternative is to make your links appear in a notebook looking like the <a href="#ui-builder">UI Builder</a> output  from a remote GenePattern job.  To do this, give an array of 1 or more links to the genepattern.GPUIOutput() method and return it at the end of a cell.  An example (with code also displayed) is shown below.</p>
 
@@ -238,8 +239,8 @@ provides the ability to customize your workspace by installing new libraries. Be
 
 <p>Once the correct conda environment has been activated, installing new packages through PIP is as easy as adding the <em>--user</em> parameter to the PIP command. (You may need to shut down and restart your notebook if it was opened before the library was installed.)</p>
 
-<pre><code>pip install --user &lt;package_name&gt;
-</code></pre>
+<code>pip install --user &lt;package_name&gt;
+</code>
 
 <h4 id="installingthroughconda">Installing Through Conda</h4>
 
@@ -247,11 +248,11 @@ provides the ability to customize your workspace by installing new libraries. Be
 
 <p>Without this additional <em>conda config</em> command, packages will install successfully, but will be lost each time you log in.</p>
 
-<pre><code>conda config --add pkgs_dirs ~/.local/lib/python3.7/site-packages
+<code>conda config --add pkgs_dirs ~/.local/lib/python3.7/site-packages
 conda install &lt;package_name&gt;
-</code></pre>
+</code>
 
-<h2 id="uibuilder">## UI Builder</h2>
+<h2 id="uibuilder">UI Builder</h2>
 
 <p>The UI Builder is a way to display any Python function or method call as an interactive widget. This will render the parameters of the function as a web form.</p>
 
@@ -263,16 +264,16 @@ conda install &lt;package_name&gt;
 
 <p>The simplest way to render a function using the UI Builder is to import the genepattern package and then attach the build_ui decorator to the function's definition. A code example for this is given below:</p>
 
-<pre><code class="python language-python">import genepattern
+<code class="python language-python">import genepattern
 
 @genepattern.build_ui
 def example_function(first_parameter, second_parameter):
     . . .
-</code></pre>
+</code>
 
 <p>Alternatively, the UI Builder widget may defined and referenced directly. To render a function in this way, simply import the GPUIBuilder class from the genepattern package and pass the function to the GPUIBuilder constructor. To display the widget, just return the GPUIBuilder object in a Jupyter code cell. A code example is provided below:</p>
 
-<pre><code class="python language-python">from genepattern import GPUIBuilder
+<code class="python language-python">from genepattern import GPUIBuilder
 
 def example_function(first_parameter, second_parameter):
     . . .
@@ -280,7 +281,7 @@ def example_function(first_parameter, second_parameter):
 # Create the GPUIBuilder object and immediately
 # return it for display in Jupyter
 GPUIBuilder(example_function)
-</code></pre>
+</code>
 
 <h3 id="2pythonvariablesstringliterals">2. Python Variables &amp; String Literals</h3>
 
@@ -290,8 +291,8 @@ GPUIBuilder(example_function)
 
 <p>Conversely, to ensure that an input value is evaluated as a string literal rather than a variable name, a user can wrap the input to a particular field in either single or double quotes (' or "). This tells the UI Builder to skip checking for variable names and to treat the value in quotes as a literal string. For example, forcing the string foo to be treated as a string literal would be entered in the input field as:</p>
 
-<pre><code>"foo"
-</code></pre>
+<code>"foo"
+</code>
 
 <h3 id="3stringserialization">3. String Serialization</h3>
 
@@ -299,8 +300,8 @@ GPUIBuilder(example_function)
 
 <p>This functionality can be achieved by placing the variable name inside double curly brackets. For example, embedding the string serialization of the variable foo would be entered into an input field as:</p>
 
-<pre><code>{{ foo }}
-</code></pre>
+<code>{{ foo }}
+</code>
 
 <p><img src="img/ui_builder_3.jpg" alt="image" /></p>
 
@@ -308,11 +309,11 @@ GPUIBuilder(example_function)
 
 <p>Existing Python functions, such as those included in third-party Python libraries, can also be used with the UI Builder. To display an existing function first import it and then pass the function into the constructor of the GPUIBuilder object. Return this object in a cell to display the resulting widget. For example, the code for displaying scikit-learn's KMeans function is given below.</p>
 
-<pre><code class="python language-python">import genepattern
+<code class="python language-python">import genepattern
 import sklearn.cluster
 
 genepattern.GPUIBuilder(sklearn.cluster.KMeans)
-</code></pre>
+</code>
 
 <h3 id="5overridingproperties">5. Overriding Properties</h3>
 
@@ -322,19 +323,19 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans)
 
 <p>The bottom example also demonstrates overriding the canonical name of the function being rendered. This is sometimes helpful if the function has been imported into the code in a non-top level namespace.</p>
 
-<pre><code>@genepattern.build_ui(name="Simple Example",
+<code>@genepattern.build_ui(name="Simple Example",
                       description="This is an example function.")
 def example_function(param_1, param_2):
     . . .
-</code></pre>
+</code>
 
 <p>The same effect can be also achieved when directly instantiating the GPUIBuilder object.</p>
 
-<pre><code>genepattern.GPUIBuilder(sklearn.cluster.KMeans,
+<code>genepattern.GPUIBuilder(sklearn.cluster.KMeans,
                         name="KMeans Clustering",
                         description="Groups data into K clusters",
                         function_import="sklearn.cluster.KMeans")
-</code></pre>
+</code>
 
 <p><img src="img/ui_builder_4.jpg" alt="image" /></p>
 
@@ -344,7 +345,7 @@ def example_function(param_1, param_2):
 
 <p>A code example is given below which overrides the name of a parameter, the description of the parameter and the default value of the parameter.</p>
 
-<pre><code class="python language-python">@genepattern.build_ui(parameters={
+<code class="python language-python">@genepattern.build_ui(parameters={
     "param_1": {
         "name": "foo",
         "description": "This parameter has been renamed.",
@@ -354,7 +355,7 @@ def example_function(param_1, param_2):
 })
 def example_function(param_1, param_2):
     ...
-</code></pre>
+</code>
 
 <p><img src="img/ui_builder_5.jpg" alt="image" /></p>
 
@@ -364,13 +365,13 @@ def example_function(param_1, param_2):
 
 <p>A code example is given below in which several parameters of scikit-learn's KMeans implementation are hidden.</p>
 
-<pre><code>genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
+<code>genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
     "init": { "hide": True },
     "verbose": { "hide": True },
     "random_state": { "hide": True, "default": 1234 },
     "copy_x": { "hide": True }
 })
-</code></pre>
+</code>
 
 <p><img src="img/ui_builder_6.jpg" alt="image" /></p>
 
@@ -378,7 +379,7 @@ def example_function(param_1, param_2):
 
 <p>The result of a UI Builder function can optionally be assigned to a Python variable. By default, a text field for this variable will appear at the bottom of each UI Builder widget. This field can be overridden just like any other parameter using the output_var parameter name. This includes the ability to change the label, description, assign a default value or hide the parameter. A code example is given below.</p>
 
-<pre><code>@genepattern.build_ui(parameters={
+<code>@genepattern.build_ui(parameters={
     "output_var": {
         "name": "results",
         "description": "The results of the function",
@@ -389,7 +390,7 @@ def example_function(param_1, param_2):
 def example_function(a_text_param, a_number_param,
                      a_password_param, a_bool_param=True):
     . . .
-</code></pre>
+</code>
 
 <h3 id="9parametertypes">9. Parameter Types</h3>
 
@@ -411,7 +412,7 @@ def example_function(a_text_param, a_number_param,
 
 <p>The UI Builder will infer a parameter's type from its default value, defaulting to a text parameter if no value is available or if the default value's type doesn't match one of the known types above. Alternatively, the developer can specify a parameter's type in the code. A code example is provided below, illustrating how to specify each type - except for choice and file parameters, which are each detailed in their own sections.</p>
 
-<pre><code>@genepattern.build_ui(parameters={
+<code>@genepattern.build_ui(parameters={
     "a_text_param": {
         "type": "text"
     },
@@ -428,7 +429,7 @@ def example_function(a_text_param, a_number_param,
 def example_function(a_text_param, a_number_param,
                      a_password_param, a_bool_param=True):
     . . .
-</code></pre>
+</code>
 
 <p><img src="img/ui_builder_8.jpg" alt="image" /></p>
 
@@ -436,7 +437,7 @@ def example_function(a_text_param, a_number_param,
 
 <p>Sometimes a parameter only accepts a limited set of valid input values. This is often represented in a user interface as a dropdown (select) input. The UI Builder has support for this functionality. To change a particular parameter into a dropdown input, simply provide the parameter with a dictionary of available choices. A code example is given below.</p>
 
-<pre><code>@genepattern.build_ui(parameters={
+<code>@genepattern.build_ui(parameters={
     "param_1": {
         "default": "some_value",
         "type": "choice",
@@ -449,7 +450,7 @@ def example_function(a_text_param, a_number_param,
 })
 def example_function(param_1, param_2):
     . . .
-</code></pre>
+</code>
 
 <p><img src="img/ui_builder_7.jpg" alt="image" /></p>
 
@@ -463,7 +464,7 @@ def example_function(param_1, param_2):
 
 <p>A code example is provided below.</p>
 
-<pre><code>@genepattern.build_ui(parameters={
+<code>@genepattern.build_ui(parameters={
     "param_1": {
         "type": "file",
         "kinds": ["gct", "odf"]
@@ -471,13 +472,13 @@ def example_function(param_1, param_2):
 })
 def example_function(param_1, param_2):
     . . .
-</code></pre>
+</code>
 
 <p><img src="img/ui_builder_9.jpg" alt="image" /></p>
 
 <p>Similar to choice parameters, a file parameter may likewise be given a list of possible options. These options will appear in a dropdown when the parameter it selected.</p>
 
-<pre><code>@genepattern.build_ui(parameters={
+<code>@genepattern.build_ui(parameters={
     "param_1": {
         "type": "file",
         "choices": {
@@ -489,7 +490,7 @@ def example_function(param_1, param_2):
 })
 def file_choice_example(param_1):
     . . .
-</code></pre>
+</code>
 
 <h3 id="12clientsideinteractivity">12. Client-side Interactivity</h3>
 
@@ -501,7 +502,7 @@ def file_choice_example(param_1):
 
 <p>An example of using both of these attributes is given below.</p>
 
-<pre><code>@nbtools.build_ui(parameters={
+<code>@nbtools.build_ui(parameters={
     "param_1": {
         "id": "example_function_param_1",
         "events": {
@@ -511,7 +512,7 @@ def file_choice_example(param_1):
 })
 def example_function(first_parameter, second_parameter):
     . . .
-</code></pre>
+</code>
 
 <p>Additionally, the top-level events attribute is available for handling events associated with the UI Builder widget itself, rather than individual parameters. This accepts a dictionary pairing event names to strings containing Javscript to be executed when the event occurs. Supported events are presented below:</p>
 
@@ -525,7 +526,7 @@ def example_function(first_parameter, second_parameter):
 <li><strong>focus:</strong> Event fires when the widget obtains focus.</li>
 </ul>
 
-<pre><code>@nbtools.build_ui(
+<code>@nbtools.build_ui(
     events={
         "load": "console.log('Write to the Javascript console when the widget is loaded.')",
         "run": "console.log('Write to the Javascript console when the Run button is clicked.')"
@@ -533,14 +534,14 @@ def example_function(first_parameter, second_parameter):
 )
 def example_function(first_parameter, second_parameter):
     . . .
-</code></pre>
+</code>
 
 <h3 id="13sendtotext">13. Send to Text</h3>
 
 <p>Specific text options can be made easily accessible from a text input by annotating them with the nbtools-text-option class. Any text annotated in this way will appear in a dropdown whenever a text input parameter is selected.</p>
 
-<pre><code class="html language-html">&lt;span class="nbtools-text-option"&gt;Text to send to parameter&lt;/span&gt;
-</code></pre>
+<code class="html language-html">&lt;span class="nbtools-text-option"&gt;Text to send to parameter&lt;/span&gt;
+</code>
 
 <h3 id="14otheroptions">14. Other Options</h3>
 
@@ -552,12 +553,12 @@ def example_function(first_parameter, second_parameter):
 <li><strong>function_import:</strong> Override the import name of an existing function.</li>
 </ul>
 
-<pre><code>@nbtools.build_ui(register_tool=False, function_import='example_package.example_function')
+<code>@nbtools.build_ui(register_tool=False, function_import='example_package.example_function')
 def example_function(first_parameter, second_parameter):
     . . .
-</code></pre>
+</code>
 
-<h2 id="uioutput">## UI Output</h2>
+<h2 id="uioutput">UI Output</h2>
 
 <p>UIOutput is a widget that can be created programmatically and displayed as the output to a UI Builder cell or any code cell. It's intended to display results in a fashion similar to a GenePattern analysis cell, thereby providing a consistent user interface.</p>
 
@@ -565,10 +566,10 @@ def example_function(first_parameter, second_parameter):
 
 <p>The simplest way to create a UIOutput widget is to import the widget and then call the constructor.:</p>
 
-<pre><code class="python language-python">import genepattern
+<code class="python language-python">import genepattern
 
 genepattern.UIOutput()
-</code></pre>
+</code>
 
 <h3 id="2specifyparameters">2. Specify Parameters</h3>
 
@@ -590,15 +591,42 @@ genepattern.UIOutput()
 
 <p>The status of a UIOutput widget can be dynamically updated by setting the status property of the widget object. This is useful for long-running analyses and allows a function to alert the user when an analysis is complete, or when a new stage of analysis has been reached.</p>
 
-<pre><code>import genepattern
+<code>import genepattern
 
 uio = genepattern.UIOutput(status="Running")
 # Perform long-running analysis here
 uio.status = "Complete"
-</code></pre>
+</code>
 
-<pre><code>
-</code></pre>
+<code>
+</code>
+
+            </section>
+            <aside>
+                <ul id="section-menu">
+                    <li><a href="#1codecells">Code Cells</a></li>
+                    <li><a href="#2genepatternpythonlibrary">GenePattern Python Library</a></li>
+                    <li><a href="#3sendtocode">Send to Code</a></li>
+                    <li><a href="#4sendtodataframe">Send to Dataframe</a></li>
+                    <li><a href="#5pythonvariableinput">Python Variable Input</a></li>
+                    <li><a href="#6rsupport">R Support</a></li>
+                    <li><a href="#7jobresultsyntax">Job Result Syntax</a></li>
+                    <li><a href="#8filesinmarkdowncells">Files in Markdown Cells</a></li>
+                    <li><a href="#9installingpackages">Installing Packaged</a></li>
+                    <li><a href="#uibuilder">UI Builder</a></li>
+
+                    <li><a href="#uioutput">UI Output</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer id="footer">
+                <div class="container">
+                    <p>GenePattern Notebook usage is free and the software is open source
+                        under a BSD-style license.</p>
+                    <p>© 2019 Regents of the University of California and the Broad Institute. </p>
+                </div>
+            </footer>
+    </div>
 
 </body>
 </html>
