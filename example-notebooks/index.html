@@ -106,7 +106,7 @@
                 </nav>
             </div>
         </header>
-            <div style="border: 1px solid black; padding: 20px; margin:50px; overflow-y: scroll; background-color: rgb(236, 236, 236); text-align:left; margin-top: 0px;margin-bottom: 0px;">
+            <div style="border: 1px solid grey; padding: 20px; margin:50px; overflow-y: scroll; background-color: rgb(236, 236, 236); text-align:left; margin-top: 0px;margin-bottom: 0px;">
                     <input id="nb-search" type="search" placeholder="Search Notebooks" style="float: right; border-radius: 10px; padding: 3px; width: 300px;" >
                     <h1 style="margin-bottom: 20px; font-size: 30px;">List of the current public notebooks</h1>
                     <hr>
@@ -163,7 +163,7 @@
                                 const notebooks = sort_notebooks(data.results);
                                 notebooks.forEach(function(nb) {
                                     if (!workshop(nb)) {
-                                    $(`<div class="notebook-listing col-sm-4" style="padding: 20px; background-color: white; border: 1px solid grey;height: 150px;overflow:hidden;"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin: 0px auto;"><a href="https://notebook.genepattern.org/services/sharing/notebooks/${nb.id}/preview/" target="_blank">${nb.name}</a></h3>
+                                    $(`<div class="notebook-listing col-sm-4" style="padding: 20px; background-color: white; border: 1px solid grey;height: 150px;overflow:hidden;"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin: 0px auto;"><a href="https://notebook.genepattern.org/services/sharing/notebooks/${nb.id}/preview/" target="_blank" style="text-decoration:none;">${nb.name}</a></h3>
                                     <address class="notebook-author" rel="author" style="font-size: 14px;">${nb.author}</address>
                                     <address class="notebook-quality" rel="quality" style="font-size: 12px;">${nb.quality}</address>
                                     <p class="notebook-description" style="font-size: 12px; margin-bottom: 0px;">${nb.description}</p></div>`)
