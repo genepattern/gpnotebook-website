@@ -111,11 +111,11 @@
             <section>
                 <h1>Featured Public Notebooks</h1>
                 <hr>
-                <p>GenePattern Notebook provides a repository where users can publicly disseminate their notebooks. It includes notebooks developed by the GenePattern team demonstrating a number of genomic and machine learning analyses, as well as notebooks contributed by the user community.</p>
+                <p>GenePattern Notebook provides a library where users can publicly disseminate their notebooks. It includes notebooks developed by the GenePattern team demonstrating a number of genomic and machine learning analyses, as well as notebooks contributed by the user community.</p>
                 
-                <p>When using the <b>GenePattern Public Notebook Library</b></a>, users have the ability to publicly share their notebooks and to run notebooks shared by others.</p>
+                <p>When using the <a href="https://notebook.genepattern.org/hub/login?next=/user-redirect/tree%23repository" target="_blank"><b>GenePattern Public Notebook Library</b></a>, users have the ability to share their notebooks and to run notebooks shared by others.</p>
         
-                <p>Here are some of the <b>featured notebooks</b> in our public collection:</p>
+                <p>Here is a selection of <b>featured notebooks</b> from our public library:</p>
                 <hr>
                 <div class="container-fluid" style="border: 1px solid black; padding: 20px; background-color: rgba(0,0,0,0.1); padding-bottom: 0px; position: relative; width: 100%;">
                     <input id="nb-search" type="search" placeholder="Search Notebooks" style="float: right; border-radius: 10px; padding: 3px; width: 300px;">
@@ -132,15 +132,38 @@
                                     else $(e).hide();
                                 });
                             });
+
+                        function workshop(nb) {
+                            let is_workshop = false;
+                            nb.tags.forEach(function(tag) {
+                                if (tag.label === "workshop") is_workshop = true;
+                            });
+
+                            return is_workshop;
+                        }
                         
                         function featured(nb) {
-                                let is_featured = false;
-                                nb.tags.forEach(function (tag) {
-                                    if (tag.label === "featured") is_featured = true;
-                                });
+                            let is_featured = false;
+                            nb.tags.forEach(function (tag) {
+                                if (tag.label === "featured") is_featured = true;
+                            });
 
-                                return is_featured;
-                            }
+                            return is_featured;
+                        }
+
+                        function sort_notebooks(notebooks) {
+                            const tutorial = [];
+                            const featured_nb = [];
+                            const other = [];
+
+                            notebooks.forEach(function(nb) {
+                                if (nb.name === "GenePattern Notebook Tutorial") tutorial.push(nb);
+                                else if (featured(nb)) featured_nb.push(nb);
+                                else if (!workshop(nb)) other.push(nb);
+                            });
+
+                            return tutorial.concat(featured_nb, other);
+                        }
 
                         $.ajax({
                             type: "GET",
@@ -148,7 +171,7 @@
                             dataType: "json",
                             cache: false,
                             success: function(data) {
-                                const notebooks = data.results;
+                                const notebooks = sort_notebooks(data.results);
                                 notebooks.forEach(function(nb) {
                                     if (featured(nb)) {
                                     $(`<div class="notebook-listing" style="padding: 10px; background-color: white; margin: 0 auto; margin-bottom: 10px; border: 1px solid grey"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin: 0px auto;"><a href="https://notebook.genepattern.org/services/sharing/notebooks/${nb.id}/preview/" target="_blank">${nb.name}</a></h3>
@@ -164,14 +187,13 @@
                             }
                         });
                     </script>
-                    <p style="text-align: center; padding-top: 20px; padding-bottom: 0px; margin-top: -50px;"><span class="glyphicon glyphicon-chevron-down" style="font-size: 20px; color:"></span></p>
                 </div>
                 <br><br>
                 <h3 style="margin-top: 0px;" id="browsing"> Browsing and Loading Public Notebooks</h3>
                 <ul>
-                    <li><a href="https://notebook.genepattern.org"><b>Log in</b></a> to the GenePattern Notebook Repository</li>
+                    <li><a href="https://notebook.genepattern.org"><b>Log in</b></a> to the GenePattern Notebook Workspace</li>
                     <li>To view the available notebooks, click the &quot;Notebook Library&quot; tab and browse through the list.</li>
-                    <li>To obtain a copy and run the public notebook, click the notebook in the list and then select &quot;Run Notebook&quot; on the confirmation dialog that pops up. This will make a copy of the chosen notebook in your current directory, accessible by clicking on the Files tab.
+                    <li>To obtain a copy and run the notebook, click the notebook in the list and then select &quot;Run Notebook&quot; on the confirmation dialog that pops up. This will make a copy of the chosen notebook in your current directory, accessible by clicking on the Files tab.
                     </li>
                     <li>To run the notebook, click the &quot;Open Notebook&quot; button in the resulting dialog, or go back to the &quot;Files&quot; tab and run the notebook as normal from there.
                     </li>
@@ -180,7 +202,7 @@
             </section>
             <aside>
                 <ul id="section-menu">
-                    <li><a href="#main">Featured Public Notebook</a></li>
+                    <li><a href="#main">Featured Public Notebooks</a></li>
                     <li><a href="#browsing">Browsing and Loading</a></li>
                 </ul>
             </aside>
