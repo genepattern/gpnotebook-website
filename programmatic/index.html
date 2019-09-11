@@ -128,7 +128,7 @@
 
 <p>A library is available for using Python to interact with available GenePattern's service. This allows a user to programmatically prepare analyses, launch jobs and retrieve results.</p>
 
-<p>A complete tutorial on using the GenePattern Python Library is available as a public notebook in the <a href="https://notebook.genepattern.org/services/sharing/notebooks/362/preview/">GenePattern Notebook Repository</a>. Additional information is available in our published <a href="https://github.com/genepattern/example-notebooks/tree/master/Example%20Notebooks">example notebooks</a> on GitHub.</p>
+<p>A complete tutorial on using the GenePattern Python Library is available as a public notebook in the <a href="https://notebook.genepattern.org/services/sharing/notebooks/362/preview/">GenePattern Notebook Library</a>. Additional information is available in our published <a href="https://github.com/genepattern/example-notebooks/tree/master/Example%20Notebooks">example notebooks</a> on GitHub.</p>
 
 <h3 id="3sendtocode">3. Send to Code</h3>
 
@@ -202,7 +202,7 @@
 
 <p>Use the third CSV file output by the first FlowMeansCluster job.</p>
 
-<p>Note that unlike python variables which also use the <code>{{ }}</code>  syntax, referencing GenePattern Job outputs in this manner only works within the interface for a GenePattern analysis or  <a href="#ui-builder">UI Builder</a> interface, and cannot be used directly in code cells.  e.g.</p>
+<p>Note that unlike python variables which also use the <code>{{ }}</code>  syntax, referencing GenePattern Job outputs in this manner only works within the interface for a GenePattern analysis or  <a href="#uibuilder">UI Builder</a> interface, and cannot be used directly in code cells.  e.g.</p>
 
 <p><img src="img/programmatic_job_result_syntax.png" alt="image" /></p>
 
@@ -215,7 +215,7 @@
 <code class="html language-html">&lt;a class="nbtools-markdown-file" href="http://example.url"&gt;The text to link here.&lt;/a&gt;
 </code>
 
-<p>An alternative is to make your links appear in a notebook looking like the <a href="#ui-builder">UI Builder</a> output  from a remote GenePattern job.  To do this, give an array of 1 or more links to the genepattern.GPUIOutput() method and return it at the end of a cell.  An example (with code also displayed) is shown below.</p>
+<p>An alternative is to make your links appear in a notebook looking like the <a href="#uibuilder">UI Builder</a> output  from a remote GenePattern job.  To do this, give an array of 1 or more links to the genepattern.GPUIOutput() method and return it at the end of a cell.  An example (with code also displayed) is shown below.</p>
 
 <p><img src="img/programmatic_links.png" alt="image" /></p>
 
