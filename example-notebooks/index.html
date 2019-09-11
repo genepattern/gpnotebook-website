@@ -131,13 +131,36 @@
                             return is_workshop;
                         }
 
+                        function featured(nb) {
+                            let is_featured = false;
+                            nb.tags.forEach(function(tag) {
+                                if (tag.label === "featured") is_featured = true;
+                            });
+
+                            return is_featured;
+                        }
+
+                        function sort_notebooks(notebooks) {
+                            const tutorial = [];
+                            const featured_nb = [];
+                            const other = [];
+
+                            notebooks.forEach(function(nb) {
+                                if (nb.name === "GenePattern Notebook Tutorial") tutorial.push(nb);
+                                else if (featured(nb)) featured_nb.push(nb);
+                                else if (!workshop(nb)) other.push(nb);
+                            });
+
+                            return tutorial.concat(featured_nb, other);
+                        }
+
                         $.ajax({
                             type: "GET",
                             url: "https://notebook.genepattern.org/services/sharing/notebooks/",
                             dataType: "json",
                             cache: false,
                             success: function(data) {
-                                const notebooks = data.results;
+                                const notebooks = sort_notebooks(data.results);
                                 notebooks.forEach(function(nb) {
                                     if (!workshop(nb)) {
                                     $(`<div class="notebook-listing col-sm-4" style="padding: 20px; background-color: white; border: 1px solid grey;height: 150px;overflow:hidden;"><h3 class="notebook-name" style="color: #103875; font-size: 20px; font-weight: 600; margin: 0px auto;"><a href="https://notebook.genepattern.org/services/sharing/notebooks/${nb.id}/preview/" target="_blank">${nb.name}</a></h3>
