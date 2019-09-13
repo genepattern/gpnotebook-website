@@ -229,8 +229,8 @@ provides the ability to customize your workspace by installing new libraries. Be
 <p>To activate a conda environment, open a new terminal and then enter one of the following lines, as appropriate for your notebook's
  environment. Since the Python 3.7 kernel is used by default, if there is any doubt, activate that environment.</p>
 
-<code>source activate python3.7<br/>
- source activate python3.6</code>
+<code><pre>source activate python3.7
+ source activate python3.6</pre></code>
 
 <h4 id="installingthroughpip">Installing Through PIP</h4>
 
@@ -245,9 +245,9 @@ provides the ability to customize your workspace by installing new libraries. Be
 
 <p>Without this additional <em>conda config</em> command, packages will install successfully, but will be lost each time you log in.</p>
 
-<code>conda config --add pkgs_dirs ~/.local/lib/python3.7/site-packages
+<code><pre>conda config --add pkgs_dirs ~/.local/lib/python3.7/site-packages
 conda install &lt;package_name&gt;
-</code>
+</pre></code>
 
 <h2 id="uibuilder">UI Builder</h2>
 
@@ -261,16 +261,16 @@ conda install &lt;package_name&gt;
 
 <p>The simplest way to render a function using the UI Builder is to import the genepattern package and then attach the build_ui decorator to the function's definition. A code example for this is given below:</p>
 
-<code class="python language-python">import genepattern
+<code class="python language-python"><pre>import genepattern
 
 @genepattern.build_ui
 def example_function(first_parameter, second_parameter):
     . . .
-</code>
+</pre></code>
 
 <p>Alternatively, the UI Builder widget may defined and referenced directly. To render a function in this way, simply import the GPUIBuilder class from the genepattern package and pass the function to the GPUIBuilder constructor. To display the widget, just return the GPUIBuilder object in a Jupyter code cell. A code example is provided below:</p>
 
-<code class="python language-python">from genepattern import GPUIBuilder
+<code class="python language-python"><pre>from genepattern import GPUIBuilder
 
 def example_function(first_parameter, second_parameter):
     . . .
@@ -278,7 +278,7 @@ def example_function(first_parameter, second_parameter):
 # Create the GPUIBuilder object and immediately
 # return it for display in Jupyter
 GPUIBuilder(example_function)
-</code>
+</pre></code>
 
 <h3 id="2pythonvariablesstringliterals">2. Python Variables &amp; String Literals</h3>
 
@@ -306,11 +306,11 @@ GPUIBuilder(example_function)
 
 <p>Existing Python functions, such as those included in third-party Python libraries, can also be used with the UI Builder. To display an existing function first import it and then pass the function into the constructor of the GPUIBuilder object. Return this object in a cell to display the resulting widget. For example, the code for displaying scikit-learn's KMeans function is given below.</p>
 
-<code class="python language-python">import genepattern
+<code class="python language-python"><pre>import genepattern
 import sklearn.cluster
 
 genepattern.GPUIBuilder(sklearn.cluster.KMeans)
-</code>
+</pre></code>
 
 <h3 id="5overridingproperties">5. Overriding Properties</h3>
 
@@ -320,19 +320,19 @@ genepattern.GPUIBuilder(sklearn.cluster.KMeans)
 
 <p>The bottom example also demonstrates overriding the canonical name of the function being rendered. This is sometimes helpful if the function has been imported into the code in a non-top level namespace.</p>
 
-<code>@genepattern.build_ui(name="Simple Example",
+<code><pre>@genepattern.build_ui(name="Simple Example",
                       description="This is an example function.")
 def example_function(param_1, param_2):
     . . .
-</code>
+</pre></code>
 
 <p>The same effect can be also achieved when directly instantiating the GPUIBuilder object.</p>
 
-<code>genepattern.GPUIBuilder(sklearn.cluster.KMeans,
+<code><pre>genepattern.GPUIBuilder(sklearn.cluster.KMeans,
                         name="KMeans Clustering",
                         description="Groups data into K clusters",
                         function_import="sklearn.cluster.KMeans")
-</code>
+</pre></code>
 
 <p><img src="img/ui_builder_4.jpg" alt="image" /></p>
 
@@ -342,7 +342,7 @@ def example_function(param_1, param_2):
 
 <p>A code example is given below which overrides the name of a parameter, the description of the parameter and the default value of the parameter.</p>
 
-<code class="python language-python">@genepattern.build_ui(parameters={
+<code class="python language-python"><pre>@genepattern.build_ui(parameters={
     "param_1": {
         "name": "foo",
         "description": "This parameter has been renamed.",
@@ -352,7 +352,7 @@ def example_function(param_1, param_2):
 })
 def example_function(param_1, param_2):
     ...
-</code>
+</pre></code>
 
 <p><img src="img/ui_builder_5.jpg" alt="image" /></p>
 
@@ -362,13 +362,13 @@ def example_function(param_1, param_2):
 
 <p>A code example is given below in which several parameters of scikit-learn's KMeans implementation are hidden.</p>
 
-<code>genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
+<code><pre>genepattern.GPUIBuilder(sklearn.cluster.KMeans, parameters={
     "init": { "hide": True },
     "verbose": { "hide": True },
     "random_state": { "hide": True, "default": 1234 },
     "copy_x": { "hide": True }
 })
-</code>
+</pre></code>
 
 <p><img src="img/ui_builder_6.jpg" alt="image" /></p>
 
@@ -376,7 +376,7 @@ def example_function(param_1, param_2):
 
 <p>The result of a UI Builder function can optionally be assigned to a Python variable. By default, a text field for this variable will appear at the bottom of each UI Builder widget. This field can be overridden just like any other parameter using the output_var parameter name. This includes the ability to change the label, description, assign a default value or hide the parameter. A code example is given below.</p>
 
-<code>@genepattern.build_ui(parameters={
+<code><pre>@genepattern.build_ui(parameters={
     "output_var": {
         "name": "results",
         "description": "The results of the function",
@@ -387,7 +387,7 @@ def example_function(param_1, param_2):
 def example_function(a_text_param, a_number_param,
                      a_password_param, a_bool_param=True):
     . . .
-</code>
+</pre></code>
 
 <h3 id="9parametertypes">9. Parameter Types</h3>
 
@@ -409,7 +409,7 @@ def example_function(a_text_param, a_number_param,
 
 <p>The UI Builder will infer a parameter's type from its default value, defaulting to a text parameter if no value is available or if the default value's type doesn't match one of the known types above. Alternatively, the developer can specify a parameter's type in the code. A code example is provided below, illustrating how to specify each type - except for choice and file parameters, which are each detailed in their own sections.</p>
 
-<code>@genepattern.build_ui(parameters={
+<code><pre>@genepattern.build_ui(parameters={
     "a_text_param": {
         "type": "text"
     },
@@ -426,7 +426,7 @@ def example_function(a_text_param, a_number_param,
 def example_function(a_text_param, a_number_param,
                      a_password_param, a_bool_param=True):
     . . .
-</code>
+</pre></code>
 
 <p><img src="img/ui_builder_8.jpg" alt="image" /></p>
 
@@ -434,7 +434,7 @@ def example_function(a_text_param, a_number_param,
 
 <p>Sometimes a parameter only accepts a limited set of valid input values. This is often represented in a user interface as a dropdown (select) input. The UI Builder has support for this functionality. To change a particular parameter into a dropdown input, simply provide the parameter with a dictionary of available choices. A code example is given below.</p>
 
-<code>@genepattern.build_ui(parameters={
+<code><pre>@genepattern.build_ui(parameters={
     "param_1": {
         "default": "some_value",
         "type": "choice",
@@ -447,7 +447,7 @@ def example_function(a_text_param, a_number_param,
 })
 def example_function(param_1, param_2):
     . . .
-</code>
+</pre></code>
 
 <p><img src="img/ui_builder_7.jpg" alt="image" /></p>
 
@@ -461,7 +461,7 @@ def example_function(param_1, param_2):
 
 <p>A code example is provided below.</p>
 
-<code>@genepattern.build_ui(parameters={
+<code><pre>@genepattern.build_ui(parameters={
     "param_1": {
         "type": "file",
         "kinds": ["gct", "odf"]
@@ -469,13 +469,13 @@ def example_function(param_1, param_2):
 })
 def example_function(param_1, param_2):
     . . .
-</code>
+</pre></code>
 
 <p><img src="img/ui_builder_9.jpg" alt="image" /></p>
 
 <p>Similar to choice parameters, a file parameter may likewise be given a list of possible options. These options will appear in a dropdown when the parameter it selected.</p>
 
-<code>@genepattern.build_ui(parameters={
+<code><pre>@genepattern.build_ui(parameters={
     "param_1": {
         "type": "file",
         "choices": {
@@ -487,7 +487,7 @@ def example_function(param_1, param_2):
 })
 def file_choice_example(param_1):
     . . .
-</code>
+</pre></code>
 
 <h3 id="12clientsideinteractivity">12. Client-side Interactivity</h3>
 
@@ -499,7 +499,7 @@ def file_choice_example(param_1):
 
 <p>An example of using both of these attributes is given below.</p>
 
-<code>@nbtools.build_ui(parameters={
+<code><pre>@nbtools.build_ui(parameters={
     "param_1": {
         "id": "example_function_param_1",
         "events": {
@@ -509,7 +509,7 @@ def file_choice_example(param_1):
 })
 def example_function(first_parameter, second_parameter):
     . . .
-</code>
+</pre></code>
 
 <p>Additionally, the top-level events attribute is available for handling events associated with the UI Builder widget itself, rather than individual parameters. This accepts a dictionary pairing event names to strings containing Javscript to be executed when the event occurs. Supported events are presented below:</p>
 
@@ -523,7 +523,7 @@ def example_function(first_parameter, second_parameter):
 <li><strong>focus:</strong> Event fires when the widget obtains focus.</li>
 </ul>
 
-<code>@nbtools.build_ui(
+<code><pre>@nbtools.build_ui(
     events={
         "load": "console.log('Write to the Javascript console when the widget is loaded.')",
         "run": "console.log('Write to the Javascript console when the Run button is clicked.')"
@@ -531,7 +531,7 @@ def example_function(first_parameter, second_parameter):
 )
 def example_function(first_parameter, second_parameter):
     . . .
-</code>
+</pre></code>
 
 <h3 id="13sendtotext">13. Send to Text</h3>
 
@@ -550,10 +550,10 @@ def example_function(first_parameter, second_parameter):
 <li><strong>function_import:</strong> Override the import name of an existing function.</li>
 </ul>
 
-<code>@nbtools.build_ui(register_tool=False, collapse=False, function_import='example_package.example_function')
+<code><pre>@nbtools.build_ui(register_tool=False, collapse=False, function_import='example_package.example_function')
 def example_function(first_parameter, second_parameter):
     . . .
-</code>
+</pre></code>
 
 <h2 id="uioutput">UI Output</h2>
 
@@ -563,10 +563,10 @@ def example_function(first_parameter, second_parameter):
 
 <p>The simplest way to create a UIOutput widget is to import the widget and then call the constructor.:</p>
 
-<code class="python language-python">import genepattern
+<code class="python language-python"><pre>import genepattern
 
 genepattern.UIOutput()
-</code>
+</pre></code>
 
 <h3 id="2specifyparameters">2. Specify Parameters</h3>
 
@@ -588,12 +588,12 @@ genepattern.UIOutput()
 
 <p>The status of a UIOutput widget can be dynamically updated by setting the status property of the widget object. This is useful for long-running analyses and allows a function to alert the user when an analysis is complete, or when a new stage of analysis has been reached.</p>
 
-<code>import genepattern
+<code><pre>import genepattern
 
 uio = genepattern.UIOutput(status="Running")
 # Perform long-running analysis here
 uio.status = "Complete"
-</code>
+</pre></code>
 
 <code>
 </code>
