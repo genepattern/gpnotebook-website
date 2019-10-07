@@ -110,53 +110,34 @@
         </header>
         <div id="main" class="container cf">
             <section>
-                <h1 id="new">New GenePattern Notebook Features June 2019</h1>
+                <h1 id="new">New GenePattern Notebook Features October 2019</h1>
                 <hr>
                 <p>The following new features have recently been added to the GenePattern Notebook environment.</p>
 
                 <h2><a href="/basic-features/">General Features</a></h2>
                 <ul>
-                    <li>Table of contents functionality has been added to the GenePattern Notebook environment. To access
-                        this functionality, click the new <em>Table of Contents</em> button in the toolbar. This will open a
-                        panel on the left-hand side of the screen. From this panel, various
-                        options can be selected, including the automatic numbering of headers and the generation of
-                        automatically-updated table of contents cells.</li>
-                    <li>Public notebooks now have improved preview functionality. To access a notebook's preview, click
-                        any public notebook on the <em>Notebook Library</em> tab and select the <em>Preview</em> button.
-                        This will bring you to a new page with basic information about the notebook and a complete
-                        preview image. From here you can download the notebook or run a copy of the notebook. You may
-                        also use the URL of the preview page as a sharable link which can be distributed to collaborators.</li>
-                    <li>Users now have the ability to add comments to public notebooks. This can be done from either the
-                        notebook via the <em>Comments</em> button on the toolbar, or from the <em>Notebook Library</em> tab.</li>
-                    <li>Users may now search over all public notebooks at once in the <em>Notebook Library</em> tab.</li>
-                    <li>New users are now presented with a tour of GenePattern Notebook features when they first log in.
-                        Existing users can view this tour from the help panel, accessed by clicking on the <em>i</em>
-                        icon in the lower right.</li>
+                    <li>The UI Builder now supports large file uploads.</li>
+                    <li>A "Rich Text" pseudo-cell type is now available from the dropdown menu in the notebook toolbar. Selecting this cell type will convert the cell to Markdown and automatically toggle it to the rich text editor interface.</li>
                 </ul>
 
                 <h2><a href="/programmatic/">Programmatic Features</a></h2>
                 <ul>
-                    <li>The ability to turn on or off the collapsing of widgets has been added to the UI Builder. To make
-                        use of this feature, add the <em>collapse=False</em> option to the UI Builder call.</li>
-                    <li>The ability to annotate parameters as required or optional has been added to the UI Builder. To
-                        make use of this functionality, add <em>optional=True</em> to the UI Builder call</li>
-                    <li>Notebook authors now have the ability to mark text as potential input to UI Builder text parameters.
-                        This can be accomplished by adding the <em>nbtools-text-option</em> class to the text in question.</li>
-                    <li>Users may now add custom status messages to the UI Output widget. This can be done by
-                        instantiating a widget instance and then setting the status property (ex: <em>uioutput.status = "message"</em>).</li>
-                    <li>Added support for user-installed and configured nbextensions.</li>
-                    <li>New libraries have been added to the Python 3.7 environment. These include igv, cyjupyter,
-                        genefab, humanfriendly and ndex2.</li>
+                    <li>Users can now define and import UI Builder widgets within Python modules. To make use of this feature, either <em>upload</em> a Python file using the <em>Upload</em> button in the upper right-hand corner of the <em>Files</em> tab or create new Python script via the <em>New</em> button in the upper right-hand corner of the <em>Files</em> tab. The Python script can then be loaded and run inside a new or existing notebook using the following syntax <pre>%run myPyScript.py</pre> The included UI Builder widget will then also be available for reuse within that notebook via the <em>Notebook</em> tab in the tool manager; which can be accessed from either the <em><i class="fa-th fa"></i> Tools</em> button in the notebook toolbar, or the <i class="fa-th fa"></i> button which is available on the left of the screen when a GenePattern cell is selected.</li>
+                    <li>Widget and parameter descriptions, for both the UI Builder and GenePattern widgets, now support HTML formatting.</li>
+                    <li>The UI Builder now supports R cells through the use of R magic commands. To learn how to use this new feature, please read the <em><a href="/programmatic/#6rsupport">R Support</a></em> section of the Programmatic User Guide.</li>
+                    <li>The UI Builder now supports the ability to change what tab a tool appears in, in the tool manager. (The default is either “Notebook” or the name of the module/file the tool was imported from.) To learn how to use the origin override, please see the <em><a href="/programmatic/#14otheroptions"> UI Builder> Other Options</a></em> section of the Programmatic User Guide.</li> 
                 </ul>
 
                 <h2>Administrative & Miscellaneous Features</h2>
                 <ul>
-                    <li>Added support for Jupyter 5.7.8, ipywidgets 7.4.2 and JupyterHub 1.0.</li>
+                    <li>UI Builder widgets with no parameters will now be shown in a condensed display.</li>
+                    <li>Support for Python 3.5 has been dropped.</li>
+                    <li>The rich text widget has been updated to <a href="https://www.tiny.cloud/docs/release-notes/release-notes5013/", target="_blank">TinyMCE 5</a></li>
+                    <li>Updated to <a href="https://medium.com/plotly/plotly-py-4-0-is-here-offline-only-express-first-displayable-anywhere-fc444e5659ee", target="_blank">Plotly 4.0</a> in the Python 3.7 kernel.</li>
+                    <li>Cell templates have been moved to "+" tab in the tool manager. Template cells allow for the reuse of common cells such as GenePattern login, Information and Warning cells. </li>
                     <li>Updated GenePattern Notebook and GenePattern Notebook Workspace Docker images have been
                         released. These updates are based on the Jupyter Stacks and include improved support for common
-                        Python libraries, streamlined configuration, theming support and improved backend configuration.</li>
-                    <li>Wrapper scripts have been added to the GenePattern Notebook Workspace Docker image, which allow
-                    for easier administration and theming of a Notebook Workspace instance.</li>
+                        Python libraries, streamlined configuration, theming support and improved backend configuration.</li>    
                 </ul>
 
                 <p>For full details, please see the <a href ="/releases/">Release Notes</a></p>
