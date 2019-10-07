@@ -548,9 +548,10 @@ def example_function(first_parameter, second_parameter):
 <li><strong>register_tool:</strong> Sets whether to register this function with the Notebook Tool Manager. Defaults to True.</li>
 <li><strong>collapse:</strong> Sets whether to collapse the UI Builder widget when the function is run. Defaults to True.</li>
 <li><strong>function_import:</strong> Override the import name of an existing function.</li>
+<li><strong>origin:</strong> Override the name of the tab the tool appears in. Defaults to either "Notebook" or the name of the module the tool is imported from.</li>
 </ul>
 
-<code><pre>@nbtools.build_ui(register_tool=False, collapse=False, function_import='example_package.example_function')
+<code><pre>@nbtools.build_ui(register_tool=False, collapse=False, function_import='example_package.example_function', origin='examples')
 def example_function(first_parameter, second_parameter):
     . . .
 </pre></code>
