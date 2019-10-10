@@ -148,8 +148,18 @@
                 <p>Markdown cells allow the user to format text using either <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a> or the <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown</a> syntax. Additionally, we provide a "What You See is What You Get" rich text editor (see the feature below).</p>
                 </div>
 
+                <div class="section" id="template-cells">
+                <h3>3. Template Cells</h3>
+                <p>Template cells are preformatted Markdown cells that allow for the reuse of common cells such as GenePattern login, Error and Warning cells</p>
+                <p>To insert a template cell, click the <em><i class="fa-th fa"></i> Tools</em> button in the notebook toolbar, and then either switch to the <i class="fa-plus fa"></i> tab in the tool manager, or search for the template you are looking for.</p>
+                <p>The keyboard shortcuts to insert the call-out, error, instruction and warning cells, are <em>C</em>, <em>E</em>, <em>I</em>, and <em>W</em>, respectively.</p>
+                <p><img class="alignnone size-full wp-image-37" src="https://datasets-genepattern-org.s3.amazonaws.com/images/Notebook+Website/TemplateCells.png"></p>
+                <p>With the exception of the GenePattern Login cells, template cells, are inserted in an editable state, as you will likely want to change their text. They can be edited in Markdown, HTML or in the Rich Text Editor, as described above and below.</p>
+                <p>Click the <i class="fa-step-forward fa"></i> button, or use the keyboard shortcut <em>Shift + Enter</em> to finish editing.</p>
+                <p><img class="alignnone size-full wp-image-37" src="https://datasets-genepattern-org.s3.amazonaws.com/images/Notebook+Website/TemplateCells_executed.png"></p>
+
                 <div class="section" id="rich-text">
-                <h3>3. Rich Text Editor</h3>
+                <h3>4. Rich Text Editor</h3>
                 <p>The GenePattern Rich Text Editor allows a user to format notes and documentation in a notebook in much the same way that one might use Microsoft Word or Libre Office &mdash; without the need to write a single HTML tag or line of markdown.</p>
                 <p>To use the Rich Text Editor, first insert a markdown cell (see the instructions above). Once a cell has been changed to the markdown type, two buttons should appear to the left of the cell. The <i class="far fa-file-alt"></i> button opens the Rich Text Editor and the <i class="fa-step-forward fa"></i> button finalizes the cell and renders the text.</p>
                 <p>Click the <i class="far fa-file-alt"></i> button and the editor will appear. A toolbar will show above the cell, allowing the user to format text, insert headers or add links. Clicking on the <i class="far fa-file-code"></i> button would toggle back to the HTML/Markdown editor. Style the text as desired, and when finished, click the <i class="fa-step-forward fa"></i> button to finish editing.</p>
@@ -157,7 +167,7 @@
                 </div>
 
                 <div class="section" id="workflow-execution">
-                <h3 id="workflow-execution">4. Workflow Execution</h3>
+                <h3 id="workflow-execution">5. Workflow Execution</h3>
                 <p>A GenePattern notebook can be executed as an automated workflow. When this happens, each cell is run in order, starting with the top. Code cells execute their contained code. GenePattern analyses are launched and the workflow waits for the analysis to complete before moving forward. If an error is encountered - either as the result of a code cell or the status of a GenePattern job - execution halts and waits for user input.</p>
                 <p>By combining this feature with the <a href="https://gpnotebook-website-docs.readthedocs.io/en/latest/programmatic/#7-job-result-syntax" target="_blank">Job Result Syntax</a> feature, a workflow can be configured to run each step in sequence, taking the output of upstream steps and sending the results as the input to downstream analyses.</p>
                 <p>To run a GenePattern notebook as a workflow, first locate an authentication cell and click on the gear menu. Select <em>Run Notebook as Workflow</em>. A dialog box will pop up displaying the status of running the workflow. Simply wait for execution to complete.</p>
@@ -169,6 +179,7 @@
                 <ul id="section-menu">
                     <li><a href="#genepattern-cells">GenePattern Cells</a></li>
                     <li><a href="#markdown-cells">Markdown Cells</a></li>
+                    <li><a href="#template-cells">Template Cells</a></li>
                     <li><a href="#rich-text">Rich Text Editor</a></li>
                     <li><a href="#workflow-execution">Workflow Execution</a></li>
                 </ul>
