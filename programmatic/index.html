@@ -556,6 +556,45 @@ def example_function(first_parameter, second_parameter):
     . . .
 </pre></code>
 
+                <h3>R Support</h3>
+                <p>The UI Builder can be used to wrap R code in conjunction with a special R cell magic. Unlike with Python code, however, the UI Builder does
+                    not have the ability to introspect and automatically generate a form from an R function. Instead, a notebook author must pass the magic a
+                    spec in the form of a dict, listing the name of the UI Builder widget and the parameters. This spec mirrors the structure of the dict passed
+                    into the <em>@nbtools.build_ui</em> decorator. When executing the R code, any parameters in the UI Builder end up as global variables in the
+                    R script's memory space. The return value of the cell is passed back to Python as the value of the output variable.</p>
+                <p>A code example is below.</p>
+
+                <code><pre>%load_ext nbtools.r_support</pre></code>
+
+                <code><pre>
+%%r_build_ui { "name": "R Example", "parameters": { "param_from_ui_builder": { "type": "number" } } }
+
+example_func <- function(first_parameter) {
+    return (first_parameter)
+}
+
+example_func(param_from_ui_builder)</pre></code>
+
+                <p>Note that the spec may also be defined as a Python dict and then included in the magic cell using the <em>$</em> notation. For example:</p>
+
+                <code><pre>spec = {
+    "name": "R Example",
+    "parameters": {
+        "param_from_ui_builder": {
+            "type": "number"
+        }
+    }
+}</pre></code>
+
+                <code><pre>
+%%r_build_ui $spec
+
+example_func <- function(first_parameter) {
+    return (first_parameter)
+}
+
+example_func(param_from_ui_builder)</pre></code>
+
 <h2 id="uioutput">UI Output</h2>
 
 <p>UIOutput is a widget that can be created programmatically and displayed as the output to a UI Builder cell or any code cell. It's intended to display results in a fashion similar to a GenePattern analysis cell, thereby providing a consistent user interface.</p>
