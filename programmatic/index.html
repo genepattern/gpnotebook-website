@@ -249,6 +249,24 @@ provides the ability to customize your workspace by installing new libraries. Be
 conda install &lt;package_name&gt;
 </pre></code>
 
+<h3 id="10globusconnect">10. Globus Connect</h3>
+
+<p><a href="https://www.globus.org/" target="_blank">Globus</a> is a way to synchronize the files in your GenePattern Notebook user directory with those on your personal computer or elsewhere.</p>
+
+<p>To use Globus Connect, you will first need to sign up for a free <a href="https://app.globus.org">Globus account</a>. You will also need to log in to the Globus file manager and create a personal endpoint.</p>
+
+<p>This can accomplished by selecting "Endpoints" from the <a href="https://app.globus.org">Globus interface</a> and then clicking "Create a Personal Endpoint" in the upper right. Give this new endpoint a name like "GenePattern Notebook" and then click the "Generate Setup Key" button. Copy and save this key.</p>
+
+<p>Inside GenePattern Notebook, open a new terminal and then set up your Globus endpoint by running:</p>
+
+<code>/opt/gcp/globusconnectpersonal -setup &lt;GENERATED_KEY&gt; -dir ~</code>
+
+<p>This will create the configuration needed to synchronize your GenePattern Notebook user directory. Finally, to begin the Globus synchronization, run the following command:</p>
+
+<code>/opt/gcp/globusconnectpersonal -start -dir ~</code>
+
+<p>As long as this process is running, Globus will continue to synchronize your files between GenePattern Notebook and any other connected endpoint. For more information, see the <a href="https://docs.globus.org/">Globus documentation</a>.</p>
+
 <h2 id="uibuilder">UI Builder</h2>
 
 <p>The UI Builder is a way to display any Python function or method call as an interactive widget. This will render the parameters of the function as a web form.</p>
@@ -647,6 +665,7 @@ uio.status = "Complete"
                     <li><a href="#7jobresultsyntax">Job Result Syntax</a></li>
                     <li><a href="#8filesinmarkdowncells">Files in Markdown Cells</a></li>
                     <li><a href="#9installingpackages">Installing Packages</a></li>
+                    <li><a href="#10globusconnect">Globus Connect</a></li>
                     <li><a href="#uibuilder">UI Builder</a></li>
 
                     <li><a href="#uioutput">UI Output</a></li>
